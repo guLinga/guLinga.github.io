@@ -1,0 +1,1071 @@
+<!DOCTYPE html><html lang="zh-CN"><head><!-- hexo injector head_begin start --><link href="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/css/index.css" rel="stylesheet"/><link href="https://cdn.jsdelivr.net/npm/hexo-widget-tree@0.2.2/css/index.css" rel="stylesheet"/><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#d79e58"><meta name="author" content="五亿个小铃铛"><meta name="copyright" content="五亿个小铃铛"><meta name="generator" content="Hexo 6.3.0"><meta name="theme" content="hexo-theme-yun"><title>TypaScript学习总结 | </title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.4.1/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://fastly.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://fastly.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" defer></script><script class="meting-script-marker" src="https://fastly.jsdelivr.net/npm/meting@1/dist/Meting.min.js" defer></script><link rel="icon" type="image/svg+xml" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#d79e58"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"gulinga.github.io","root":"/","title":"五亿个小铃铛","version":"1.10.9","mode":"time","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"local_search":{"path":"/search.xml"},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]},"vendors":{"host":"https://fastly.jsdelivr.net/npm/","darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="" type="application/atom+xml"><script src="//at.alicdn.com/t/c/font_3758607_6sjs0ax6htf.js" async></script><meta name="description" content="TypaScript 常用类型 原始类型 let age:number&#x3D;20; let myName:string&#x3D;&#39;xsx&#39; let isLoading:boolean&#x3D;false; let a:null&#x3D;null; let b:undefined&#x3D;undefined; let s:symbol&#x3D;Symbol(); 数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypaScript学习总结">
+<meta property="og:url" content="http://gulinga.github.io/2022/07/03/typeScript/typescript%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="TypaScript 常用类型 原始类型 let age:number&#x3D;20; let myName:string&#x3D;&#39;xsx&#39; let isLoading:boolean&#x3D;false; let a:null&#x3D;null; let b:undefined&#x3D;undefined; let s:symbol&#x3D;Symbol(); 数组">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-03T11:11:09.537Z">
+<meta property="article:author" content="五亿个小铃铛">
+<meta name="twitter:card" content="summary"><script type="module">import { getScript } from '/js/utils.js'
+getScript("https://fastly.jsdelivr.net/npm/mermaid/dist/mermaid.min.js", () => {
+  const mermaidOptions = "https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js"
+  mermaid.initialize(mermaidOptions);
+}, window.mermaid);
+</script><style>.mermaid{background: transparent;}</style><script>(function() {
+  if (CONFIG.mode !== 'auto') return
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
+IconifyProviders = {
+  // Empty prefix: overwrite default API provider configuration
+  '': {
+    // Use custom API first, use Iconify public API as backup
+    resources: [
+        'https://api.iconify.design',
+    ],
+    // Wait for 1 second before switching API hosts
+    rotate: 1000,
+  },
+};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><span class="icon iconify" data-icon="ri:list-ordered"></span></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><span class="icon iconify" data-icon="ri:passport-line"></span></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="五亿个小铃铛"><img width="96" loading="lazy" src="/images/my.jpg" alt="五亿个小铃铛"><span class="site-author-status" title="不想上学">💛</span></a><div class="site-author-name"><a href="/about/">五亿个小铃铛</a></div><span class="site-name"></span><sub class="site-subtitle"></sub><div class="site-description">我喜欢在夜晚聆听星星的笑声，它们就像五亿个小铃铛。</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">194</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">24</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">37</span></a></div><a class="site-state-item hty-icon-button" href="/links/" title="友链"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/guLinga" title="GitHub" target="_blank" style="color:#181717"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://juejin.cn/user/3316588148427885/posts" title="掘金" target="_blank" style="color:undefined"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-juejin"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://leetcode.cn/u/1514/" title="力扣" target="_blank" style="color:undefined"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-leetcode1"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://blog.csdn.net/qq_51965698" title="CSDN" target="_blank" style="color:#fc5531"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-csdn"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://bigfrontend.dev/user/ptACGZQ" title="BFE.dev" target="_blank" style="color:#ff1a00"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dev"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:xsx1514@163.com" title="E-Mail" target="_blank" style="color:#8E71C1"><span class="icon iconify" data-icon="ri:mail-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/179654060" title="哔哩哔哩动画" target="_blank" style="color:#FF8EB3"><span class="icon iconify" data-icon="ri:bilibili-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/guestbook" title="留言板" style="color:#ff72b8"><span class="icon iconify" data-icon="ri:women-line"></span></a><a class="links-item hty-icon-button" href="/albums" title="相册" style="color:undefined"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiangce"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#TypaScript"><span class="toc-text">TypaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">常用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E7%B1%BB%E5%9E%8B"><span class="toc-text">原始类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">数组类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="toc-text">联合类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-text">函数类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="toc-text">函数的可选参数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B"><span class="toc-text">对象类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8F%AF%E9%80%89%E5%B1%9E%E6%80%A7"><span class="toc-text">对象的可选属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B"><span class="toc-text">高级类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-text">接口的继承</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80"><span class="toc-text">类型断言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B8%8E%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">接口与类型别名的对比</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-text">字面量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%9E%9A%E4%B8%BE"><span class="toc-text">数字枚举</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9E%9A%E4%B8%BE"><span class="toc-text">字符串枚举</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#any%E7%B1%BB%E5%9E%8B-%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8"><span class="toc-text">any类型(不推荐使用)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E5%85%B7%E6%9C%89any%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">隐式具有any类型的情况</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TypeScript%E4%B8%AD%E7%9A%84typeof"><span class="toc-text">TypeScript中的typeof</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#class%E7%B1%BB"><span class="toc-text">class类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#class%E7%B1%BB%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">class类构造函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#class%E7%B1%BB%E7%9A%84%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-text">class类的实例方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#class%E7%B1%BB%E7%BB%A7%E6%89%BF%E7%88%B6%E7%B1%BB"><span class="toc-text">class类继承父类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#class%E7%B1%BB%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3"><span class="toc-text">class类实现接口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#class%E7%B1%BB%E5%8F%AF%E8%A7%81%E6%80%A7%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">class类可见性修饰符</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">类型兼容性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">对象之间的类型兼容性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">接口之间的类型兼容性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#class%E4%B8%8Einterface%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">class与interface之间的兼容性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">函数之间的兼容性</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B"><span class="toc-text">交叉类型(&amp;)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E4%BA%8E%E6%8E%A5%E5%8F%A3%E7%BB%A7%E6%89%BF%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">交叉类型于接口继承的对比</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F"><span class="toc-text">泛型约束</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E6%B3%9B%E5%9E%8B%E5%8F%98%E9%87%8F%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">多个泛型变量的情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-text">泛型接口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B0%B1%E6%98%AF%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-text">数组就是泛型接口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB"><span class="toc-text">泛型类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%9E%8B"><span class="toc-text">泛型工具类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E7%AD%BE%E5%90%8D%E7%B1%BB%E5%9E%8B"><span class="toc-text">索引签名类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%A0%E5%B0%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">映射类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E6%B3%9B%E5%9E%8B%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%9E%8BPartial%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">分析泛型工具类型Partial的实现</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E6%9F%A5%E8%AF%A2%E7%B1%BB%E5%9E%8B"><span class="toc-text">索引查询类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6"><span class="toc-text">类型声明文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TypeScript%E4%B8%AD%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-text">TypeScript中的两种文件类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6"><span class="toc-text">第三方库的类型声明文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E6%96%87%E4%BB%B6"><span class="toc-text">创建自己的类型说明文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8React%E4%B8%AD%E4%BD%BF%E7%94%A8TypeScript"><span class="toc-text">在React中使用TypeScript</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8CRA%E5%88%9B%E5%BB%BA%E6%94%AF%E6%8C%81TypeScript%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="toc-text">使用CRA创建支持TypeScript的项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TypeScript%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6tsconfig-json"><span class="toc-text">TypeScript配置文件tsconfig.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#React%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">React中常用的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6"><span class="toc-text">函数组件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B1%BB%E7%BB%84%E4%BB%B6"><span class="toc-text">类组件</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/BUG/" style="font-size: 12px; color: #999">BUG</a> <a href="/tags/DNS/" style="font-size: 25.5px; color: #2680d4">DNS</a> <a href="/tags/GET/" style="font-size: 12px; color: #999">GET</a> <a href="/tags/HTTP/" style="font-size: 30px; color: #0078e7">HTTP</a> <a href="/tags/OPTIONS/" style="font-size: 12px; color: #999">OPTIONS</a> <a href="/tags/POST/" style="font-size: 12px; color: #999">POST</a> <a href="/tags/Promise/" style="font-size: 12px; color: #999">Promise</a> <a href="/tags/React/" style="font-size: 21px; color: #4d89c0">React</a> <a href="/tags/TCP/" style="font-size: 25.5px; color: #2680d4">TCP</a> <a href="/tags/UDP/" style="font-size: 16.5px; color: #7391ad">UDP</a> <a href="/tags/URL/" style="font-size: 12px; color: #999">URL</a> <a href="/tags/Vue/" style="font-size: 12px; color: #999">Vue</a> <a href="/tags/Vue2/" style="font-size: 12px; color: #999">Vue2</a> <a href="/tags/Vue3/" style="font-size: 12px; color: #999">Vue3</a> <a href="/tags/async/" style="font-size: 12px; color: #999">async</a> <a href="/tags/await/" style="font-size: 12px; color: #999">await</a> <a href="/tags/live/" style="font-size: 12px; color: #999">live</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 25.5px; color: #2680d4">二叉树</a> <a href="/tags/%E4%BA%91%E6%96%87%E6%A1%A3/" style="font-size: 25.5px; color: #2680d4">云文档</a> <a href="/tags/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/" style="font-size: 12px; color: #999">内存泄漏</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#d79e58;"><link itemprop="mainEntityOfPage" href="http://gulinga.github.io/2022/07/03/typeScript/typescript%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="五亿个小铃铛"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content=""></span><header class="post-header"><h1 class="post-title" itemprop="name headline">TypaScript学习总结</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2022-07-03 00:00:00" itemprop="dateCreated datePublished" datetime="2022-07-03T00:00:00+08:00">2022-07-03</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2022-11-03 19:11:09" itemprop="dateModified" datetime="2022-11-03T19:11:09+08:00">2022-11-03</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><span class="icon iconify" data-icon="ri:file-word-line"></span></span> <span title="本文字数">4.9k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><span class="icon iconify" data-icon="ri:timer-line"></span></span> <span title="阅读时长">23m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读次数"><span class="icon iconify" data-icon="ri:eye-line"></span> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/typascript/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">typascript</span></a></span></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h2 id="TypaScript">TypaScript</h2>
+<h3 id="常用类型">常用类型</h3>
+<h4 id="原始类型">原始类型</h4>
+<pre class="language-none"><code class="language-none">let age:number&#x3D;20;
+let myName:string&#x3D;&#39;xsx&#39;
+let isLoading:boolean&#x3D;false;
+let a:null&#x3D;null;
+let b:undefined&#x3D;undefined;
+let s:symbol&#x3D;Symbol();</code></pre>
+<h4 id="数组类型">数组类型</h4>
+<pre class="language-none"><code class="language-none">let numbers:number[]&#x3D;[1,2,3];
+let numbers2:Array&lt;number&gt;&#x3D;[1,2,3];</code></pre>
+<h4 id="联合类型">联合类型</h4>
+<pre class="language-none"><code class="language-none">let arr:(number|string)[]&#x3D;[&#39;1&#39;,&#39;2&#39;,1,2];</code></pre>
+<h4 id="函数类型">函数类型</h4>
+<pre class="language-none"><code class="language-none">function add(num1:number,num2:number):number&#123;
+    return num1+num2;
+&#125;
+const add2&#x3D;(num1:number,num2:number):number&#x3D;&gt;&#123;
+    return num1+num2;
+&#125;</code></pre>
+<h5 id="函数的可选参数">函数的可选参数</h5>
+<pre class="language-none"><code class="language-none">function mySlice(start?:number,end?:number):void&#123;
+    console.log(&#96;起始索引$&#123;start&#125;,结束索引$&#123;end&#125;&#96;);
+&#125;
+
+mySlice();
+mySlice(1);
+mySlice(1,2);</code></pre>
+<h4 id="对象类型">对象类型</h4>
+<pre class="language-none"><code class="language-none">let person:&#123;name:string;age:number;sayHi():void;greet(name:string):void&#125;&#x3D;&#123;
+    name:&#39;jack&#39;,
+    age:19,
+    sayHi()&#123;&#125;,
+    greet(name)&#123;&#125;,
+&#125;
+let person2:&#123;
+    name:string
+    age:number
+    sayHi:()&#x3D;&gt;void
+    greet(name:string):void
+&#125;&#x3D;&#123;
+    name:&#39;jack&#39;,
+    age:19,
+    sayHi()&#123;&#125;,
+    greet(name)&#123;&#125;,
+&#125;</code></pre>
+<h5 id="对象的可选属性">对象的可选属性</h5>
+<pre class="language-none"><code class="language-none">function myAxios(config:&#123;url:string;method?:string&#125;)&#123;
+    console.log(config);
+&#125;</code></pre>
+<h3 id="高级类型">高级类型</h3>
+<h4 id="接口">接口</h4>
+<pre class="language-none"><code class="language-none">interface IPerson&#123;
+    name:string
+    age:number
+    sayHi():void
+&#125;
+let person3:IPerson&#x3D;&#123;
+    name:&#39;jack&#39;,
+    age:19,
+    sayHi()&#123;&#125;
+&#125;</code></pre>
+<h5 id="接口的继承">接口的继承</h5>
+<pre class="language-none"><code class="language-none">interface Point2D&#123;
+    x:number
+    y:number
+&#125;
+interface Point3D extends Point2D&#123;
+    z:number
+&#125;
+let d2:Point2D&#x3D;&#123;
+    x:1,
+    y:2
+&#125;
+let d3:Point3D&#x3D;&#123;
+    x:1,
+    y:2,
+    z:3
+&#125;</code></pre>
+<h4 id="类型别名">类型别名</h4>
+<pre class="language-none"><code class="language-none">type TPerson&#x3D;&#123;
+    name:string
+    age:number
+    sayHi():void
+&#125;
+let person4:TPerson&#x3D;&#123;
+    name:&#39;jack&#39;,
+    age:19,
+    sayHi()&#123;&#125;
+&#125;</code></pre>
+<h4 id="类型断言">类型断言</h4>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;如果不知道是什么类型的，可以在控制台选中元素，输入console.dir($0)查看。
+const aLink &#x3D; &lt;HTMLAnchorElement&gt;document.getElementById(&#39;link&#39;)</code></pre>
+<h4 id="接口与类型别名的对比">接口与类型别名的对比</h4>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;接口只能给对象起别名，而类型别名可以给任意类型起别名
+type NumStr &#x3D; number | string;</code></pre>
+<h4 id="字面量类型">字面量类型</h4>
+<pre class="language-none"><code class="language-none">const str2:&#39;Hello TS&#39; &#x3D; &#39;Hello TS&#39;
+let age2:18&#x3D;18
+function changeDirection(direction:&#39;up&#39;|&#39;down&#39;|&#39;left&#39;|&#39;right&#39;)&#123;
+    console.log(direction);
+&#125;
+changeDirection(&#39;up&#39;);</code></pre>
+<h4 id="数字枚举">数字枚举</h4>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;对于数字枚举存在自增长行为，如果你不设置数值，则会从0依次增长。
+enum Direction&#123;Up,Down,Left,Right&#125;
+enum Direction2&#123;Up&#x3D;10,Down&#x3D;22,Left&#x3D;65,Right&#x3D;1025&#125;
+function changeDirection2(direction:Direction)&#123;
+    console.log(direction);
+&#125;
+changeDirection2(Direction.Up)</code></pre>
+<h4 id="字符串枚举">字符串枚举</h4>
+<pre class="language-none"><code class="language-none">enum Direction3&#123;
+    Up&#x3D;&#39;Up&#39;,
+    Down&#x3D;&#39;Down&#39;,
+    Left&#x3D;&#39;Left&#39;,
+    Right&#x3D;&#39;Right&#39;,
+&#125;</code></pre>
+<h4 id="any类型-不推荐使用">any类型(不推荐使用)</h4>
+<pre class="language-none"><code class="language-none">&#x2F;*
+    不推荐使用any类型，它会让TypeScript变成AnyScript，会失去TypeScript类型保护的优势。
+
+*&#x2F;
+let objans:any&#x3D;&#123;x:0&#125;;
+objans();
+&#x2F;&#x2F;上述代码执行错误</code></pre>
+<h5 id="隐式具有any类型的情况">隐式具有any类型的情况</h5>
+<ol>
+<li class="lvl-3">
+<p>声明变量不提供类型也不提供默认值</p>
+</li>
+<li class="lvl-3">
+<p>函数参数不加类型</p>
+</li>
+</ol>
+<h4 id="TypeScript中的typeof">TypeScript中的typeof</h4>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;typeof只能查询变量或属性的类型，无法查询其他形式的类型
+let p&#x3D;&#123;x:1,y:2&#125;;
+function formatPoint(point:&#123;x:number,y:number&#125;)&#123;&#125;
+formatPoint(p);
+function formatPoint2(point:typeof p)&#123;&#125;
+formatPoint2(p);</code></pre>
+<h4 id="class类">class类</h4>
+<pre class="language-none"><code class="language-none">class Persons&#123;
+    ages!:number
+    gender&#x3D;&#39;男&#39;
+&#125;
+const per&#x3D;new Persons();</code></pre>
+<h5 id="class类构造函数">class类构造函数</h5>
+<pre class="language-none"><code class="language-none">class Persons&#123;
+    ages!:number
+    gender&#x3D;&#39;男&#39;
+    constructor(ages:number,gender:string)&#123;
+        this.ages&#x3D;ages;
+        this.gender&#x3D;gender
+    &#125;
+&#125;
+const per&#x3D;new Persons(18,&#39;女&#39;);</code></pre>
+<h5 id="class类的实例方法">class类的实例方法</h5>
+<pre class="language-none"><code class="language-none">class Point&#123;
+    x&#x3D;10
+    y&#x3D;10
+    scale(n:number):void&#123;
+        this.x*&#x3D;n;
+        this.y*&#x3D;n;
+    &#125;
+&#125;
+const poi&#x3D;new Point();
+poi.scale(10);</code></pre>
+<h5 id="class类继承父类">class类继承父类</h5>
+<pre class="language-none"><code class="language-none">class Animal&#123;
+    move()&#123;
+        console.log(&#39;移动&#39;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+    bark()&#123;
+        console.log(&#39;汪&#39;);
+    &#125;
+&#125;
+const dog&#x3D;new Dog();</code></pre>
+<h5 id="class类实现接口">class类实现接口</h5>
+<pre class="language-none"><code class="language-none">interface Singalbe&#123;
+    sing():void
+&#125;
+class Persons2 implements Singalbe&#123;
+    sing(): void &#123;
+        console.log(&#39;sign&#39;);
+    &#125;
+&#125;</code></pre>
+<h5 id="class类可见性修饰符">class类可见性修饰符</h5>
+<ol>
+<li class="lvl-3">
+<p>public(公有的，默认为public)</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">class Animal&#123;
+    public move()&#123;
+        console.log(&#39;移动&#39;);
+    &#125;
+&#125;</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>protected(受保护的)</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;仅对声明的所有类和子类中（非实例对象）可见。
+class Animal&#123;
+    protected move()&#123;
+        console.log(&#39;移动&#39;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+    bark()&#123;
+        console.log(&#39;汪&#39;);
+        this.move();
+    &#125;
+&#125;</code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>private(私有的)</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;只在当前类中可见，对实例对象以及子类都不可见
+class Animal&#123;
+    private move()&#123;
+        console.log(&#39;移动&#39;);
+    &#125;
+&#125;
+class Dog extends Animal&#123;
+    bark()&#123;
+        console.log(&#39;汪&#39;);
+        this.move();&#x2F;&#x2F;报错
+    &#125;
+&#125;</code></pre>
+<ol start="4">
+<li class="lvl-3">
+<p>readonly(只读，不仅class类中可用)</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">&#x2F;*
+用来防止在构造函数之外对属性进行赋值，可以在声明时和constructor里面进行赋值
+只可以修饰属性，不能修饰方法
+下面代码中如果:number没有写，则age会变成字面量类型，如果再在constructor中改变值会报错。
+接口或&#123;&#125;表示的对象类型，也可以使用readonly
+*&#x2F;
+class Persons3&#123;
+    readonly age:number&#x3D;18
+    constructor()&#123;
+        this.age&#x3D;age;
+    &#125;
+    setAge()&#123;
+        this.age&#x3D;20&#x2F;&#x2F;报错
+    &#125;
+&#125;
+interface readi&#123;
+    readonly age:18
+&#125;
+let obji:&#123;readonly age:number&#125;&#x3D;&#123;
+    age:18
+&#125;</code></pre>
+<h4 id="类型兼容性">类型兼容性</h4>
+<p>    TypeScript采用的是结构化类型系统，也叫做duck typing（鸭子类型），如果两个对象具有相同的形状，则认为它们属于同一类型。<br>
+    在Java、c#中，它们是标明类型系统，不会根据具有相同形状来判度。</p>
+<pre class="language-none"><code class="language-none">class Pointl&#123;x!:number;y!:number&#125;
+class pointl2D&#123;x!:number;y!:number&#125;
+const pl:Pointl&#x3D;new pointl2D();
+&#x2F;&#x2F;在TypeScript看来Pointl和pointl2D是同一类型</code></pre>
+<h5 id="对象之间的类型兼容性">对象之间的类型兼容性</h5>
+<p>    对于对象类型来说，y的成员至少与x相同，则x兼容y（成员多的可以兼容少的）。</p>
+<pre class="language-none"><code class="language-none">class pointl2D&#123;x!:number;y!:number&#125;
+class pointl3D&#123;x!:number;y!:number;z!:number&#125;
+const ppl:Pointl&#x3D;new pointl3D();</code></pre>
+<h5 id="接口之间的类型兼容性">接口之间的类型兼容性</h5>
+<pre class="language-none"><code class="language-none">interface Int1&#123;
+    x:number
+    y:number
+&#125;
+interface Int2&#123;
+    x:number
+    y:number
+&#125;
+interface Int3&#123;
+    x:number
+    y:number
+    z:number
+&#125;
+let inte1:Int1&#x3D;&#123;x:1,y:2&#125;;
+let inte2:Int2&#x3D;&#123;x:1,y:2&#125;;
+let inte3:Int3&#x3D;&#123;x:1,y:2,z:3&#125;;
+inte1&#x3D;inte2;
+inte2&#x3D;inte1;
+inte1&#x3D;inte3;
+inte3&#x3D;inte1;&#x2F;&#x2F;报错</code></pre>
+<h5 id="class与interface之间的兼容性">class与interface之间的兼容性</h5>
+<pre class="language-none"><code class="language-none">interface ic1&#123;
+    x:number
+    y:number
+&#125;
+class ic2&#123;
+    x!:number
+    y!:number
+&#125;
+let ict:ic1&#x3D;new ic2();</code></pre>
+<h5 id="函数之间的兼容性">函数之间的兼容性</h5>
+<p>    函数之间兼容性要考虑三个方面。</p>
+<ol>
+<li class="lvl-3">
+<p>参数个数<br>
+    参数多的兼容参数少的。（参数少的可以赋值给参数多的）</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">type F1&#x3D;(a:number)&#x3D;&gt;void
+type F2&#x3D;(a:number,b:number)&#x3D;&gt;void
+let f1:F1&#x3D;(a)&#x3D;&gt;&#123;&#125;;
+let f2:F2&#x3D;(a,b)&#x3D;&gt;&#123;&#125;;
+f2&#x3D;f1;
+f1&#x3D;f2;&#x2F;&#x2F;报错</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>参数类型<br>
+    相同位置的参数类型要相同（原始类型）或兼容（对象类型）</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">type F1&#x3D;(a:number,b:string)&#x3D;&gt;void
+type F2&#x3D;(a:number,b:number)&#x3D;&gt;void
+let f1:F1&#x3D;(a,b)&#x3D;&gt;&#123;&#125;;
+let f2:F2&#x3D;(a,b)&#x3D;&gt;&#123;&#125;;
+f2&#x3D;f1;&#x2F;&#x2F;报错</code></pre>
+<pre class="language-none"><code class="language-none">interface ic1&#123;
+    x:number
+    y:number
+&#125;
+class ic2&#123;
+    x!:number
+    y!:number
+&#125;
+type F1&#x3D;(a:number,b:ic1)&#x3D;&gt;void
+type F2&#x3D;(a:number,b:ic2)&#x3D;&gt;void
+let f1:F1&#x3D;(a,b)&#x3D;&gt;&#123;&#125;;
+let f2:F2&#x3D;(a,b)&#x3D;&gt;&#123;&#125;;
+f2&#x3D;f1;</code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>返回值类型</p>
+<ul class="lvl-2">
+<li class="lvl-6">如果返回值类型是原始类型，此时两个类型要相同</li>
+</ul>
+</li>
+</ol>
+ <pre class="language-none"><code class="language-none">type F5&#x3D;()&#x3D;&gt;string;
+type F6&#x3D;()&#x3D;&gt;string;
+let f5:F5&#x3D;()&#x3D;&gt;&#39;1&#39;;
+let f6:F6&#x3D;()&#x3D;&gt;&#39;1&#39;;
+f6&#x3D;f5;</code></pre>
+<pre><code>- 如果返回值类型是对象类型，此时成员多的可以赋值给成员少的（和对象类型一直）
+</code></pre>
+<pre class="language-none"><code class="language-none">type F7&#x3D;()&#x3D;&gt;&#123;name:string&#125;
+type F8&#x3D;()&#x3D;&gt;&#123;name:string;age:number&#125;
+let f7:F7&#x3D;()&#x3D;&gt;&#123;return&#123;
+    name:&#39;111&#39;
+&#125;&#125;;
+let f8:F8&#x3D;()&#x3D;&gt;&#123;return&#123;
+    name:&#39;111&#39;,
+    age:10
+&#125;&#125;;
+f7&#x3D;f8;
+f8&#x3D;f7;&#x2F;&#x2F;报错</code></pre>
+<h4 id="交叉类型">交叉类型(&amp;)</h4>
+<p>    交叉类型&amp;功能类似于接口的继承，用于组合多个类型为一个类型（常用于对象类型）</p>
+<pre class="language-none"><code class="language-none">interface jio1&#123;name:string&#125;
+interface jio2&#123;age:number&#125;
+type Jio &#x3D; jio1&amp;jio2;
+let obj:Jio&#x3D;&#123;
+    name:&#39;111&#39;,
+    age:10
+&#125;</code></pre>
+<h5 id="交叉类型于接口继承的对比">交叉类型于接口继承的对比</h5>
+<ol>
+<li class="lvl-3">
+<p>相同点<br>
+    都可以实现对象类型的组合。</p>
+</li>
+<li class="lvl-3">
+<p>不同点<br>
+    两种方式实现类型组合时，对于同名属性之间，处理类型冲突的方式不同。</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">interface A&#123;
+    fn(a:number):string
+&#125;
+interface B extends A&#123;&#x2F;&#x2F;报错，类型不兼容
+    fn(a:string):string
+&#125;</code></pre>
+<pre class="language-none"><code class="language-none">interface A&#123;
+    fn(a:number):string
+&#125;
+interface B&#123;
+    fn(a:string):string
+&#125;
+type C &#x3D; A &amp; B</code></pre>
+<p>    对于C我们可以理解为一下代码</p>
+<pre class="language-none"><code class="language-none">interface A&#123;
+    fn(a:number):string
+&#125;
+interface B&#123;
+    fn(a:string):number
+&#125;
+type C &#x3D; A &amp; B
+
+class cc implements C&#123;
+    fn(a: number): string;
+    fn(a: string): number;
+    fn(a: unknown): string | number &#123;
+        return &#39;&#39;
+    &#125;
+&#125;</code></pre>
+<h4 id="泛型">泛型</h4>
+<p>    泛型可以在保护类型安全的前提下，让函数等多种类型一起工作，从而实现复用。例：实现一个函数，输入什么数据就返回什么数据。</p>
+<pre class="language-none"><code class="language-none">function id&lt;Type&gt;(value:Type):Type&#123;
+    return value
+&#125;
+id&lt;number&gt;(10);
+id(10);&#x2F;&#x2F;如果编译器推断的类型不准确，我们必须在括号前声明类型
+id&lt;string&gt;(10);&#x2F;&#x2F;报错
+&#x2F;&#x2F;Type也可以写成别的合法名称</code></pre>
+<h5 id="泛型约束">泛型约束</h5>
+<pre class="language-none"><code class="language-none">function id2&lt;Type&gt;(value:Type):Type&#123;
+    return value.length&#x2F;&#x2F;报错
+&#125;</code></pre>
+<p>    添加泛型约束</p>
+<ol>
+<li class="lvl-3">
+<p>指定更加具体的类型</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">function ida&lt;type&gt;(value:type[]):type[]&#123;
+    return value.length
+&#125;</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>extends添加约束</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">interface ILength&#123;length:number&#125;;
+function ide&lt;type extends ILength&gt;(value:type):type&#123;
+    console.log(value.length);
+    return value
+&#125;
+ide([]);
+ide(&#39;&#39;);
+ide(&#123;length:0,name:&#39;0&#39;&#125;);</code></pre>
+<h5 id="多个泛型变量的情况">多个泛型变量的情况</h5>
+<p>    keyof关键字接收一个对象类型，生成其键名称（可能是字符串或数字）的联合类型</p>
+<pre class="language-none"><code class="language-none">function getProp&lt;Type,Key extends keyof Type&gt;(obj:Type,key:Key)&#123;
+    return obj[key];
+&#125;
+let objkey&#x3D;&#123;name:&#39;11&#39;&#125;;
+getProp(objkey,&#39;name&#39;);
+getProp(objkey,&#39;age&#39;);&#x2F;&#x2F;报错
+getProp([],0);
+getProp(0,&#39;toString&#39;);</code></pre>
+<h5 id="泛型接口">泛型接口</h5>
+<pre class="language-none"><code class="language-none">interface IdFunc&lt;Type&gt;&#123;
+    id:(value:Type)&#x3D;&gt;Type
+    ids:()&#x3D;&gt;Type[]
+&#125;
+let func1:IdFunc&lt;number&gt;&#x3D;&#123;
+    id(value) &#123;
+        return value
+    &#125;,
+    ids() &#123;
+        return []
+    &#125;,
+&#125;</code></pre>
+<h5 id="数组就是泛型接口">数组就是泛型接口</h5>
+<p>    可以点击去数组的forEach源码来查看。</p>
+<h5 id="泛型类">泛型类</h5>
+<p>    在React的class组件中的基类Component就是泛型类，不同的组件有不同的props和state。</p>
+<pre class="language-none"><code class="language-none">interface IState&#123;count:number&#125;
+interface IProps&#123;maxLength:number&#125;
+class InputCount extends React.Component&lt;IProps,IState&gt;&#123;
+    state:IState&#123;
+        const:0
+    &#125;
+    render()&#123;
+        return &lt;div&gt;&#123;this.props.maxLength&#125;&lt;&#x2F;div&gt;
+    &#125;
+&#125;</code></pre>
+<p>    创建泛型类</p>
+<pre class="language-none"><code class="language-none">class Generic&lt;NumType&gt;&#123;
+    defaultVlaue!:NumType
+    add!:(x:NumType,y:NumType)&#x3D;&gt;NumType
+&#125;
+const myGen &#x3D; new Generic&lt;number&gt;()
+myGen.defaultVlaue&#x3D;10</code></pre>
+<h5 id="泛型工具类型">泛型工具类型</h5>
+<p>    TypaScript内置了一些常用的工具类型，来简化TypeScript中的一些常见操作。</p>
+<ol>
+<li class="lvl-3">
+<p>Partial<Type><br>
+    用来构造（创建）一个类型，将Type的所有属性设置为可选。</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">interface PropsP&#123;
+    id:string
+    children:number[]
+&#125;
+type PartialProps &#x3D; Partial&lt;PropsP&gt;
+class classProps implements PartialProps&#123;
+    id!: string;
+&#125;</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>Readonly<Type><br>
+    用来构造一个类型，将Type的所用属性都设置为readonly（只读）</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">interface PropsR&#123;
+    id:string
+    children:number[]
+&#125;
+type ReadonlyProps &#x3D; Readonly&lt;PropsP&gt;
+let rp:ReadonlyProps&#x3D;&#123;
+    id:&#39;1&#39;,
+    children:[]
+&#125;
+rp.id&#x3D;&#39;2&#39;&#x2F;&#x2F;报错</code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>Pick<Type><br>
+    从Type中选择一组属性来构造新类型。</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">interface PropsPi&#123;
+    id:string
+    children:number[]
+&#125;
+type PickProps &#x3D; Pick&lt;PropsPi,&#39;id&#39;&gt;
+let pp:PickProps&#x3D;&#123;
+    id:&#39;1&#39;,
+    children:[]&#x2F;&#x2F;报错
+&#125;
+&#x2F;&#x2F;PickProps类型中只有id，所以会报错。</code></pre>
+<ol start="4">
+<li class="lvl-3">
+<p>Record&lt;Keys,Type&gt;<br>
+    构造一个对象类型，属性键为Keys，属性类型为Type。Record传入两个类型变量，第一个表示对象有哪些属性，第二个表示对象属性的类型。</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">type RecordObj&#x3D;Record&lt;&#39;a&#39;|&#39;b&#39;|&#39;c&#39;,string[]&gt;
+let objRec:RecordObj&#x3D;&#123;
+    a:[&#39;1&#39;],
+    b:[&#39;1&#39;],
+    c:[&#39;1&#39;]
+&#125;</code></pre>
+<h5 id="索引签名类型">索引签名类型</h5>
+<p>    当无法确认对象中有哪些属性或者说对象中可以出现任意多个属性，此时就用到索引签名类型了。</p>
+<pre class="language-none"><code class="language-none">interface AnyObject&#123;
+    [Key:string]:number
+&#125;
+let anyobj:AnyObject&#x3D;&#123;
+    a:1,
+    &#39;b&#39;:2,
+&#125;
+&#x2F;&#x2F;Key只是一个占位符，可以换成任意合法的变量名称。</code></pre>
+<h4 id="映射类型">映射类型</h4>
+<pre class="language-none"><code class="language-none">type PropKeys&#x3D;&#39;x&#39;|&#39;y&#39;|&#39;z&#39;
+type Type1&#x3D;&#123;x:number;y:number;z:number&#125;
+type Type2&#x3D;&#123;[Key in PropKeys]:number&#125;&#x2F;&#x2F;映射
+&#x2F;&#x2F;Key只是一个占位符，可以换成任意合法的变量名称</code></pre>
+<pre class="language-none"><code class="language-none">type Props&#x3D;&#123;a:number,b:string,c:boolean&#125;
+type Type3&#x3D;&#123;[Key in keyof Props]:number&#125;</code></pre>
+<h5 id="分析泛型工具类型Partial的实现">分析泛型工具类型Partial的实现</h5>
+<pre class="language-none"><code class="language-none">type Partials&lt;T&gt;&#x3D;&#123;
+    [P in keyof T]?:T[P]
+&#125;
+type ParText&#x3D;&#123;a:number;b:string;c:boolean&#125;
+type part&#x3D;Partials&lt;ParText&gt;</code></pre>
+<h4 id="索引查询类型">索引查询类型</h4>
+<ol>
+<li class="lvl-3">
+<p>基本使用</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">type Propsi&#x3D;&#123;a:number;b:number;c:number&#125;
+type Tyepi&#x3D;Propsi[&#39;a&#39;];</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>查询多个</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">type Propsi&#x3D;&#123;a:number;b:number;c:number&#125;
+type Tyepi2&#x3D;Propsi[&#39;a&#39;|&#39;b&#39;];
+type Tyepi3&#x3D;Propsi[keyof Propsi];</code></pre>
+<h3 id="类型声明文件">类型声明文件</h3>
+<h4 id="TypeScript中的两种文件类型">TypeScript中的两种文件类型</h4>
+<p>    今天几乎所有的JavaScript应用都会引入许多第三方库来完成任务需求。这些第三方库不管是否是用TS编写的，最终都要编译成JS代码,才能发布给开发者使用。我们知道是TS提供了类型，才有了代码提示和类型保护等机制。但在项目开发中使用第三方库时，你会发现它们几乎都有相应的TS类型，这些类型是怎么来的呢?类型声明文件:用来为已存在的JS库提供类型信息。这样在TS项目中使用这些库时，就像用TS-样，都会有代码提示、类型保护等机制了。</p>
+<ol>
+<li class="lvl-3">
+<p>TS的两种文件类型</p>
+<ul class="lvl-2">
+<li class="lvl-6">.ts文件
+<ol>
+<li class="lvl-11">既包含类型信息又可执行代码</li>
+<li class="lvl-11">可以被编译为.js文件，然后执行代码</li>
+<li class="lvl-11">用途：编写程序代码的地方</li>
+</ol>
+</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p>类型声明文件的使用说明</p>
+<ul class="lvl-2">
+<li class="lvl-6">.d.ts文件
+<ol>
+<li class="lvl-11">只包含类型信息的类型声明文件</li>
+<li class="lvl-11">不会生成.js文件，仅用于提供类型信息</li>
+<li class="lvl-11">用途：为js提供类型信息<br>
+※.ts事代码实现文件；.d.ts事类型声明文件</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="第三方库的类型声明文件">第三方库的类型声明文件</h4>
+<ol>
+<li class="lvl-3">
+<p>库自带的类型声明文件</p>
+</li>
+<li class="lvl-3">
+<p><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/dt/search?search=">由DefinitelyTyped提供</a></p>
+</li>
+</ol>
+<h4 id="创建自己的类型说明文件">创建自己的类型说明文件</h4>
+<ol>
+<li class="lvl-3">
+<p>项目内共享类型<br>
+    如果多个.ts文件中都用到同一个类型，此时可以创建.d.ts文件提供该类型，实现类型共享。</p>
+</li>
+</ol>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>操作步骤</p>
+<ol>
+<li class="lvl-7">创建index.d.ts事类型声明文件</li>
+<li class="lvl-7">创建需要共享的类型，并使用export导出（TypeScript中的类型也可以使用import/export实现模块化功能）</li>
+<li class="lvl-7">在需要使用共享类型的.ts文件中，通过import导入即可（.d.ts后缀导入时，直接省略）</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li class="lvl-3">
+<p>为已有JS文件提供类型声明</p>
+<ol>
+<li class="lvl-7">在将JS项目迁移到TS项目时，为了让已有的js文件有类型声明。</li>
+<li class="lvl-7">成为库作者， 创建库给其他人使用。</li>
+</ol>
+<ul class="lvl-2">
+<li class="lvl-6">说明：TypeScript项目中也可以使用.js文件，在导入.js文件时，TypeScript会自动加载与.js同名的.d.ts文件，以提供类型声明。declare关键字：用于类型声明，为其他地方（比如.js文件）已存在的变量声明类型，而不是创建一个新的类型。
+<ol>
+<li class="lvl-11">对于type. interface 等这些明确就是TS类型的(只能在TS中使用的)，可以省略declare关键字。</li>
+<li class="lvl-11">对于let. function等具有双重含义(在JS、TS中都能用)，应该使用declare关键字，明确指定此处用于类型声明。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="在React中使用TypeScript">在React中使用TypeScript</h3>
+<h4 id="使用CRA创建支持TypeScript的项目">使用CRA创建支持TypeScript的项目</h4>
+<p>    创建支持TypeScript的项目的命令：npx create-react-app 项目名。<a target="_blank" rel="noopener" href="https://create-react-app.dev/docs/adding-typescript">在已有项目中使用TypeScript</a><br>
+    相对于非TypeScript项目，目录结构主要由以下三个变化。</p>
+<ol>
+<li class="lvl-3">
+<p>项目根目录中增加了tsconfig.json 配置文件:指定TS的编译选项(比如，编译时是否移除注释)。</p>
+</li>
+<li class="lvl-3">
+<p>React 组件的文件扩展名变为: *.tsx。</p>
+</li>
+<li class="lvl-3">
+<p>src目录中增加了react-app-env.d.ts: React项目默认的类型声明文件。</p>
+</li>
+<li class="lvl-3">
+<p>react-app-env.d.ts文件中三斜线指令，指定依赖的其他类型声明文件，types表示依赖的类型声明文件包的名称。</p>
+</li>
+</ol>
+<h4 id="TypeScript配置文件tsconfig-json">TypeScript配置文件tsconfig.json</h4>
+<pre class="language-none"><code class="language-none">&#123;
+  &quot;compilerOptions&quot;: &#123;
+    &quot;target&quot;: &quot;es6&quot;,&#x2F;&#x2F;生成代码的语言版本
+    &quot;lib&quot;: [&#x2F;&#x2F;指定要包含在编译中的library
+      &quot;dom&quot;,
+      &quot;dom.iterable&quot;,
+      &quot;esnext&quot;
+    ],
+    &quot;allowJs&quot;: true,&#x2F;&#x2F;允许ts编译器编译js文件
+    &quot;skipLibCheck&quot;: true,&#x2F;&#x2F;跳过声明文件的类型检查
+    &quot;esModuleInterop&quot;: true,&#x2F;&#x2F;es模块互操作，屏蔽ESModule和CommonJS之间的差异
+    &quot;allowSyntheticDefaultImports&quot;: true,&#x2F;&#x2F;允许使用import
+    &quot;strict&quot;: true,&#x2F;&#x2F;开启严格模式
+    &quot;forceConsistentCasingInFileNames&quot;: true,&#x2F;&#x2F;对文件名称强制区分大小写
+    &quot;noFallthroughCasesInSwitch&quot;: true,&#x2F;&#x2F;为switch语句启用报错报告
+    &quot;module&quot;: &quot;esnext&quot;,&#x2F;&#x2F;生成代码的模块化标准
+    &quot;moduleResolution&quot;: &quot;node&quot;,&#x2F;&#x2F;模块解析（查找）策略
+    &quot;resolveJsonModule&quot;: true,&#x2F;&#x2F;允许导入扩展名为.json的模块
+    &quot;isolatedModules&quot;: true,&#x2F;&#x2F;是否将没有import&#x2F;export的文件规为旧（全局而非模块化）脚本文件
+    &quot;noEmit&quot;: true,&#x2F;&#x2F;编译时不生产任何文件（只进行类型检查）
+    &quot;jsx&quot;: &quot;react-jsx&quot;&#x2F;&#x2F;将指定jsx编译成什么形式
+  &#125;,
+  &quot;include&quot;: [&#x2F;&#x2F;指定允许ts处理的目录
+    &quot;src&quot;
+  ]
+&#125;</code></pre>
+<h4 id="React中常用的类型">React中常用的类型</h4>
+<p>    在不使用TypeScript时，可以使用prop-types库，为React组件提供类型检查。在TypeScript项目中，推荐使用TypeScript或Flow实现组件类型校验（代替prop-types）</p>
+<h5 id="函数组件">函数组件</h5>
+<ol>
+<li class="lvl-3">
+<p>组件和属性类型</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;组件和属性类型
+import React,&#123;FC&#125; from &#39;react&#39;;
+type Props&#x3D;&#123;name:string;age?:number&#125;
+const Hello:FC&lt;Props&gt;&#x3D;(&#123;name,age&#125;)&#x3D;&gt;(
+  &lt;div&gt;你好，我叫：&#123;name&#125;，我&#123;age&#125;岁了&lt;&#x2F;div&gt;
+)
+const Hello2&#x3D;(&#123;name,age&#125;:Props)&#x3D;&gt;(
+  &lt;div&gt;你好，我叫：&#123;name&#125;，我&#123;age&#125;岁了&lt;&#x2F;div&gt;
+)</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>组件属性的默认值(defaultProps)</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;属性默认值
+import React,&#123;FC&#125; from &#39;react&#39;;
+const Hello:FC&lt;Props&gt;&#x3D;(&#123;name,age&#125;)&#x3D;&gt;(
+  &lt;div&gt;你好，我叫：&#123;name&#125;，我&#123;age&#125;岁了&lt;&#x2F;div&gt;
+)
+Hello.defaultProps&#x3D;&#123;
+  age:18
+&#125;
+const Hello2&#x3D;(&#123;name,age&#x3D;18&#125;:Props)&#x3D;&gt;(
+  &lt;div&gt;你好，我叫：&#123;name&#125;，我&#123;age&#125;岁了&lt;&#x2F;div&gt;
+)</code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>事件绑定和事件对象</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">&#x2F;&#x2F;事件与事件对象
+import React from &#39;react&#39;
+
+export default function Test() &#123;
+  function onclick(e:React.MouseEvent&lt;HTMLButtonElement&gt;)&#123;
+    console.log(e.currentTarget);
+  &#125;
+  function onchange(e:React.ChangeEvent&lt;HTMLInputElement&gt;)&#123;
+    console.log(e.target);
+    
+  &#125;
+  return (
+    &lt;div&gt;
+      &lt;button onClick&#x3D;&#123;onclick&#125;&gt;你点我一下&lt;&#x2F;button&gt;
+      &lt;input type&#x3D;&quot;text&quot; onChange&#x3D;&#123;onchange&#125; &#x2F;&gt;
+    &lt;&#x2F;div&gt;
+  )
+&#125;</code></pre>
+<h5 id="类组件">类组件</h5>
+<ol>
+<li class="lvl-3">
+<p>组件和类型</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">type State &#x3D; &#123; count: number &#125;
+type Props &#x3D; &#123; message? :string &#125;
+class C1 extends React.Component &#125;&#x2F;&#x2F; 无props、state
+class C2 extends React.Component&lt;Props&gt; &#123;&#125;&#x2F;&#x2F;有props,无state
+class C3 extends React.Component&lt;&#123;&#125;, State&gt; &#125;&#x2F;&#x2F;无props, 有state
+class C4 extends React.Component&lt;Props, State&gt; 年&#125; &#x2F;&#x2F;有props、state</code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>组件属性和默认值</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">import React, &#123; Component &#125; from &#39;react&#39;
+type Props &#x3D; &#123; name:string;age?:number &#125;
+export default class TestClass extends Component&lt;Props&gt; &#123;
+  static defaultProps:Partial&lt;Props&gt;&#x3D;&#123;
+    age:14
+  &#125;
+  render() &#123;
+    const &#123;name,age&#x3D;18&#125; &#x3D; this.props
+    return (
+      &lt;div&gt;
+        你好，我叫：&#123;name&#125;，我&#123;age&#125;岁了
+      &lt;&#x2F;div&gt;
+    )
+  &#125;
+&#125;</code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>状态与事件</p>
+</li>
+</ol>
+<pre class="language-none"><code class="language-none">import React, &#123; Component &#125; from &#39;react&#39;
+type State &#x3D; &#123; count:number &#125;
+export default class TestClass extends Component&lt;&#123;&#125;,State&gt; &#123;
+  state:State&#x3D;&#123;
+    count:0
+  &#125;
+  add&#x3D;()&#x3D;&gt;&#123;
+    this.setState(&#123;
+        count:this.state.count+1
+    &#125;)
+  &#125;
+  render() &#123;
+    return (
+      &lt;div&gt;
+        &#123;this.state.count&#125;
+        &lt;button onClick&#x3D;&#123;this.add&#125;&gt;+1&lt;&#x2F;button&gt;
+      &lt;&#x2F;div&gt;
+    )
+  &#125;
+&#125;</code></pre>
+</div></section><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>五亿个小铃铛</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="http://gulinga.github.io/2022/07/03/typeScript/typescript%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="TypaScript学习总结">http://gulinga.github.io/2022/07/03/typeScript/typescript%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><span class="icon iconify" data-icon="ri:creative-commons-line"></span><span class="icon iconify" data-icon="ri:creative-commons-by-line"></span><span class="icon iconify" data-icon="ri:creative-commons-nc-line"></span><span class="icon iconify" data-icon="ri:creative-commons-sa-line"></span></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2022/08/30/technology/%E5%AF%B9%E8%B1%A1%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/" rel="prev" title="遍历对象的方法"><span class="icon iconify" data-icon="ri:arrow-left-s-line"></span><span class="post-nav-text">遍历对象的方法</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2021/12/22/technology/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="next" title="JavaScript设计模式"><span class="post-nav-text">JavaScript设计模式</span><span class="icon iconify" data-icon="ri:arrow-right-s-line"></span></a></div></div></div><div class="hty-card" id="comment"><style>.utterances {
+  max-width: 100%;
+}</style><script src="https://giscus.app/client.js" data-repo="guLinga/guLinga.github.io" data-repo-id="R_kgDOIW5gZA" data-category="General" data-category-id="DIC_kwDOIW5gZM4CSWdD" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async></script></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2020 – 2022 </span><span class="with-love" id="animate"><span class="icon iconify" data-icon="ri:cloud-line"></span></span><span class="author"> 五亿个小铃铛</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2022-11-02T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_uv" title="总访客量"><span><span class="icon iconify" data-icon="ri:user-line"></span></span><span id="busuanzi_value_site_uv"></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv" title="总访问量"><span><span class="icon iconify" data-icon="ri:eye-line"></span></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#d79e58" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:search-line"></span></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script src="https://fastly.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script><script src="/js/search/local-search.js" defer type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><span class="icon iconify" data-icon="ri:close-line"></span></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="搜索..." value=""></div><div class="search-result-container"></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = ["4-4","9-18"]
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><div class="aplayer no-destroy" id="aplayer" data-id="308168565" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay data-theme="#d79e58" data-loop="all" data-order="list" data-preload="auto" data-volume="0.7" data-mutex data-lrctype="0" data-listfolded data-listmaxheight="340px" data-storagename="metingjs"></div><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
+mediumZoom(images)</script><style>.medium-zoom-image {
+  z-index: 99;
+}</style><!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-widget-tree@0.2.2/js/index.js"></script><div id="widget-tree">
+      <ul>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/English/">
+          English
+        </a>
+      <span class="tree-list-count">3</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2020/09/10/English/%E5%8D%95%E8%AF%8D/" title="单词"><i class="post-icon gg-file-document"></i>单词</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2020/09/10/English/%E5%B8%B8%E7%94%A8%E8%AF%8D%E6%A0%B9/" title="常用词根"><i class="post-icon gg-file-document"></i>常用词根</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2020/09/10/English/%E8%AF%8D%E6%A0%B9/" title="词根"><i class="post-icon gg-file-document"></i>词根</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E5%BC%80%E5%8F%91/">
+          开发
+        </a>
+      <span class="tree-list-count">4</span><ul class="tree-list-children">
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E5%BC%80%E5%8F%91/live/">
+          live
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/12/03/develop/%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/" title="后端接口开发及其生活总结"><i class="post-icon gg-file-document"></i>后端接口开发及其生活总结</a></li></ul></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/">
+          前端学习
+        </a>
+      <span class="tree-list-count">16</span><ul class="tree-list-children">
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/%E6%95%B0%E7%BB%84/">
+          数组
+        </a>
+      <span class="tree-list-count">2</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/04/technology/Array/created%20array/" title="创建数组"><i class="post-icon gg-file-document"></i>创建数组</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/04/technology/Array/traversal%20array/" title="遍历数组"><i class="post-icon gg-file-document"></i>遍历数组</a></li></ul></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/live/">
+          live
+        </a>
+      <span class="tree-list-count">10</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/live/%E4%BC%9A%E8%AE%AE/" title="会议"><i class="post-icon gg-file-document"></i>会议</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/07/live/%E5%8D%81%E4%B8%80%E6%9C%88%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" title="十一月学习计划"><i class="post-icon gg-file-document"></i>十一月学习计划</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/27/live/%E5%8D%81%E4%B8%80%E6%9C%88%E6%9C%88%E5%BA%95%E6%80%BB%E7%BB%93/" title="十一月月底总结"><i class="post-icon gg-file-document"></i>十一月月底总结</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/live/%E5%8D%81%E6%9C%88%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" title="十月学习计划"><i class="post-icon gg-file-document"></i>十月学习计划</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/25/live/%E5%8D%81%E6%9C%88%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%E4%B8%AD%E7%9A%84%E6%84%9F%E6%82%9F/" title="十月学习计划中的感悟"><i class="post-icon gg-file-document"></i>十月学习计划中的感悟</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/live/%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%9A%84%E6%80%9D%E8%80%83/" title="对前端的思考"><i class="post-icon gg-file-document"></i>对前端的思考</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/live/%E6%A0%A1%E4%BC%81%E5%90%88%E4%BD%9C/" title="校企合作"><i class="post-icon gg-file-document"></i>校企合作</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/07/live/%E6%A0%A1%E4%BC%81%E5%90%88%E4%BD%9C%E6%80%BB%E7%BB%93/" title="校企合作总结"><i class="post-icon gg-file-document"></i>校企合作总结</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/08/31/live/%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%9D%A2%E8%AF%95%E9%80%9A%E8%BF%87%E5%95%A6/" title="第一个面试通过啦"><i class="post-icon gg-file-document"></i>第一个面试通过啦</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/09/live/%E8%BF%9F%E5%88%B0%E7%9A%84%E7%94%9F%E6%97%A5%E7%A5%9D%E7%A6%8F/" title="迟到的生日祝福"><i class="post-icon gg-file-document"></i>迟到的生日祝福</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/typascript/">
+          typascript
+        </a>
+      <span class="tree-list-count">10</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/07/03/typeScript/typescript%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="TypaScript学习总结"><i class="post-icon gg-file-document"></i>TypaScript学习总结</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/25/typeScript/%E4%B8%80%E4%BA%9B%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E7%9A%84%E8%AF%B4%E6%98%8E/" title="一些特殊情况的说明"><i class="post-icon gg-file-document"></i>一些特殊情况的说明</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E5%86%85%E7%BD%AE%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B/" title="内置高级类型"><i class="post-icon gg-file-document"></i>内置高级类型</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/23/typeScript/%E5%A5%97%E8%B7%AF%E4%B8%80%E3%80%81%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F%E5%81%9A%E6%8F%90%E5%8F%96/" title="匹配模式做提取"><i class="post-icon gg-file-document"></i>匹配模式做提取</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E5%A5%97%E8%B7%AF%E4%B8%89%E3%80%81%E9%80%92%E5%BD%92%E5%A4%8D%E7%94%A8%E5%81%9A%E5%BE%AA%E7%8E%AF/" title="递归复用做循环"><i class="post-icon gg-file-document"></i>递归复用做循环</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E5%A5%97%E8%B7%AF%E4%BA%8C%E3%80%81%E9%87%8D%E6%96%B0%E6%9E%84%E9%80%A0%E5%81%9A%E5%8F%98%E6%8D%A2/" title="重新构造做变换"><i class="post-icon gg-file-document"></i>重新构造做变换</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E5%A5%97%E8%B7%AF%E4%BA%94%E3%80%81%E8%81%94%E5%90%88%E5%88%86%E6%95%A3%E5%8F%AF%E5%8C%96%E7%AE%80/" title="联合分散可化简"><i class="post-icon gg-file-document"></i>联合分散可化简</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E5%A5%97%E8%B7%AF%E5%85%AD%E3%80%81%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E8%A6%81%E8%AE%B0%E6%B8%85/" title="特殊类型要记清"><i class="post-icon gg-file-document"></i>特殊类型要记清</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E5%A5%97%E8%B7%AF%E5%9B%9B%E3%80%81%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6%E5%81%9A%E8%AE%A1%E7%AE%97/" title="数组长度做计算"><i class="post-icon gg-file-document"></i>数组长度做计算</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/24/typeScript/%E9%80%86%E5%8F%98%E3%80%81%E5%8D%8F%E5%8F%98%E3%80%81%E5%8F%8C%E5%90%91%E5%8D%8F%E5%8F%98%E3%80%81%E4%B8%8D%E5%8F%98/" title="逆变、协变、双向协变、不变"><i class="post-icon gg-file-document"></i>逆变、协变、双向协变、不变</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/write/">
+          write
+        </a>
+      <span class="tree-list-count">9</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/29/write/%E6%89%8B%E5%86%99apply/" title="手写apply"><i class="post-icon gg-file-document"></i>手写apply</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/16/write/PromiseA+/" title="Promise/A+"><i class="post-icon gg-file-document"></i>Promise/A+</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/29/write/%E6%89%8B%E5%86%99bind/" title="手写bind"><i class="post-icon gg-file-document"></i>手写bind</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/29/write/%E6%89%8B%E5%86%99call/" title="手写call"><i class="post-icon gg-file-document"></i>手写call</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/31/write/%E6%89%8B%E5%86%99curry/" title="手写curry"><i class="post-icon gg-file-document"></i>手写curry</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/29/write/%E6%89%8B%E5%86%99instanceof/" title="手写instanceof"><i class="post-icon gg-file-document"></i>手写instanceof</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/29/write/%E6%89%8B%E5%86%99new/" title="手写new"><i class="post-icon gg-file-document"></i>手写new</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/31/write/%E6%89%8B%E5%86%99%E9%98%B2%E6%8A%96/" title="手写防抖"><i class="post-icon gg-file-document"></i>手写防抖</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/31/write/%E6%89%8B%E5%86%99%E8%8A%82%E6%B5%81/" title="手写节流"><i class="post-icon gg-file-document"></i>手写节流</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E7%AE%97%E6%B3%95/">
+          算法
+        </a>
+      <span class="tree-list-count">79</span><ul class="tree-list-children">
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E7%AE%97%E6%B3%95/LeetCode%E7%83%AD%E9%A2%98HOT100/">
+          LeetCode热题HOT100
+        </a>
+      <span class="tree-list-count">79</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/1/" title="1"><i class="post-icon gg-file-document"></i>1</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/101/" title="101"><i class="post-icon gg-file-document"></i>101</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/104/" title="104"><i class="post-icon gg-file-document"></i>104</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/102/" title="102"><i class="post-icon gg-file-document"></i>102</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/11/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/105/" title="力扣第105题- 从前序与中序遍历序列构造二叉树"><i class="post-icon gg-file-document"></i>力扣第105题- 从前序与中序遍历序列构造二叉树</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/11/" title="11"><i class="post-icon gg-file-document"></i>11</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/11/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/114/" title="力扣第114题-二叉树展开为链表"><i class="post-icon gg-file-document"></i>力扣第114题-二叉树展开为链表</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/121/" title="121"><i class="post-icon gg-file-document"></i>121</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/124/" title="124"><i class="post-icon gg-file-document"></i>124</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/128/" title="128"><i class="post-icon gg-file-document"></i>128</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/136/" title="136"><i class="post-icon gg-file-document"></i>136</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/142/" title="142"><i class="post-icon gg-file-document"></i>142</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/141/" title="141"><i class="post-icon gg-file-document"></i>141</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/17/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/146/" title="力扣第146题-LRU 缓存"><i class="post-icon gg-file-document"></i>力扣第146题-LRU 缓存</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/07/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/148/" title="128"><i class="post-icon gg-file-document"></i>128</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/155/" title="155"><i class="post-icon gg-file-document"></i>155</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/15/" title="15"><i class="post-icon gg-file-document"></i>15</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/160/" title="160"><i class="post-icon gg-file-document"></i>160</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/169/" title="169"><i class="post-icon gg-file-document"></i>169</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/17/" title="17"><i class="post-icon gg-file-document"></i>17</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/19/" title="19"><i class="post-icon gg-file-document"></i>19</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/10/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/198/" title="力扣第198题-打家劫舍"><i class="post-icon gg-file-document"></i>力扣第198题-打家劫舍</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/2/" title="2"><i class="post-icon gg-file-document"></i>2</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/20/" title="20"><i class="post-icon gg-file-document"></i>20</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/09/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/200/" title="由力扣第200题-岛屿数量-引出一些力扣上的岛屿问题"><i class="post-icon gg-file-document"></i>由力扣第200题-岛屿数量-引出一些力扣上的岛屿问题</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/206/" title="206"><i class="post-icon gg-file-document"></i>206</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/07/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/208/" title="215"><i class="post-icon gg-file-document"></i>215</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/215/" title="215"><i class="post-icon gg-file-document"></i>215</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/21/" title="21"><i class="post-icon gg-file-document"></i>21</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/22/" title="22"><i class="post-icon gg-file-document"></i>22</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/14/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/221/" title="力扣第221题-最大正方形"><i class="post-icon gg-file-document"></i>力扣第221题-最大正方形</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/23/" title="23"><i class="post-icon gg-file-document"></i>23</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/226/" title="226"><i class="post-icon gg-file-document"></i>226</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/234/" title="234"><i class="post-icon gg-file-document"></i>234</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/236/" title="236"><i class="post-icon gg-file-document"></i>236</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/238/" title="238"><i class="post-icon gg-file-document"></i>238</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/12/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/240/" title="力扣第240题-搜索二维矩阵 II"><i class="post-icon gg-file-document"></i>力扣第240题-搜索二维矩阵 II</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/18/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/279/" title="力扣第279题-完全平方数"><i class="post-icon gg-file-document"></i>力扣第279题-完全平方数</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/283/" title="283"><i class="post-icon gg-file-document"></i>283</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/08/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/287/" title="力扣287题-寻找重复数"><i class="post-icon gg-file-document"></i>力扣287题-寻找重复数</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/3/" title="3"><i class="post-icon gg-file-document"></i>3</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/12/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/300/" title="力扣300题-最长递增子序列"><i class="post-icon gg-file-document"></i>力扣300题-最长递增子序列</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/31/" title="31"><i class="post-icon gg-file-document"></i>31</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/32/" title="32"><i class="post-icon gg-file-document"></i>32</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/33/" title="33"><i class="post-icon gg-file-document"></i>33</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/10/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/337/" title="力扣第337题-打家劫舍3"><i class="post-icon gg-file-document"></i>力扣第337题-打家劫舍3</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/34/" title="34"><i class="post-icon gg-file-document"></i>34</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/08/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/347/" title="力扣347题-前 K 个高频元素"><i class="post-icon gg-file-document"></i>力扣347题-前 K 个高频元素</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/39/" title="39"><i class="post-icon gg-file-document"></i>39</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/4/" title="4"><i class="post-icon gg-file-document"></i>4</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/09/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/416/" title="力扣第416题-分割等和子集"><i class="post-icon gg-file-document"></i>力扣第416题-分割等和子集</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/12/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/437/" title="力扣437题-路径总和 III"><i class="post-icon gg-file-document"></i>力扣437题-路径总和 III</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/448/" title="448"><i class="post-icon gg-file-document"></i>448</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/46/" title="46"><i class="post-icon gg-file-document"></i>46</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/42/" title="42"><i class="post-icon gg-file-document"></i>42</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/461/" title="461"><i class="post-icon gg-file-document"></i>461</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/48/" title="48"><i class="post-icon gg-file-document"></i>48</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/49/" title="49"><i class="post-icon gg-file-document"></i>49</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/494/" title="494"><i class="post-icon gg-file-document"></i>494</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/5/" title="5"><i class="post-icon gg-file-document"></i>5</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/53/" title="53"><i class="post-icon gg-file-document"></i>53</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/18/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/538/" title="力扣第538题-把二叉搜索树转换为累加树"><i class="post-icon gg-file-document"></i>力扣第538题-把二叉搜索树转换为累加树</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/543/" title="543"><i class="post-icon gg-file-document"></i>543</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/55/" title="55"><i class="post-icon gg-file-document"></i>55</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/56/" title="56"><i class="post-icon gg-file-document"></i>56</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/560/" title="560"><i class="post-icon gg-file-document"></i>560</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/581/" title="581"><i class="post-icon gg-file-document"></i>581</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/617/" title="617"><i class="post-icon gg-file-document"></i>617</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/62/" title="62"><i class="post-icon gg-file-document"></i>62</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/64/" title="64"><i class="post-icon gg-file-document"></i>64</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/647/" title="647"><i class="post-icon gg-file-document"></i>647</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/70/" title="70"><i class="post-icon gg-file-document"></i>70</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/739/" title="739"><i class="post-icon gg-file-document"></i>739</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/75/" title="75"><i class="post-icon gg-file-document"></i>75</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/78/" title="78"><i class="post-icon gg-file-document"></i>78</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/84/" title="84"><i class="post-icon gg-file-document"></i>84</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/94/" title="94"><i class="post-icon gg-file-document"></i>94</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/17/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/96/" title="力扣第96题-不同的二叉搜索树"><i class="post-icon gg-file-document"></i>力扣第96题-不同的二叉搜索树</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/09/21/arithmetic/LeetCode%E7%83%AD%E9%A2%98HOT100/98/" title="98"><i class="post-icon gg-file-document"></i>98</a></li></ul></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E6%A1%86%E6%9E%B6/">
+          框架
+        </a>
+      <span class="tree-list-count">12</span><ul class="tree-list-children">
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E6%A1%86%E6%9E%B6/react/">
+          react
+        </a>
+      <span class="tree-list-count">8</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/React%20Hooks%E7%90%86%E5%BF%B5/" title="React Hooks理念"><i class="post-icon gg-file-document"></i>React Hooks理念</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/React%20hooks%E7%AE%80%E5%8D%95%E6%BA%90%E7%A0%81%E5%AE%9E%E7%8E%B0/" title="React hooks简单源码实现"><i class="post-icon gg-file-document"></i>React hooks简单源码实现</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/04/frame/React/React%20render/" title="React render阶段"><i class="post-icon gg-file-document"></i>React render阶段</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/React.createElement/" title="React.createElement"><i class="post-icon gg-file-document"></i>React.createElement</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/React%E5%AF%BC%E5%AD%A6/" title="React导学"><i class="post-icon gg-file-document"></i>React导学</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/React%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="React性能优化"><i class="post-icon gg-file-document"></i>React性能优化</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/React%E6%BA%90%E7%A0%81/" title="React源码学习"><i class="post-icon gg-file-document"></i>React源码学习</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/03/frame/React/diff%E7%AE%97%E6%B3%95/" title="diff算法"><i class="post-icon gg-file-document"></i>diff算法</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E6%A1%86%E6%9E%B6/Umi3/">
+          Umi3
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/06/frame/Umi3/index/" title="Umi3"><i class="post-icon gg-file-document"></i>Umi3</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E6%A1%86%E6%9E%B6/babel/">
+          babel
+        </a>
+      <span class="tree-list-count">3</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/11/frame/babel/babel%E5%AD%A6%E4%B9%A0/" title="Babel"><i class="post-icon gg-file-document"></i>Babel</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/11/frame/babel/babel%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAjs%E8%A7%A3%E6%9E%90%E5%99%A8/" title="babel实现一个js解析器"><i class="post-icon gg-file-document"></i>babel实现一个js解析器</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/11/frame/babel/babel%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/" title="Babel编译流程"><i class="post-icon gg-file-document"></i>Babel编译流程</a></li></ul></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">
+          面试准备
+        </a>
+      <span class="tree-list-count">51</span><ul class="tree-list-children">
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/CSS/">
+          CSS
+        </a>
+      <span class="tree-list-count">4</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/30/interview/CSS/css%E5%9F%BA%E7%A1%80/" title="CSS常见面试题"><i class="post-icon gg-file-document"></i>CSS常见面试题</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/30/interview/CSS/%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%B5%AE%E5%8A%A8/" title="定位与浮动"><i class="post-icon gg-file-document"></i>定位与浮动</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/30/interview/CSS/%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/" title="应用场景"><i class="post-icon gg-file-document"></i>应用场景</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/30/interview/CSS/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/" title="页面布局"><i class="post-icon gg-file-document"></i>页面布局</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/HTML/">
+          HTML
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/HTML/index/" title="HTML常见面试题"><i class="post-icon gg-file-document"></i>HTML常见面试题</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/React/">
+          React
+        </a>
+      <span class="tree-list-count">3</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/21/interview/React/react%20hooks%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="react hooks性能优化"><i class="post-icon gg-file-document"></i>react hooks性能优化</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/14/interview/React/%E7%BB%84%E4%BB%B6%E5%9F%BA%E7%A1%80/" title="React组件基础"><i class="post-icon gg-file-document"></i>React组件基础</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/14/interview/React/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="React组件通信"><i class="post-icon gg-file-document"></i>React组件通信</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/Vue/">
+          Vue
+        </a>
+      <span class="tree-list-count">3</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/11/interview/Vue/Vue2%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="Vue2组件通信"><i class="post-icon gg-file-document"></i>Vue2组件通信</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/12/interview/Vue/Vue3%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="Vue3组件通信"><i class="post-icon gg-file-document"></i>Vue3组件通信</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/12/interview/Vue/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="Vue生命周期"><i class="post-icon gg-file-document"></i>Vue生命周期</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E5%BC%82%E6%AD%A5/">
+          异步
+        </a>
+      <span class="tree-list-count">3</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/19/interview/%E5%BC%82%E6%AD%A5/Promise%E9%80%9A%E8%BF%87%E4%BB%80%E4%B9%88%E6%B6%88%E7%81%AD%E4%BA%86%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1%EF%BC%9F/" title="Promise通过什么消灭了回调地狱？"><i class="post-icon gg-file-document"></i>Promise通过什么消灭了回调地狱？</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/19/interview/%E5%BC%82%E6%AD%A5/async%E3%80%81await%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="async、await的运行机制"><i class="post-icon gg-file-document"></i>async、await的运行机制</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/19/interview/%E5%BC%82%E6%AD%A5/js%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E6%96%B9%E6%A1%88%E9%83%BD%E6%9C%89%E4%BB%80%E4%B9%88/" title="js异步编程方案都有什么？"><i class="post-icon gg-file-document"></i>js异步编程方案都有什么？</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/js%E5%9F%BA%E7%A1%80/">
+          js基础
+        </a>
+      <span class="tree-list-count">5</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/js%E5%9F%BA%E7%A1%80/0.1+0.2!=0.3/" title="储存"><i class="post-icon gg-file-document"></i>储存</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/js%E5%9F%BA%E7%A1%80/js%E5%A4%A7%E6%95%B0/" title="js大数"><i class="post-icon gg-file-document"></i>js大数</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/js%E5%9F%BA%E7%A1%80/js%E7%B1%BB%E5%9E%8B/" title="js类型"><i class="post-icon gg-file-document"></i>js类型</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/js%E5%9F%BA%E7%A1%80/this/" title="this"><i class="post-icon gg-file-document"></i>this</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/js%E5%9F%BA%E7%A1%80/%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" title="类型判断"><i class="post-icon gg-file-document"></i>类型判断</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/">
+          浏览器基础
+        </a>
+      <span class="tree-list-count">10</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%89%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/" title="为什么要有浏览器缓存？"><i class="post-icon gg-file-document"></i>为什么要有浏览器缓存？</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E4%BA%8B%E4%BB%B6%E4%BB%A3%E7%90%86/" title="事件代理"><i class="post-icon gg-file-document"></i>事件代理</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/" title="事件机制"><i class="post-icon gg-file-document"></i>事件机制</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E5%82%A8%E5%AD%98/" title="储存"><i class="post-icon gg-file-document"></i>储存</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6%E4%BA%86%E4%BB%80%E4%B9%88/" title="同源策略限制了什么?"><i class="post-icon gg-file-document"></i>同源策略限制了什么?</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E5%A6%82%E6%9E%9C%E9%81%BF%E5%85%8D%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/" title="如果避免内存泄漏"><i class="post-icon gg-file-document"></i>如果避免内存泄漏</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E5%BC%BA%E7%BC%93%E5%AD%98%E5%92%8C%E5%8D%8F%E5%95%86%E7%BC%93%E5%AD%98%E7%9A%84%E5%8C%BA%E5%88%AB/" title="强缓存和协商缓存的区别"><i class="post-icon gg-file-document"></i>强缓存和协商缓存的区别</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E7%82%B9%E5%87%BB%E5%88%B7%E6%96%B0%E6%8C%89%E9%92%AE%E6%88%96%E8%80%85%E6%8C%89%20F5%E3%80%81%E6%8C%89%20Ctrl+F5%20%EF%BC%88%E5%BC%BA%E5%88%B6%E5%88%B7%E6%96%B0%EF%BC%89%E3%80%81%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%9B%9E%E8%BD%A6%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F/" title="点击刷新按钮或者按 F5、按 Ctrl+F5 （强制刷新）、地址栏回车有什么区别？"><i class="post-icon gg-file-document"></i>点击刷新按钮或者按 F5、按 Ctrl+F5 （强制刷新）、地址栏回车有什么区别？</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E7%BC%93%E5%AD%98/" title="浏览器缓存流程"><i class="post-icon gg-file-document"></i>浏览器缓存流程</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E8%B7%A8%E5%9F%9F/" title="跨域"><i class="post-icon gg-file-document"></i>跨域</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%AE%97%E6%B3%95/">
+          算法
+        </a>
+      <span class="tree-list-count">1</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/22/interview/%E7%AE%97%E6%B3%95/%E5%B8%B8%E8%80%83%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3%E6%9E%90/" title="常考算法题解析"><i class="post-icon gg-file-document"></i>常考算法题解析</a></li></ul></li>
+      <li class="tree-list-item">
+        <i class="toggle-post-icon gg-folder-add"></i>
+        <a class="tree-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/">
+          网络
+        </a>
+      <span class="tree-list-count">21</span><ul class="tree-list-children"><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/DNS%E5%AE%8C%E6%95%B4%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B/" title="DNS完整查询流程"><i class="post-icon gg-file-document"></i>DNS完整查询流程</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/DNS%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE%E5%90%97/" title="DNS同时使用TCP和UDP协议吗?"><i class="post-icon gg-file-document"></i>DNS同时使用TCP和UDP协议吗?</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/GET%E5%92%8CPOST%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB/" title="GET和POST请求的区别"><i class="post-icon gg-file-document"></i>GET和POST请求的区别</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/GET%E6%96%B9%E6%B3%95URL%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/" title="GET方法URL长度限制的原因"><i class="post-icon gg-file-document"></i>GET方法URL长度限制的原因</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP1.0%E4%B8%8EHTTP1.1%E7%9A%84%E5%8C%BA%E5%88%AB/" title="HTTP1.0与HTTP1.1的区别"><i class="post-icon gg-file-document"></i>HTTP1.0与HTTP1.1的区别</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP1.1%E5%92%8CHTTP2%E7%9A%84%E5%8C%BA%E5%88%AB/" title="HTTP1.1和HTTP2的区别"><i class="post-icon gg-file-document"></i>HTTP1.1和HTTP2的区别</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E5%92%8CHTTPS%E7%9A%84%E5%8C%BA%E5%88%AB/" title="HTTP和HTTPS的区别"><i class="post-icon gg-file-document"></i>HTTP和HTTPS的区别</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E7%8A%B6%E6%80%81%E7%A0%81304%E6%98%AF%E5%A4%9A%E5%A5%BD%E8%BF%98%E6%98%AF%E5%B0%91%E5%A5%BD/" title="HTTP状态码304是多好还是少好"><i class="post-icon gg-file-document"></i>HTTP状态码304是多好还是少好</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E7%9A%84%E4%BC%98%E7%82%B9%E4%B8%8E%E7%BC%BA%E7%82%B9/" title="HTTP的优点与缺点"><i class="post-icon gg-file-document"></i>HTTP的优点与缺点</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E5%92%8C%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87/" title="HTTP请求报文和响应报文"><i class="post-icon gg-file-document"></i>HTTP请求报文和响应报文</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/OPTIONS%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/" title="OPTIONS请求方法的使用场景"><i class="post-icon gg-file-document"></i>OPTIONS请求方法的使用场景</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E5%92%8CUDP%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/" title="TCP和UDP的适用场景"><i class="post-icon gg-file-document"></i>TCP和UDP的适用场景</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E6%9C%BA%E5%88%B6/" title="TCP拥塞控制机制"><i class="post-icon gg-file-document"></i>TCP拥塞控制机制</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/" title="TCP流量控制和死锁"><i class="post-icon gg-file-document"></i>TCP流量控制和死锁</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E7%9A%84%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6/" title="TCP的重传机制"><i class="post-icon gg-file-document"></i>TCP的重传机制</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/UDP%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%AF%E9%9D%A0/" title="UDP为什么不可靠?"><i class="post-icon gg-file-document"></i>UDP为什么不可靠?</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/URL%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86/" title="URL有哪些组成部分"><i class="post-icon gg-file-document"></i>URL有哪些组成部分</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/%E4%BB%80%E4%B9%88%E6%98%AFDNS/" title="什么是DNS？"><i class="post-icon gg-file-document"></i>什么是DNS？</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/24/interview/%E7%BD%91%E7%BB%9C/%E5%B8%B8%E8%A7%81%E7%9A%84HTTP%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95/" title="常见的HTTP请求方法"><i class="post-icon gg-file-document"></i>常见的HTTP请求方法</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/11/23/interview/%E7%BD%91%E7%BB%9C/%E8%BF%AD%E4%BB%A3%E6%9F%A5%E8%AF%A2%E4%B8%8E%E9%80%92%E5%BD%92%E6%9F%A5%E8%AF%A2/" title="迭代查询与递归查询"><i class="post-icon gg-file-document"></i>迭代查询与递归查询</a></li><li class="tree-list-item"><a class="tree-list-post-link" href="/2022/10/31/interview/%E7%BD%91%E7%BB%9C/%E9%94%AE%E5%85%A5%E7%BD%91%E5%9D%80%E6%8C%89%E4%B8%8B%E5%9B%9E%E8%BD%A6%E5%90%8E%E7%A9%B6%E7%AB%9F%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/" title="键入网址按下回车后究竟发生了什么"><i class="post-icon gg-file-document"></i>键入网址按下回车后究竟发生了什么</a></li></ul></li></ul></li></ul>
+        <div id="widget-tree-button">
+          <i class="gg-chevron-right"></i>
+        </div>
+      </div><!-- hexo injector body_end end --><script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>

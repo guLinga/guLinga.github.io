@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  
+  <link href="http://gulinga.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://gulinga.github.io/"/>
+  <updated>2022-12-03T15:04:47.819Z</updated>
+  <id>http://gulinga.github.io/</id>
+  
+  <author>
+    <name>五亿个小铃铛</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>后端接口开发及其生活总结</title>
+    <link href="http://gulinga.github.io/2022/12/03/develop/%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/"/>
+    <id>http://gulinga.github.io/2022/12/03/develop/%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%E5%8F%8A%E5%85%B6%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/</id>
+    <published>2022-12-02T16:00:00.000Z</published>
+    <updated>2022-12-03T15:04:47.819Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="后端接口开发及其生活总结">后端接口开发及其生活总结</h2><h3 id="开发">开发</h3><p>前一段时间开始学习了一下mysql，感觉还好，简单一点的mysql语句还是能写出来的。登录、注册、日记、好友接口都写好了，然后最近也吧样式美化了一下，然后打了一下包，测试了一下，发现在electorn中好像不能使用BrowserRouter，这会导致打包后路由失效。我测试的时候一直不知道axios的url应该设置成什么，最后发现好像直接访问接口的地址就行，不需要代理（开发环境需要代理），也不知道为什么，现在还没有把接口部署，只是前端打包后，接口还是用的本地。不知道部署到服务器上后会不会有问题。目前还不知道怎么部署。</p><h3 id="github-io"><a href="http://github.io">github.io</a></h3><p>最近不知道什么原因，github.io都进不去了，起初我以为我电脑有问题，尝试了各种方法还是不行，问了问别人，结果好像都打不开，最后我去github上找了一下fasegithub，暂时能访问github.io了。</p><h3 id="git-lfs">git lfs</h3><p>今天我准备弄一下官网，然后上传压缩文件到github的时候一直上传不上去，我就打算不用命令上传了，直接在github上选择文件上传，结果显示<code>Yowza, that’s a big file. Try again with a file smaller than 25MB.</code>，然后我看了一下我的压缩文件153MB，我去网上求助，发现了git lfs这个东西。就记录一下git lfs的用法。</p><ol><li class="lvl-3"><p>安装git lfs</p></li></ol><pre class="language-none"><code class="language-none">git lfs install</code></pre><ol start="2"><li class="lvl-3"><p>追踪文件</p></li></ol><pre class="language-none"><code class="language-none">git lfs track &quot;文件名 或 *.后缀名&quot;</code></pre><p>这时候会生成一个<code>.gitattributes</code>配置文件你可以通过<code> git lfs ls-files</code>来查看追踪的文件通过<code> git lfs untrack &quot;文件名 或 *.后缀名&quot;</code>来取消追踪<br>3. push .gitattributes文件按照正常的方法将<code>.gitattributes</code>文件push到仓库<br>4. push 大文件最后将打文件按照正常的方法push上去</p><p>然后就完成了大文件的push。如果clone大量lfs文件的仓库，可以使用<code>git lfs clone 地址</code>来进行clone，可以提高性能。</p><h3 id="官网发布">官网发布</h3><p>最后我还是发布了<code>PENFRIEND-DIARY</code>官网，并把第一版放了上去，因为还没有部署接口，所以肯定使没法运行的。<a href="https://gulinga.github.io/penfriend-diary/">官网地址</a></p><h3 id="知识体系">知识体系</h3><p>前一段时间，差不多一个月，把前端的面试题看了一篇，但是再去看就又忘记了。我已经开始梳理知识体系了，等把所有的东西差不多整理一下就开始背，背的熟练一点，面试的时候也能更流畅一点。</p><h3 id="组员">组员</h3><p>我留个组员，全是计科的，咱也不是对计科的有偏见，就是全是计科的多少优有点离谱。</p><h3 id="回家">回家</h3><p>我准备明天回家的，早上给辅导员报备了，晚上还打了电话问了问，说是学校又有异常的了，明天早上看看，如果没有问题就给我通过。</p><h3 id="力扣">力扣</h3><p>我的力扣估计还差四题就到10%，刷的不多，可能有好多题再写也不一定会。确定了，自己很菜。明天力扣周赛，加油。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://gulinga.github.io/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="live" scheme="http://gulinga.github.io/categories/%E5%BC%80%E5%8F%91/live/"/>
+    
+    
+    <category term="开发笔记" scheme="http://gulinga.github.io/tags/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云文档" scheme="http://gulinga.github.io/tags/%E4%BA%91%E6%96%87%E6%A1%A3/"/>
+    
+    <category term="live" scheme="http://gulinga.github.io/tags/live/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十一月月底总结</title>
+    <link href="http://gulinga.github.io/2022/11/27/live/%E5%8D%81%E4%B8%80%E6%9C%88%E6%9C%88%E5%BA%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://gulinga.github.io/2022/11/27/live/%E5%8D%81%E4%B8%80%E6%9C%88%E6%9C%88%E5%BA%95%E6%80%BB%E7%BB%93/</id>
+    <published>2022-11-26T16:00:00.000Z</published>
+    <updated>2022-11-28T09:12:10.749Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="十一月月底总结">十一月月底总结</h2><h3 id="突如其来的假期">突如其来的假期</h3><p>前几天，一直有小道消息说要放假了，周边的好几个学校都走了好几个了。然后我学校也通知了，前期学校说的是四六级只有一次机会，想考试的只能留校，所以，导致了很多人都想着留校考完四六级再走，可以看出来学校还是想让学生留校的。现在反转了，好多人走不了，学校一直催着走，说现在疫情很严重，可能晚点走就走不了了，不能回家过年。我就在学校待着吧，等啥时候学校真的催我走了我再走。</p><h3 id="生活">生活</h3><p>这一月的生活方面嘛，也没啥特别的。在月中的时候小组举行了一次算法比赛，只拿了第七名。然后中午的时候还是时不时打打球，我感觉我的球技真的有进步。本来计划的是把精选一百到算法刷完的，但是就刷了80道，后面的实在写不动了。就想着开始复习一下，开了个二分查找，前几天写完了拿到了个勋章，感觉自己对二分查找又理解的更深刻了些。哦哦，对了，今天力扣周赛，我写第三题的时候发现了一个问题，在js中如果我用数组的shift方法的时间复杂度是O(n)，而用pop的方法的时间复杂度是O(1)，所以，还是少用队列，多用栈，今天我用队列就超时了，用栈没有超时。小组招新已经悄悄的进行了一段时间了，招进来十个人左右吧，这几天学生会招新完了才让小组宣传，本来五十多人的群一会就超过了一百人。我应该是第一批面试的，我当时面试的一个学妹，挺不错的，自己在私底下学的挺多，有很强的求知欲。学习态度很好。最后也是分给了我组。看了看计网和浏览器基础，感觉挺好玩的。</p><h3 id="开发">开发</h3><p>我的项目开发遇到了点问题，因为我要自己写接口，于是我这一周去学习了一下node.js+MySQL，学了一下SQL命令，学的不算多，但是应该能写一些简单的接口。等我学完就去写接口，然后继续开发项目。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="live" scheme="http://gulinga.github.io/categories/live/"/>
+    
+    
+    <category term="总结" scheme="http://gulinga.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GET和POST请求的区别</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/GET%E5%92%8CPOST%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/GET%E5%92%8CPOST%E8%AF%B7%E6%B1%82%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T07:58:17.851Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="GET和POST请求的区别">GET和POST请求的区别</h2><ol><li class="lvl-3"><p>应用场景<br>GET请求是请求服务器的数据，而POST一般是修改服务器的资源</p></li><li class="lvl-3"><p>是否缓存浏览器会对GET请求进行缓存，但是很少对POST请求缓存</p></li><li class="lvl-3"><p>发送的报文<br>GET请求的请求体是空的，POST请求的请求体是传递的一些参数</p></li><li class="lvl-3"><p>安全性<br>GET请求的参数是拼接到url后面的，但是POST的是在请求体中，请求的URL会保存到历史记录中，如果POST也在url后面拼接参数，会导致不安全</p></li><li class="lvl-3"><p>请求长度<br>GET请求被不同的浏览器限制了长度</p></li><li class="lvl-3"><p>参数类型<br>POST请求支持更多的参数类型</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="GET" scheme="http://gulinga.github.io/tags/GET/"/>
+    
+    <category term="POST" scheme="http://gulinga.github.io/tags/POST/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GET方法URL长度限制的原因</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/GET%E6%96%B9%E6%B3%95URL%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/GET%E6%96%B9%E6%B3%95URL%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6%E7%9A%84%E5%8E%9F%E5%9B%A0/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T07:49:22.580Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="GET方法URL长度限制的原因">GET方法URL长度限制的原因</h2><p>HTTP对GET方法的URL长度没有限制，只是不同浏览器对GET有不同字节的限制。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP1.0与HTTP1.1的区别</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP1.0%E4%B8%8EHTTP1.1%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP1.0%E4%B8%8EHTTP1.1%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T01:50:38.995Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP1-0与HTTP1-1的区别">HTTP1.0与HTTP1.1的区别</h2><ol><li class="lvl-3"><p>连接方面<br>http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，这就使得不同的http请求可以复用同一个tcp连接，避免了非持续性连接每次都需要连接的延时。</p></li><li class="lvl-3"><p>缓存方面在http1.0中是使用的expires和if-Modified-Since来进行缓存的判读，但是expires判读的是服务器上的时间，如果客户端和服务器上的时间不一致，就会导致缓存没有命中的情况。在http1.1中增加了Etag和if-None-Match等来进行缓存的判断。</p></li><li class="lvl-3"><p>资源请求方面在http1.0中，客户端请求一个资源的一部分，服务器会将整个资源都返回，这就造成了宽带的浪费。而在http1.1中，在头部增加了range头域，使得可以请求一个资源的一部分。</p></li><li class="lvl-3"><p>HOST<br>在http1.0中，一个服务器就对应一个固定的ip地址，所以是没有域名解析这个东西的。在http1.1中增加了host，用来自定服务器的域名。</p></li><li class="lvl-3"><p>请求方法在http1.1中增加了一些请求方法，例如：PUST,HEAD,OPTIONS等。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP1.1和HTTP2的区别</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP1.1%E5%92%8CHTTP2%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP1.1%E5%92%8CHTTP2%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T05:40:31.372Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP1-1和HTTP2的区别">HTTP1.1和HTTP2的区别</h2><ol><li class="lvl-3"><p>二进制协议在http1.1中，头部信息是文本，数据可以是文本也可以是二进制，而http2中都必须是二进制，这个概念称为&quot;帧&quot;，分为头部信息帧和数据帧，帧也是http2中多路复用的基础。</p></li><li class="lvl-3"><p>多路复用在http2中，同样复用了tcp连接，但是http2中可以同时接收和发送多个请求和响应，不用按照顺序一一发送。对头阻塞：在http1.1中，报文是一发一收的，在http1.1中没有优先级，只有入队的先后顺序，先入队的先执行，如果对首的请求处理的时间过长，后面的请求需要等待对首的执行完毕才能继续执行，这就是对头阻塞。</p></li><li class="lvl-3"><p>数据流在http2中引入了数据流的概念，并不是按顺序发送的，所以每个数据流都有一个独一无二的编号，用来区分是哪个数据流。</p></li><li class="lvl-3"><p>头部信息压缩在http1.1每次都要附带上所有的信息发送请求，例如cookien，这就使得附带的信息可能有重复的，所以，在http2中会使用gzip或compress进行头部信息的压缩，而且服务器和客户端会共同维护一个头部信息表，所有的字段存入这个表中，生成一个索引值，当下次携带相同的信息的时候只携带索引值。</p></li><li class="lvl-3"><p>服务器推送在http2中，服务器在没有收到请求的情况下，主动向客户端推送资源，减少一些延迟时间，推送的资源只能是静态资源。websocket向服务端请求的及时数据是不推送的。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP和HTTPS的区别</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E5%92%8CHTTPS%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E5%92%8CHTTPS%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T02:31:38.928Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP和HTTPS的区别">HTTP和HTTPS的区别</h2><ol><li class="lvl-3">HTTPS需要CA证书，费用较高，而HTTP不需要</li><li class="lvl-3">HTTP是超文本传输协议，是明文传输，而HTTPS是具有安全性的SSL加密的传输协议</li><li class="lvl-3">HTTP的端口号是80，HTTPS的端口号是443</li><li class="lvl-3">HTTP协议较简单，是无状态的，HTTPS是通过SSL和HTTP构建的可加密传输和身份认证的网络协议，比较安全</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP状态码304是多好还是少好</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E7%8A%B6%E6%80%81%E7%A0%81304%E6%98%AF%E5%A4%9A%E5%A5%BD%E8%BF%98%E6%98%AF%E5%B0%91%E5%A5%BD/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E7%8A%B6%E6%80%81%E7%A0%81304%E6%98%AF%E5%A4%9A%E5%A5%BD%E8%BF%98%E6%98%AF%E5%B0%91%E5%A5%BD/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T03:03:22.248Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP状态码304是多好还是少好">HTTP状态码304是多好还是少好</h2><p>304状态码是浏览器的缓存机制，当没有命中强缓存的时候就会进行协商缓存，如果命中了协商缓存就返回304，直接使用缓存资源，不用再次下载资源，所以304状态码不是错误，而是浏览器的缓存机制所造成的。</p><p>但是304状态码如果较多，搜索引擎会减少对其的抓取次数，网站的访问量可能就会减少，网站的权重下降。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP的优点与缺点</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E7%9A%84%E4%BC%98%E7%82%B9%E4%B8%8E%E7%BC%BA%E7%82%B9/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E7%9A%84%E4%BC%98%E7%82%B9%E4%B8%8E%E7%BC%BA%E7%82%B9/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T07:46:48.471Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP的优点与缺点">HTTP的优点与缺点</h2><p>优点</p><ol><li class="lvl-3"><p>简单快速，因为HTTP在请求的时候只需要发送方法和路径，而且HTTP协议简单，所以简单快速</p></li><li class="lvl-3"><p>无连接，由于HTTP无连接，每次只能处理一个请求，当服务器收到客户端的应道后立即断开连接，节省了传输时间</p></li><li class="lvl-3"><p>无状态，由于HTTP连接无状态，所以如果需要前面的数据的时候，只能重传，但是如果不需要前面的数据，就比较快速了</p></li></ol><p>缺点</p><ol><li class="lvl-3"><p>无状态，HTTP是一个无状态的协议，不会保存用户的任何信息</p></li><li class="lvl-3"><p>明文传输，协议中的报文使用的纯文本的方式传输</p></li><li class="lvl-3"><p>不安全，文明传输不加密，不会进行身份验证，不验证报文的完整性</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OPTIONS请求方法的使用场景</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/OPTIONS%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/OPTIONS%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T03:09:19.743Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="OPTIONS请求方法的使用场景">OPTIONS请求方法的使用场景</h2><ol><li class="lvl-3">查询服务器支持的HTTP请求方法</li><li class="lvl-3">查询访问权限，在进行CROS跨域的时候，就是使用OPTIONS来判断是否对资源有访问权限</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+    <category term="OPTIONS" scheme="http://gulinga.github.io/tags/OPTIONS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>URL有哪些组成部分</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/URL%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/URL%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T07:46:39.787Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="URL有哪些组成部分">URL有哪些组成部分</h2><ol><li class="lvl-3">协议</li><li class="lvl-3">主机</li><li class="lvl-3">端口</li><li class="lvl-3">虚拟目录</li><li class="lvl-3">文件名</li><li class="lvl-3">参数</li><li class="lvl-3">锚点</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="URL" scheme="http://gulinga.github.io/tags/URL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常见的HTTP请求方法</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/%E5%B8%B8%E8%A7%81%E7%9A%84HTTP%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/%E5%B8%B8%E8%A7%81%E7%9A%84HTTP%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T01:30:32.700Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="常见的HTTP请求方法">常见的HTTP请求方法</h2><ol><li class="lvl-3">Get：向服务器请求资源</li><li class="lvl-3">POST：向服务器提交资源，一般会修改服务器上的数据</li><li class="lvl-3">PUT：上传文件，更新信息</li><li class="lvl-3">DELETE：删除服务器上的数据</li><li class="lvl-3">OPTIONS：查询支持的请求方法，用来跨域请求</li><li class="lvl-3">CONNECT：和代理服务器通信时建立通道，在通道上进行TCP通信</li><li class="lvl-3">REACT：回显服务器收到的请求，用来诊断错误</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>同源策略限制了什么?</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6%E4%BA%86%E4%BB%80%E4%B9%88/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6%E4%BA%86%E4%BB%80%E4%B9%88/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T14:33:40.332Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="同源策略限制了什么">同源策略限制了什么?</h2><p>同源策略就是，必须<code>协议</code>、<code>主机</code>、<code>端口</code>都相同才是同源的。</p><p>同源策略限制了以下三点。</p><ol><li class="lvl-3"><p>不同源的网站不能相互的访问和操作DOM。</p></li><li class="lvl-3"><p>不同源的网站中的sessionStorage、localStorage、Cookie、indexDB不互相连通。</p></li><li class="lvl-3"><p>不同源的网站不能使用XMLHTTPRequest来进行数据的请求。</p></li></ol><p>对于<code>script</code>、<code>link</code>、<code>img</code>标签来说，他们是没有跨域限制的。所以这也就使得出现了浏览器安全的问题。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="浏览器基础" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="同源策略" scheme="http://gulinga.github.io/tags/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DNS完整查询流程</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/DNS%E5%AE%8C%E6%95%B4%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/DNS%E5%AE%8C%E6%95%B4%E6%9F%A5%E8%AF%A2%E6%B5%81%E7%A8%8B/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T06:24:03.631Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="DNS完整查询流程">DNS完整查询流程</h2><ol><li class="lvl-3">浏览器查询自己的缓存，如果有对应的ip地址则直接返回，没有则向本地DNS服务器请求。</li><li class="lvl-3">本地DNS服务器查询自己的缓存，如果有对应的ip地址则直接返回，没有则向继续下一步。</li><li class="lvl-3">本地DNS服务器向根域名服务器发送请求，根域名服务器返回对应的顶级域名服务器地址。</li><li class="lvl-3">本地DNS服务器向定义域名服务器发送请求，顶级域名服务器返回对应的权威域名服务器地址。</li><li class="lvl-3">本地DNS服务器向权威域名服务器发送请求，权威域名服务器返回对应的结果。</li><li class="lvl-3">本地DNS服务器缓存该结果。</li><li class="lvl-3">本地DNS将结果返回给浏览器。</li></ol><p>其中DNS服务器在向各个服务器发送请求的时候，各个服务器都会先查询缓存。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="DNS" scheme="http://gulinga.github.io/tags/DNS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DNS同时使用TCP和UDP协议吗?</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/DNS%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE%E5%90%97/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/DNS%E5%90%8C%E6%97%B6%E4%BD%BF%E7%94%A8TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE%E5%90%97/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T06:23:41.020Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="DNS同时使用TCP和UDP协议吗">DNS同时使用TCP和UDP协议吗?</h2><p>DNS服务器占用的53端口，同时使用TCP和UDP协议。</p><p>在进行区域传输的时候使用DNS协议，在进行域名解析的时候使用UDP协议。</p><ol><li class="lvl-3"><p>使用TCP协议辅域名服务器会定期的向主域名服务器查询数据是否变动，如果变动就是进行一次区域传输，来同步数据，此时的区域传输就是使用的TCP协议。<br>TCP是一种可靠的连接，确保了数据的准确性。</p></li><li class="lvl-3"><p>使用UDP协议客户端向DNS服务端发送查询域名，服务端返回的信息一般不会超过512字节，所以使用UDP协议，UDP协议不需要三次握手，所以服务器压力更小，响应快。理论上客户端也可以指定DNS服务器查询域名的时候使用TCP，但是实际上有的DNS服务器已经配置了仅支持UDP查询。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="DNS" scheme="http://gulinga.github.io/tags/DNS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP请求报文和响应报文</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E5%92%8C%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87%E5%92%8C%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-24T02:52:16.272Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP请求报文和响应报文">HTTP请求报文和响应报文</h2><h3 id="请求报文">请求报文</h3><ol><li class="lvl-3"><p>请求行：由<code>请求方法</code>空格<code>url</code>空格<code>协议版本</code>回车符 换行符组成。例如：GET /index.html HTTP/1.1</p></li><li class="lvl-3"><p>请求头：由键值对组成，每行一对</p></li><li class="lvl-3"><p>空行</p></li><li class="lvl-3"><p>请求体：POST、PUT等请求方法携带的数据</p></li></ol><h3 id="响应报文">响应报文</h3><ol><li class="lvl-3"><p>响应行：由<code>协议版本</code>空格<code>状态码</code>空格<code>状态码的原因短语</code>组成。例如：HTTP/1.1 200 ok</p></li><li class="lvl-3"><p>响应头：也是由键值对组成，每行一对</p></li><li class="lvl-3"><p>空行</p></li><li class="lvl-3"><p>响应体：服务器响应的数据</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TCP和UDP的适用场景</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E5%92%8CUDP%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E5%92%8CUDP%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T06:51:42.213Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP和UDP的适用场景">TCP和UDP的适用场景</h2><ol><li class="lvl-3"><p>TCP是一种可靠的连接，但是建立连接之前需要&quot;三次握手&quot;，所以TCP适用于文件的传输和邮箱接收，虽然速度较慢，但是数据准确。</p></li><li class="lvl-3"><p>UDP面向与无连接，不可靠，适用于即时通讯，例如聊天软件，会议软件，广播，偶尔出现丢包也不是太大的问题，而且也可以不需要重发机制。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="TCP" scheme="http://gulinga.github.io/tags/TCP/"/>
+    
+    <category term="UDP" scheme="http://gulinga.github.io/tags/UDP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TCP拥塞控制机制</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E6%9C%BA%E5%88%B6/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E6%9C%BA%E5%88%B6/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T08:33:50.073Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP拥塞控制机制">TCP拥塞控制机制</h2><ol><li class="lvl-3"><p>慢开始</p></li><li class="lvl-3"><p>拥塞避免</p></li><li class="lvl-3"><p>快速重传</p></li><li class="lvl-3"><p>快速恢复</p></li><li class="lvl-3"><p>慢开始慢开始，会设置一个cnwd（拥塞窗口的值），还会设置一个慢开始门限（ssthresh）。判断cnwd和ssthresh的关系，执行不同的算法。</p></li></ol><p>cnwd &lt; ssthresh，执行慢开始算法，每次数据发送成功后将cnwd的值乘2<br>cnwd == ssthresh，既可以执行慢开始算法，也可以执行拥塞避免算法<br>cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cnwd的值加1</p><ol start="2"><li class="lvl-3"><p>拥塞避免无论是在慢开始阶段还是拥塞避免阶段，只要发送方判断网络拥塞了，就会将门限值（ssthresh）变成发送窗口值的一半，把cnwd（拥塞窗口）的值变成1，重新执行慢开始算法。</p></li></ol><p><img src="/images/TCP/1.png" alt=""></p><ol start="3"><li class="lvl-3"><p>快速重传当接收方接收到失序的报文后就立刻向发送方发送重复确认，当发送方接收到三次重复确认就会重传对方未接收到的报文，而不用等待定时器结束后才重传。</p></li><li class="lvl-3"><p>快速恢复当发送方接收到三次重复确认后，会将门限值（ssthres）设置成发送窗口值的一半，将cnwd设置成ssthres的大小，然后执行拥塞避免算法。</p></li></ol><p><img src="/images/TCP/2.png" alt=""></p><h2 id="参考资料">参考资料</h2><p>[1]<a href="https://juejin.cn/post/6908327746473033741">「2021」高频前端面试题汇总之计算机网络篇</a><br>[2]<a href="https://www.bilibili.com/video/BV1L4411a7RN">计算机网络第35讲-TCP的拥塞控制（计算机网络简明教程及仿真实验）</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="TCP" scheme="http://gulinga.github.io/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TCP流量控制和死锁</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T11:49:36.885Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP流量控制和死锁">TCP流量控制和死锁</h2><ol><li class="lvl-3">TCP中采用滑动窗口来进行流量控制。</li><li class="lvl-3">发送方和接收方都有一个缓存区。</li><li class="lvl-3">如果接收方读取的速度与数据到达的速度一样快，那么接收方就会向发送方发送一个正的窗口通知。</li><li class="lvl-3">如果接收方读取的速度慢于数据到达的速度，接收的数据会填满缓存区，这时接收方会发送一个零的窗口通知，将发送方的窗口设置成零，这是发送方的窗口将不能传输数据。</li><li class="lvl-3">发送方等待接收方发送一个正的窗口通知后再次传输数据。</li><li class="lvl-3">如果在接收方向发送方发送正的窗口通知的时候，通知丢失了。这是就会产生发送方等待接收方的正的窗口通知，而接收方等待发送方的数据，这就形成了死锁。</li><li class="lvl-3">在发送方接收到接收方发送的零窗口的通知的时候，就会启用持续计时器，如果计时器超时就会发送一个探测报文，只有1字节，去探测接收方的窗口是否是零。如果是零，那么就重新启用计时器，如果不是零就接触了死锁的局面。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="TCP" scheme="http://gulinga.github.io/tags/TCP/"/>
+    
+    <category term="死锁" scheme="http://gulinga.github.io/tags/%E6%AD%BB%E9%94%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TCP的重传机制</title>
+    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E7%9A%84%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6/"/>
+    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E7%9A%84%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6/</id>
+    <published>2022-11-22T16:00:00.000Z</published>
+    <updated>2022-11-23T07:01:27.712Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP的重传机制">TCP的重传机制</h2><p>TCP的下层网络可能会出现，重复，丢失，失序等情况，TCP会重传它自己认为丢失的包，TCP的重传是根据两方面来进行的，一个是时间，一个是确认信息。</p><p>TCP在发送一个数据之后就会开启一个定时器，如果在这个时间内，没有收到ACK的确认报文，则重传数据，如果多次重传都没有成功则放弃重传，并返回一个复位信号。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="TCP" scheme="http://gulinga.github.io/tags/TCP/"/>
+    
+  </entry>
+  
+</feed>

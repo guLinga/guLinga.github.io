@@ -6,7 +6,7 @@
   <link href="http://gulinga.github.io/atom.xml" rel="self"/>
   
   <link href="http://gulinga.github.io/"/>
-  <updated>2022-12-03T15:04:47.819Z</updated>
+  <updated>2022-12-18T11:12:21.499Z</updated>
   <id>http://gulinga.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>十二月最后一段时间的规划</title>
+    <link href="http://gulinga.github.io/2022/12/18/live/%E5%8D%81%E4%BA%8C%E6%9C%88%E6%9C%80%E5%90%8E%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9A%84%E8%A7%84%E5%88%92/"/>
+    <id>http://gulinga.github.io/2022/12/18/live/%E5%8D%81%E4%BA%8C%E6%9C%88%E6%9C%80%E5%90%8E%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9A%84%E8%A7%84%E5%88%92/</id>
+    <published>2022-12-17T16:00:00.000Z</published>
+    <updated>2022-12-18T11:12:21.499Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="十二月最后一段时间的规划">十二月最后一段时间的规划</h2><h3 id="关于项目">关于项目</h3><p>我的那个<code>penfriend-diary</code>已经完成了本地markdown，日记，聊天的功能了。我要规划一下接下来怎么完善项目。</p><ul class="lvl-0"><li class="lvl-2"><p>完善项目样式和一些小细节。</p></li><li class="lvl-2"><p>增加云文档的功能。保留本地文档功能。</p></li><li class="lvl-2"><p>总结一下整个项目的功能和难点，等面试的时候说。</p></li><li class="lvl-2"><p>自己尝试使用webpack和babel优化自己的项目。</p></li><li class="lvl-2"><p>以前写的代码好多可以使用memo、useMemo、useCallback优化的地方都没有优化，以后要注意了。</p></li><li class="lvl-2"><p>尝试使用前端可视化来优化项目。</p></li><li class="lvl-2"><p>聊天小游戏。</p></li><li class="lvl-2"><p>了解react 3D。</p></li></ul><h3 id="算法">算法</h3><p>我最近算法没有怎么练，就今天leetcode周赛写了一下，这一周的有点难，我就写出来两题还能排1300多名，主要是这次思路挺不错，做的比较快。</p><p>以后我要开始写算法了，每天写个四到五题，emmm，是有点多，但是20多天前我开了一个leetcode的学习计划，20多天的题都没写了，只能每天写四到五题了，还好吧，好多题都是写过类似的。</p><p>这次算法不仅要写好，也要锻炼好算法思维和特殊情况思维。</p><h3 id="前端复习">前端复习</h3><p>我树立了一下我的知识体系，有的好多都是知道但是说不明白，所以我感觉还是要背背，但是我又怕忘记，真实瞻前顾后的，不管了，背吧，要不等以后面试的时候啥都说不出来。</p><p>但是背东西是真的枯燥，一天真的不能背的太多，所以现在要做的就是每天背一点，然后主要抓住项目，使用新的东西来优化项目。</p><h3 id="了解前端发展">了解前端发展</h3><p>要多多了解前端目前的发展形式。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="live" scheme="http://gulinga.github.io/categories/live/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>坎坎坷坷的一周</title>
+    <link href="http://gulinga.github.io/2022/12/10/develop/%E5%9D%8E%E5%9D%8E%E5%9D%B7%E5%9D%B7%E7%9A%84%E4%B8%80%E5%91%A8/"/>
+    <id>http://gulinga.github.io/2022/12/10/develop/%E5%9D%8E%E5%9D%8E%E5%9D%B7%E5%9D%B7%E7%9A%84%E4%B8%80%E5%91%A8/</id>
+    <published>2022-12-09T16:00:00.000Z</published>
+    <updated>2022-12-18T10:40:08.146Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="坎坎坷坷的一周">坎坎坷坷的一周</h2><h3 id="本地mysql80报错">本地mysql80报错</h3><p>一天早上我常规的启动node服务，结果就报错了，我弄了半天发现mysql服务开不开了，数据库连接不上，在网上找了好长时间都没结果，最后我吧mysql删除了重新安装。本以为以前的mysql查询语句和表都没了，结果查询语句还在，还好，本来表中的数据就没多少。</p><h3 id="mysql-node-js部署">mysql+node.js部署</h3><p>我弄了好长时间的linux服务器安装mysql，找了好几篇文章，跟着做都报错，然后就没弄了放了一放，今天下午就想着再弄一弄，不经意间看到了一篇文章，结果竟然弄好了，然后在vscode上安装了一下SSH TABGETS插件，使用pm2把linux服务器上的node.js运行了一下，本来我还以为要使用pkg打包一下呢，我都给打包好了，结果发现了pm2好像更好用一点就用来pm2，然后成功了。</p><h3 id="项目">项目</h3><p>我的项目的聊天模块基本成型了，今天将后端接口部署了一下，前端也打包成功了，对了今天还是我前端仓库提交量超过100的一天。</p><h3 id="聊天">聊天</h3><p>我这里说一下我的聊天功能的基本实现流程，通过@reduxjs/toolkit库中的createAsyncThunk处理异步请求，来储存笔友列表，当点击不同的笔友的时候判断是否已经请求过聊天记录，如果没有则通过createAsyncThunk来处理聊天记录的异步请求，发送消息的时候先请求发送信息的接口，如果成功则通过socket.io想服务器发送消息，然后另一个好友通过socket.io接收消息，发送过socket.io后想redux的state中添加消息。</p><h3 id="论文">论文</h3><p>好烦呀，我的论文还没写完，明天写吧，下周就要交了。</p><h3 id="专业课">专业课</h3><p>快要考试了，我专业课是一点不会，靠别人了，我兄弟说了，只要他有答案都会给我的。</p><h3 id="guithub的pages服务">guithub的pages服务</h3><p>不知道为什么，最近github的pages服务的静态页面都打不开了，我用了fastgithub才打开了，希望哪位大佬可以给我解惑一下，我实在弄不明白为什么，我ping了一下，ping的地址也没问题。但是就是显示**“页面可能存在问题，或者已永久移动到新的网址。”**</p><h3 id="复习">复习</h3><p>本来我的知识体系都总结好了，说是要背的，但是总是懒得背，明天就让我哥监督我来背。</p><h3 id="作息">作息</h3><p>最近总是起不来，闹钟响了就被我关了，起不到叫醒我的作用，还好，有我姐叫我起床。</p><h3 id="看书">看书</h3><p>我本来想买卢思浩的书来着，但是不知道为啥，我还没买，就忽然多了一本他的书《你也走了很远的路吧》，明天就开始看，哈哈。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="开发" scheme="http://gulinga.github.io/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="开发笔记" scheme="http://gulinga.github.io/tags/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="云文档" scheme="http://gulinga.github.io/tags/%E4%BA%91%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>后端接口开发及其生活总结</title>
@@ -502,64 +550,6 @@
     <updated>2022-11-23T08:33:50.073Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP拥塞控制机制">TCP拥塞控制机制</h2><ol><li class="lvl-3"><p>慢开始</p></li><li class="lvl-3"><p>拥塞避免</p></li><li class="lvl-3"><p>快速重传</p></li><li class="lvl-3"><p>快速恢复</p></li><li class="lvl-3"><p>慢开始慢开始，会设置一个cnwd（拥塞窗口的值），还会设置一个慢开始门限（ssthresh）。判断cnwd和ssthresh的关系，执行不同的算法。</p></li></ol><p>cnwd &lt; ssthresh，执行慢开始算法，每次数据发送成功后将cnwd的值乘2<br>cnwd == ssthresh，既可以执行慢开始算法，也可以执行拥塞避免算法<br>cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cnwd的值加1</p><ol start="2"><li class="lvl-3"><p>拥塞避免无论是在慢开始阶段还是拥塞避免阶段，只要发送方判断网络拥塞了，就会将门限值（ssthresh）变成发送窗口值的一半，把cnwd（拥塞窗口）的值变成1，重新执行慢开始算法。</p></li></ol><p><img src="/images/TCP/1.png" alt=""></p><ol start="3"><li class="lvl-3"><p>快速重传当接收方接收到失序的报文后就立刻向发送方发送重复确认，当发送方接收到三次重复确认就会重传对方未接收到的报文，而不用等待定时器结束后才重传。</p></li><li class="lvl-3"><p>快速恢复当发送方接收到三次重复确认后，会将门限值（ssthres）设置成发送窗口值的一半，将cnwd设置成ssthres的大小，然后执行拥塞避免算法。</p></li></ol><p><img src="/images/TCP/2.png" alt=""></p><h2 id="参考资料">参考资料</h2><p>[1]<a href="https://juejin.cn/post/6908327746473033741">「2021」高频前端面试题汇总之计算机网络篇</a><br>[2]<a href="https://www.bilibili.com/video/BV1L4411a7RN">计算机网络第35讲-TCP的拥塞控制（计算机网络简明教程及仿真实验）</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
-      
-    
-    
-    
-    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
-    
-    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="TCP" scheme="http://gulinga.github.io/tags/TCP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TCP流量控制和死锁</title>
-    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/"/>
-    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/</id>
-    <published>2022-11-22T16:00:00.000Z</published>
-    <updated>2022-11-23T11:49:36.885Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP流量控制和死锁">TCP流量控制和死锁</h2><ol><li class="lvl-3">TCP中采用滑动窗口来进行流量控制。</li><li class="lvl-3">发送方和接收方都有一个缓存区。</li><li class="lvl-3">如果接收方读取的速度与数据到达的速度一样快，那么接收方就会向发送方发送一个正的窗口通知。</li><li class="lvl-3">如果接收方读取的速度慢于数据到达的速度，接收的数据会填满缓存区，这时接收方会发送一个零的窗口通知，将发送方的窗口设置成零，这是发送方的窗口将不能传输数据。</li><li class="lvl-3">发送方等待接收方发送一个正的窗口通知后再次传输数据。</li><li class="lvl-3">如果在接收方向发送方发送正的窗口通知的时候，通知丢失了。这是就会产生发送方等待接收方的正的窗口通知，而接收方等待发送方的数据，这就形成了死锁。</li><li class="lvl-3">在发送方接收到接收方发送的零窗口的通知的时候，就会启用持续计时器，如果计时器超时就会发送一个探测报文，只有1字节，去探测接收方的窗口是否是零。如果是零，那么就重新启用计时器，如果不是零就接触了死锁的局面。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
-      
-    
-    
-    
-    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
-    
-    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="TCP" scheme="http://gulinga.github.io/tags/TCP/"/>
-    
-    <category term="死锁" scheme="http://gulinga.github.io/tags/%E6%AD%BB%E9%94%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TCP的重传机制</title>
-    <link href="http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E7%9A%84%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6/"/>
-    <id>http://gulinga.github.io/2022/11/23/interview/%E7%BD%91%E7%BB%9C/TCP%E7%9A%84%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6/</id>
-    <published>2022-11-22T16:00:00.000Z</published>
-    <updated>2022-11-23T07:01:27.712Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="TCP的重传机制">TCP的重传机制</h2><p>TCP的下层网络可能会出现，重复，丢失，失序等情况，TCP会重传它自己认为丢失的包，TCP的重传是根据两方面来进行的，一个是时间，一个是确认信息。</p><p>TCP在发送一个数据之后就会开启一个定时器，如果在这个时间内，没有收到ACK的确认报文，则重传数据，如果多次重传都没有成功则放弃重传，并返回一个复位信号。</p>]]></content>
     
     
       

@@ -15697,4 +15697,83 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <tag>live</tag>
       </tags>
   </entry>
+  <entry>
+    <title>坎坎坷坷的一周</title>
+    <url>/2022/12/10/develop/%E5%9D%8E%E5%9D%8E%E5%9D%B7%E5%9D%B7%E7%9A%84%E4%B8%80%E5%91%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="坎坎坷坷的一周">坎坎坷坷的一周</h2>
+<h3 id="本地mysql80报错">本地mysql80报错</h3>
+<p>一天早上我常规的启动node服务，结果就报错了，我弄了半天发现mysql服务开不开了，数据库连接不上，在网上找了好长时间都没结果，最后我吧mysql删除了重新安装。本以为以前的mysql查询语句和表都没了，结果查询语句还在，还好，本来表中的数据就没多少。</p>
+<h3 id="mysql-node-js部署">mysql+node.js部署</h3>
+<p>我弄了好长时间的linux服务器安装mysql，找了好几篇文章，跟着做都报错，然后就没弄了放了一放，今天下午就想着再弄一弄，不经意间看到了一篇文章，结果竟然弄好了，然后在vscode上安装了一下SSH TABGETS插件，使用pm2把linux服务器上的node.js运行了一下，本来我还以为要使用pkg打包一下呢，我都给打包好了，结果发现了pm2好像更好用一点就用来pm2，然后成功了。</p>
+<h3 id="项目">项目</h3>
+<p>我的项目的聊天模块基本成型了，今天将后端接口部署了一下，前端也打包成功了，对了今天还是我前端仓库提交量超过100的一天。</p>
+<h3 id="聊天">聊天</h3>
+<p>我这里说一下我的聊天功能的基本实现流程，通过@reduxjs/toolkit库中的createAsyncThunk处理异步请求，来储存笔友列表，当点击不同的笔友的时候判断是否已经请求过聊天记录，如果没有则通过createAsyncThunk来处理聊天记录的异步请求，发送消息的时候先请求发送信息的接口，如果成功则通过socket.io想服务器发送消息，然后另一个好友通过socket.io接收消息，发送过socket.io后想redux的state中添加消息。</p>
+<h3 id="论文">论文</h3>
+<p>好烦呀，我的论文还没写完，明天写吧，下周就要交了。</p>
+<h3 id="专业课">专业课</h3>
+<p>快要考试了，我专业课是一点不会，靠别人了，我兄弟说了，只要他有答案都会给我的。</p>
+<h3 id="guithub的pages服务">guithub的pages服务</h3>
+<p>不知道为什么，最近github的pages服务的静态页面都打不开了，我用了fastgithub才打开了，希望哪位大佬可以给我解惑一下，我实在弄不明白为什么，我ping了一下，ping的地址也没问题。但是就是显示**“页面可能存在问题，或者已永久移动到新的网址。”**</p>
+<h3 id="复习">复习</h3>
+<p>本来我的知识体系都总结好了，说是要背的，但是总是懒得背，明天就让我哥监督我来背。</p>
+<h3 id="作息">作息</h3>
+<p>最近总是起不来，闹钟响了就被我关了，起不到叫醒我的作用，还好，有我姐叫我起床。</p>
+<h3 id="看书">看书</h3>
+<p>我本来想买卢思浩的书来着，但是不知道为啥，我还没买，就忽然多了一本他的书《你也走了很远的路吧》，明天就开始看，哈哈。</p>
+]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>开发笔记</tag>
+        <tag>云文档</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十二月最后一段时间的规划</title>
+    <url>/2022/12/18/live/%E5%8D%81%E4%BA%8C%E6%9C%88%E6%9C%80%E5%90%8E%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9A%84%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="十二月最后一段时间的规划">十二月最后一段时间的规划</h2>
+<h3 id="关于项目">关于项目</h3>
+<p>我的那个<code>penfriend-diary</code>已经完成了本地markdown，日记，聊天的功能了。我要规划一下接下来怎么完善项目。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>完善项目样式和一些小细节。</p>
+</li>
+<li class="lvl-2">
+<p>增加云文档的功能。保留本地文档功能。</p>
+</li>
+<li class="lvl-2">
+<p>总结一下整个项目的功能和难点，等面试的时候说。</p>
+</li>
+<li class="lvl-2">
+<p>自己尝试使用webpack和babel优化自己的项目。</p>
+</li>
+<li class="lvl-2">
+<p>以前写的代码好多可以使用memo、useMemo、useCallback优化的地方都没有优化，以后要注意了。</p>
+</li>
+<li class="lvl-2">
+<p>尝试使用前端可视化来优化项目。</p>
+</li>
+<li class="lvl-2">
+<p>聊天小游戏。</p>
+</li>
+<li class="lvl-2">
+<p>了解react 3D。</p>
+</li>
+</ul>
+<h3 id="算法">算法</h3>
+<p>我最近算法没有怎么练，就今天leetcode周赛写了一下，这一周的有点难，我就写出来两题还能排1300多名，主要是这次思路挺不错，做的比较快。</p>
+<p>以后我要开始写算法了，每天写个四到五题，emmm，是有点多，但是20多天前我开了一个leetcode的学习计划，20多天的题都没写了，只能每天写四到五题了，还好吧，好多题都是写过类似的。</p>
+<p>这次算法不仅要写好，也要锻炼好算法思维和特殊情况思维。</p>
+<h3 id="前端复习">前端复习</h3>
+<p>我树立了一下我的知识体系，有的好多都是知道但是说不明白，所以我感觉还是要背背，但是我又怕忘记，真实瞻前顾后的，不管了，背吧，要不等以后面试的时候啥都说不出来。</p>
+<p>但是背东西是真的枯燥，一天真的不能背的太多，所以现在要做的就是每天背一点，然后主要抓住项目，使用新的东西来优化项目。</p>
+<h3 id="了解前端发展">了解前端发展</h3>
+<p>要多多了解前端目前的发展形式。</p>
+]]></content>
+      <categories>
+        <category>live</category>
+      </categories>
+  </entry>
 </search>

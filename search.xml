@@ -7654,6 +7654,7 @@ React中的虚拟DOM中的属性：</p>
     <title>React数据管理</title>
     <url>/2023/03/06/frame/React/React%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="React数据管理">React数据管理</h2>
+<p><a href="https://github.com/guLinga/React-data-administration">代码仓库</a></p>
 <h3 id="React批量更新">React批量更新</h3>
 <p>React中的批量更新就是将多次更新合并处理，最终只渲染一次，来获得更好的性能。</p>
 <h4 id="React18版本之前的批量更新">React18版本之前的批量更新</h4>

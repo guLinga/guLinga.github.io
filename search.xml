@@ -13,9 +13,6 @@
 <h3 id="4">4</h3>
 <p>economy、subject、patient、major、security、global、environment、writing、derive、employee、economic、community、access、affect、survey</p>
 ]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
   </entry>
   <entry>
     <title>常用词根</title>
@@ -85,9 +82,6 @@
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
   </entry>
   <entry>
     <title>词根</title>
@@ -296,9 +290,6 @@
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>English</category>
-      </categories>
   </entry>
   <entry>
     <title>云文档开发笔记-录制音频</title>
@@ -680,13 +671,6 @@ webAudio解析数据--AudioContext-->采集数据
 <p>[1]<a href="https://juejin.cn/post/6844903953381982222">前端webrtc基础 —— 录音篇</a><br>
 [2]<a href="https://juejin.cn/post/6844903668588740621">如何实现前端录音功能</a></p>
 ]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>开发笔记</tag>
-        <tag>云文档</tag>
-      </tags>
   </entry>
   <entry>
     <title>云文档开发笔记-本地批量删除文件的BUG和路径修改BUG</title>
@@ -698,14 +682,6 @@ webAudio解析数据--AudioContext-->采集数据
 <p>所以我接下来的任务就是先把文件名的对象给修改一下。看看可不可以。</p>
 <p>至于监听修改路径那个bug，我先看看改好文件名对象后能不能解决，如果不行我再另想办法。</p>
 ]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>开发笔记</tag>
-        <tag>云文档</tag>
-        <tag>BUG</tag>
-      </tags>
   </entry>
   <entry>
     <title>云文档开发笔记-第一周总结</title>
@@ -785,13 +761,6 @@ webAudio解析数据--AudioContext-->采集数据
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>开发笔记</tag>
-        <tag>云文档</tag>
-      </tags>
   </entry>
   <entry>
     <title>Commonjs和EsModule</title>
@@ -995,9 +964,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>JS事件循环机制event loop</title>
@@ -1167,9 +1133,6 @@ EventQueue-微-->检查任务队列,先微后宏,有事件回调,入主线程执
 </tbody>
 </table>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>闭包</title>
@@ -1209,9 +1172,6 @@ EventQueue-微-->检查任务队列,先微后宏,有事件回调,入主线程执
 3.</p>
 <h3 id="防御">防御</h3>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>css优先级计算规则</title>
@@ -1331,9 +1291,6 @@ A、B、C、D可简写为(0,1,1,3)</p>
 <h3 id="问题">问题</h3>
 <p><strong>这里有一个小问题，我在尝试的时候发现给内联样式加上!important也无法覆盖伪类的样式。</strong></p>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>Flex布局</title>
@@ -1418,9 +1375,6 @@ A、B、C、D可简写为(0,1,1,3)</p>
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>闭包</title>
@@ -2096,9 +2050,6 @@ console.log(cur.current)</code></pre>
    <span class="token keyword">const</span> rid <span class="token operator">=</span> <span class="token function">useId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 生成稳定的 id </span>
    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span>rid<span class="token punctuation">&#125;</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>js深拷贝和浅拷贝</title>
@@ -2339,9 +2290,6 @@ Array.slice()只深拷贝第一层。所以说是浅拷贝。</p>
 <p>[2]<a href="https://juejin.cn/post/6844903929705136141">如何写出一个惊艳面试官的深拷贝?</a></p>
 <p>[3]<a href="https://www.zhangbaolin.cn/docs/js/%E6%89%8B%E5%86%99/%E6%B7%B1%E6%8B%B7%E8%B4%9D/">深拷贝</a></p>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>遍历对象的方法</title>
@@ -2444,9 +2392,6 @@ hasOwnProperty是判断对象自身是否有指定的属性，也就是指定的
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">key</span><span class="token operator">:</span> prop<span class="token punctuation">,</span> <span class="token literal-property property">value</span><span class="token operator">:</span> obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">pair</span><span class="token operator">:</span> <span class="token punctuation">[</span>prop<span class="token punctuation">,</span> obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>Redux、Redux Toolkit</title>
@@ -2955,9 +2900,6 @@ store<span class="token punctuation">.</span><span class="token function">dispat
 <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> postAdded <span class="token punctuation">&#125;</span> <span class="token operator">=</span> postsSlice<span class="token punctuation">.</span>actions
 <span class="token keyword">export</span> <span class="token keyword">default</span> postsSlice<span class="token punctuation">.</span>reducer</code></pre>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>js执行上下文</title>
@@ -3097,9 +3039,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//1</span></code></pre>
 <p>因为函数和var重名，函数变量提升优先于var所以第一次输出a返回函数。第二次输出a由于var变量提升在var之后，所以，var在函数之后将函数覆盖，最后输出1。</p>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>数组扁平化</title>
@@ -3118,9 +3057,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">let</span> arr1 <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'['</span><span class="token operator">+</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(\[|\])</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">']'</span><span class="token punctuation">)</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//[ 1, 2, 3, 21 ]</span></code></pre>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>深浅拷贝（讲课版）</title>
@@ -3453,9 +3389,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>JavaScript设计模式</title>
@@ -4473,9 +4406,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator3<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iterator3<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>闭包</title>
@@ -4522,9 +4452,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="/images/%E9%97%AD%E5%8C%85/2.png" alt="内存泄漏监听"><br>
 上图可以看出堆内存中的占用一直存在。</p>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-      </categories>
   </entry>
   <entry>
     <title>会议</title>
@@ -4623,9 +4550,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
   </entry>
   <entry>
     <title>十一月学习计划</title>
@@ -4654,12 +4578,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="维护">维护</h3>
 <p>我要开始维护自己的账号了，比如<a href="https://blog.csdn.net/qq_51965698">CSDN</a>、<a href="https://github.com/guLinga">Github</a>、<a href="https://juejin.cn/user/3316588148427885/posts">掘金</a>、<a href="https://gulinga.github.io/">博客</a>。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>学习计划</tag>
-      </tags>
   </entry>
   <entry>
     <title>十一月月底总结</title>
@@ -4672,12 +4590,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="开发">开发</h3>
 <p>我的项目开发遇到了点问题，因为我要自己写接口，于是我这一周去学习了一下node.js+MySQL，学了一下SQL命令，学的不算多，但是应该能写一些简单的接口。等我学完就去写接口，然后继续开发项目。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-      </tags>
   </entry>
   <entry>
     <title>十月学习计划</title>
@@ -4714,12 +4626,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="远离诱惑">远离诱惑</h3>
 <p>最近寝室又封了，小组也不让进，导致我在学习的时候总是想玩。真正聪明的人不是直面诱惑而是远离，所以我要做一个聪明人（好气呀，好多人说俺憨憨的），我要远离诱惑，不能相信自己的控制能力。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>学习计划</tag>
-      </tags>
   </entry>
   <entry>
     <title>十月学习计划中的感悟</title>
@@ -4736,9 +4642,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="接下来对学习计划的调整">接下来对学习计划的调整</h3>
 <p><code>基础、算法、网络</code>三座大山我目前开始了两座，网络还没开始学习，学长学姐们一致强调要好好学习<code>计算机网络</code>这门专业课，但是我听课的时候感觉好枯燥，都是些书面知识，听了也不一定能记得住。我目前还是要每天好好弄基础和算法，然后<strong>学习React源码，这次学习我不手写React了，我要明白它的设计思路和原理，这样在开发中需要问题的时候可以更快的解决了。<strong>然后主要学习一下</strong>React和Vue的用法</strong>，看看还有什么用法是自己不知道的。不要把框架想的太高大上了，他只是一个前端开发的工具。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
   </entry>
   <entry>
     <title>对前端的思考</title>
@@ -4769,9 +4672,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
   </entry>
   <entry>
     <title>校企合作</title>
@@ -4803,12 +4703,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>校企合作</tag>
-      </tags>
   </entry>
   <entry>
     <title>校企合作总结</title>
@@ -4828,12 +4722,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="四、校企合作的总结">四、校企合作的总结</h3>
 <p>在校企合作的过程中，我只学到了使用Apifox来调试接口和使用文档来排期。在整个项目的交互过程中用的都是别人已经写好的项目，基本上都是增删改查，学习不到技术方向上的知识。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>校企合作</tag>
-      </tags>
   </entry>
   <entry>
     <title>第一个面试通过啦</title>
@@ -4842,9 +4730,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     昨天算是我第一次技术面试吧，我第一次有点紧张，好多问题都没回答上来，本来还知道的深拷贝两种方法，就说出来了个使用JSON，直接忘记“递归”这个词了，第二种递归方法就没说。问的框架不怎么多，基本都是最基础的js，html，css知识点。我发现以前好多东西都是一知半解的，当真正面试的时候就只能说不来一点，没办法说的太详细。说来可笑，面试的时候就连同步异步我都说反了。但是这就阴差阳错的面过了，嘿嘿。虽然只是一个小公司，但是我还是高兴了很久，感谢上帝。<br>
 <img src="images/live-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%9D%A2%E8%AF%95%E9%80%9A%E8%BF%87%E5%95%A6.jpg" alt="面试通过的图片"></p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
   </entry>
   <entry>
     <title>迟到的生日祝福</title>
@@ -4856,12 +4741,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>就在今天，我组员跟我说了一句生日快乐，说迟到21天的生日礼物。我当时有点小激动。毕竟这算是我真正意义上的第一个生日礼物，一个逻辑鼠标，一百多呢，挺贵的。</p>
 <p>我组员真好。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>生日</tag>
-      </tags>
   </entry>
   <entry>
     <title>TypaScript学习总结</title>
@@ -5694,9 +5573,6 @@ export default class TestClass extends Component&lt;&#123;&#125;,State&gt; &#123
   &#125;
 &#125;</code></pre>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>一些特殊情况的说明</title>
@@ -5751,9 +5627,6 @@ export default class TestClass extends Component&lt;&#123;&#125;,State&gt; &#123
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>内置高级类型</title>
@@ -5832,9 +5705,6 @@ export default class TestClass extends Component&lt;&#123;&#125;,State&gt; &#123
         <span class="token operator">:</span> <span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token operator">:</span> <span class="token keyword">infer</span> <span class="token constant">A</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">infer</span> <span class="token constant">R</span> 
             <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token operator">:</span> <span class="token constant">A</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token constant">R</span> 
             <span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>匹配模式做提取</title>
@@ -5930,9 +5800,6 @@ ConstructorType <span class="token keyword">extends</span> <span class="token cl
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>递归复用做循环</title>
@@ -6047,9 +5914,6 @@ Result<span class="token punctuation">;</span>
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>重新构造做变换</title>
@@ -6163,9 +6027,6 @@ Func <span class="token keyword">extends</span> <span class="token punctuation">
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>联合分散可化简</title>
@@ -6232,9 +6093,6 @@ guang__aaa--warning guang__bbb--success</code></pre>
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>特殊类型要记清</title>
@@ -6335,9 +6193,6 @@ guang__aaa--warning guang__bbb--success</code></pre>
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>数组长度做计算</title>
@@ -6434,9 +6289,6 @@ Rest<span class="token punctuation">[</span><span class="token string">'length'<
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>逆变、协变、双向协变、不变</title>
@@ -6500,9 +6352,6 @@ printHobbies <span class="token operator">=</span> printName<span class="token p
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/book/7047524421182947366?enter_from=course_center">TypeScript 类型体操通关秘籍</a></p>
 ]]></content>
-      <categories>
-        <category>typascript</category>
-      </categories>
   </entry>
   <entry>
     <title>手写apply</title>
@@ -6547,9 +6396,6 @@ printHobbies <span class="token operator">=</span> printName<span class="token p
 <h3 id="参考文献">参考文献</h3>
 <p>[1]<a href="https://www.zhangbaolin.cn/docs/js/%E6%89%8B%E5%86%99/%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0call%E3%80%81apply%E5%87%BD%E6%95%B0">如何模拟实现call、apply函数</a></p>
 ]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>Promise/A+</title>
@@ -6712,9 +6558,6 @@ myPromise<span class="token punctuation">.</span><span class="token function-var
 <span class="token punctuation">&#125;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> myPromise<span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写bind</title>
@@ -6742,9 +6585,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <h3 id="参考文献">参考文献</h3>
 <p>[1]<a href="https://www.wolai.com/serendipityape/6yn9QDJFn6Cp2UjPM9LDis">高阶组件手写实现篇</a></p>
 ]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写call</title>
@@ -6786,9 +6626,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <h3 id="参考文献">参考文献</h3>
 <p>[1]<a href="https://www.zhangbaolin.cn/docs/js/%E6%89%8B%E5%86%99/%E5%A6%82%E4%BD%95%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0call%E3%80%81apply%E5%87%BD%E6%95%B0">如何模拟实现call、apply函数</a></p>
 ]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写curry</title>
@@ -6813,9 +6650,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写instanceof</title>
@@ -6832,9 +6666,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写new</title>
@@ -6848,9 +6679,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token function">Con</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> result <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token operator">?</span> result <span class="token operator">:</span> obj<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写防抖</title>
@@ -6870,9 +6698,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>手写节流</title>
@@ -6890,9 +6715,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>write</category>
-      </categories>
   </entry>
   <entry>
     <title>1</title>
@@ -6919,10 +6741,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>101</title>
@@ -6968,10 +6786,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">return</span> <span class="token function">jude</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>104</title>
@@ -6981,10 +6795,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>root<span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>102</title>
@@ -7012,10 +6822,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第105题- 从前序与中序遍历序列构造二叉树</title>
@@ -7043,13 +6849,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">refaction</span><span class="token punctuation">(</span>preorder<span class="token punctuation">,</span>pstart<span class="token operator">+</span>leftLen<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>pend<span class="token punctuation">,</span>inorder<span class="token punctuation">,</span>iRoot<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>iend<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> root<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-      </tags>
   </entry>
   <entry>
     <title>11</title>
@@ -7071,10 +6870,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> max<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第114题-二叉树展开为链表</title>
@@ -7121,14 +6916,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-        <tag>链表</tag>
-      </tags>
   </entry>
   <entry>
     <title>121</title>
@@ -7149,10 +6936,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>124</title>
@@ -7189,10 +6972,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> max<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>128</title>
@@ -7215,10 +6994,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   ans <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> nums<span class="token punctuation">.</span>length<span class="token operator">-</span>idx<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>136</title>
@@ -7243,10 +7018,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">return</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>142</title>
@@ -7288,10 +7059,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>141</title>
@@ -7323,10 +7090,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第146题-LRU 缓存</title>
@@ -7368,10 +7131,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <span class="token keyword">this</span><span class="token punctuation">.</span>stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>128</title>
@@ -7411,10 +7170,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>155</title>
@@ -7493,10 +7248,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token class-name">MinStack</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getMin</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>min_stack<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>min_stack<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>15</title>
@@ -7531,10 +7282,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>160</title>
@@ -7569,10 +7316,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> cur2<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>169</title>
@@ -7598,10 +7341,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span>y</span><span class="token punctuation">)</span><span class="token operator">=></span>x<span class="token operator">-</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> nums<span class="token punctuation">[</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>17</title>
@@ -7656,10 +7395,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token function">backtrack</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>19</title>
@@ -7700,10 +7435,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   pop<span class="token punctuation">.</span>next <span class="token operator">=</span> pop<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
   <span class="token keyword">return</span> head<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第198题-打家劫舍</title>
@@ -7746,13 +7477,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 <p>然后我忽然看到，LeetCode热题HOT100里面还有一道<code>打家劫舍3</code>，<a href="../337">立马去写一下</a>。</p>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>打家劫舍</tag>
-      </tags>
   </entry>
   <entry>
     <title>2</title>
@@ -7785,10 +7509,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> head<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>20</title>
@@ -7811,10 +7531,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token keyword">if</span><span class="token punctuation">(</span>stack<span class="token punctuation">.</span>length<span class="token operator">!==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>由力扣第200题-岛屿数量-引出一些力扣上的岛屿问题</title>
@@ -7894,13 +7610,6 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     <span class="token function">maxIsland</span><span class="token punctuation">(</span>grid<span class="token punctuation">,</span>i<span class="token punctuation">,</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span>
     <span class="token function">maxIsland</span><span class="token punctuation">(</span>grid<span class="token punctuation">,</span>i<span class="token punctuation">,</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>岛屿</tag>
-      </tags>
   </entry>
   <entry>
     <title>206</title>
@@ -7935,10 +7644,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   head<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> temp<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>215</title>
@@ -8001,10 +7706,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> node<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>215</title>
@@ -8017,10 +7718,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 &#125;;
 </code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>21</title>
@@ -8039,10 +7736,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token keyword">return</span> list2<span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>22</title>
@@ -8095,10 +7788,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第221题-最大正方形</title>
@@ -8131,10 +7820,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token function">maxSquare</span><span class="token punctuation">(</span>matrix<span class="token punctuation">,</span>i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>x<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>23</title>
@@ -8189,10 +7874,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">return</span> lists<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>226</title>
@@ -8207,10 +7888,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">invertTree</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> root<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>234</title>
@@ -8240,10 +7917,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>236</title>
@@ -8264,10 +7937,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>238</title>
@@ -8314,10 +7983,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第240题-搜索二维矩阵 II</title>
@@ -8350,10 +8015,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第279题-完全平方数</title>
@@ -8371,10 +8032,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> f<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>283</title>
@@ -8396,10 +8053,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> nums<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣287题-寻找重复数</title>
@@ -8474,10 +8127,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>3</title>
@@ -8501,10 +8150,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> max<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣300题-最长递增子序列</title>
@@ -8537,10 +8182,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> max<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>31</title>
@@ -8565,10 +8206,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
         nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span>y</span><span class="token punctuation">)</span><span class="token operator">=></span>x<span class="token operator">-</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>32</title>
@@ -8612,10 +8249,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">return</span> max<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>33</title>
@@ -8666,10 +8299,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第337题-打家劫舍3</title>
@@ -8688,13 +8317,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>打家劫舍</tag>
-      </tags>
   </entry>
   <entry>
     <title>34</title>
@@ -8751,10 +8373,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣347题-前 K 个高频元素</title>
@@ -8818,10 +8436,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">let</span> arr <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=></span>b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">n</span> <span class="token operator">=></span> n<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>39</title>
@@ -8861,10 +8475,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>4</title>
@@ -8915,10 +8525,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <span class="token keyword">return</span> arr<span class="token punctuation">[</span><span class="token punctuation">(</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第416题-分割等和子集</title>
@@ -8984,13 +8590,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> dp<span class="token punctuation">[</span>dp<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>numsTotal<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>背包问题</tag>
-      </tags>
   </entry>
   <entry>
     <title>力扣437题-路径总和 III</title>
@@ -9021,13 +8620,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token function">dfs</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span>targetSum<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> idx<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-      </tags>
   </entry>
   <entry>
     <title>448</title>
@@ -9049,10 +8641,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> ans
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>46</title>
@@ -9076,10 +8664,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>42</title>
@@ -9105,10 +8689,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>方法二：栈</p>
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript"></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>461</title>
@@ -9166,10 +8746,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> ans
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>48</title>
@@ -9205,10 +8781,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> matrix<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>49</title>
@@ -9236,10 +8808,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>494</title>
@@ -9261,10 +8829,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   <span class="token keyword">return</span> num<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>5</title>
@@ -9327,10 +8891,6 @@ function findJudge(s,left,right,len)&#123;
   return right - left + 1 - 2;
 &#125;</code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>53</title>
@@ -9348,10 +8908,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> max<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第538题-把二叉搜索树转换为累加树</title>
@@ -9373,10 +8929,6 @@ function findJudge(s,left,right,len)&#123;
     <span class="token function">bst</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> root<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>543</title>
@@ -9397,10 +8949,6 @@ function findJudge(s,left,right,len)&#123;
   ans <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>55</title>
@@ -9418,10 +8966,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>56</title>
@@ -9441,10 +8985,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> stack<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>560</title>
@@ -9487,10 +9027,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>581</title>
@@ -9516,10 +9052,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> end<span class="token operator">-</span>start<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>617</title>
@@ -9536,10 +9068,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token keyword">return</span> root1<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>62</title>
@@ -9557,10 +9085,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">[</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>64</title>
@@ -9578,10 +9102,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> grid<span class="token punctuation">[</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>647</title>
@@ -9604,10 +9124,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> num<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>70</title>
@@ -9641,10 +9157,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>739</title>
@@ -9665,10 +9177,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> stack<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>75</title>
@@ -9706,10 +9214,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> nums<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>78</title>
@@ -9729,10 +9233,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>84</title>
@@ -9756,10 +9256,6 @@ function findJudge(s,left,right,len)&#123;
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 <p>方法二：栈</p>
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript"></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>94</title>
@@ -9777,10 +9273,6 @@ function findJudge(s,left,right,len)&#123;
   <span class="token function">sort</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>力扣第96题-不同的二叉搜索树</title>
@@ -9797,13 +9289,6 @@ function findJudge(s,left,right,len)&#123;
     <span class="token punctuation">&#125;</span>
     <span class="token keyword">return</span> <span class="token constant">G</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
-      <tags>
-        <tag>二叉树</tag>
-      </tags>
   </entry>
   <entry>
     <title>98</title>
@@ -9818,20 +9303,12 @@ function findJudge(s,left,right,len)&#123;
   <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token operator">&lt;=</span>lower<span class="token operator">||</span>root<span class="token punctuation">.</span>val<span class="token operator">>=</span>upper<span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token function">jude</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>lower<span class="token punctuation">,</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token function">jude</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>root<span class="token punctuation">.</span>val<span class="token punctuation">,</span>upper<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>]]></content>
-      <categories>
-        <category>算法</category>
-        <category>LeetCode热题HOT100</category>
-      </categories>
   </entry>
   <entry>
     <title>React Hooks理念</title>
     <url>/2022/10/03/frame/React/React%20Hooks%E7%90%86%E5%BF%B5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="React-Hooks理念">React Hooks理念</h2>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>React hooks简单源码实现</title>
@@ -9926,10 +9403,6 @@ function findJudge(s,left,right,len)&#123;
 window<span class="token punctuation">.</span>app <span class="token operator">=</span> <span class="token function">schedule</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 app<span class="token punctuation">.</span><span class="token function">onClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 app<span class="token punctuation">.</span><span class="token function">onFocus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>React render阶段</title>
@@ -9958,10 +9431,6 @@ app<span class="token punctuation">.</span><span class="token function">onFocus<
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://react.iamkasong.com/">React技术揭秘</a></p>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>React.createElement</title>
@@ -10036,10 +9505,6 @@ children：子元素。</p>
 <span class="token punctuation">&#125;</span></code></pre>
 <p>上面就是React.createElement函数的代码，还是比较简单的，就是将一些属性转换一下，然后就成了虚拟Dom，返回虚拟Dom。</p>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>React导学</title>
@@ -10061,10 +9526,6 @@ React源码-->第五层:大佬的世界
 局部细节-->hooks源码</pre>
 <h3 id="React-Hooks">React Hooks</h3>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>React性能优化</title>
@@ -10261,10 +9722,6 @@ React中旧新props的比较，默认是全等比较，所以当props没有传�
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Body'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token number">222</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></code></pre>]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>React源码学习</title>
@@ -10362,10 +9819,6 @@ React中的虚拟DOM中的属性：</p>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> wrap2VirtualDom</code></pre>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>diff算法</title>
@@ -10587,10 +10040,6 @@ oldIndex <span class="token number">2</span> <span class="token operator">&lt;</
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://react.iamkasong.com/">React技术揭秘</a></p>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
     <title>Umi3</title>
@@ -11046,10 +10495,6 @@ dva的文件在<code>src</code>下的<code>models</code>下的<code>global.js</c
   <span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>Umi3</category>
-      </categories>
   </entry>
   <entry>
     <title>Babel</title>
@@ -11336,10 +10781,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="自动埋点"><a href="../../Test/frameTest/Babel/plugin/exercize-auto-track">自动埋点</a></h3>
 <h3 id="Link"><a href="../../Test/frameTest/Babel/plugin/Link">Link</a></h3>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>babel</category>
-      </categories>
   </entry>
   <entry>
     <title>babel实现一个js解析器</title>
@@ -11840,10 +11281,6 @@ globalScope<span class="token punctuation">.</span><span class="token function">
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 evaluator<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>ast<span class="token punctuation">.</span>program<span class="token punctuation">,</span> globalScope<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>babel</category>
-      </categories>
   </entry>
   <entry>
     <title>Babel编译流程</title>
@@ -11917,10 +11354,6 @@ babel整体转译流程分为三步：</p>
 </li>
 </ul>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>babel</category>
-      </categories>
   </entry>
   <entry>
     <title>CSS常见面试题</title>
@@ -12091,10 +11524,6 @@ box-sizing:content-box，表示标准盒模型。</p>
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/post/6905539198107942919">「2021」高频前端面试题汇总之CSS篇</a></p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>CSS</category>
-      </categories>
   </entry>
   <entry>
     <title>定位与浮动</title>
@@ -12272,10 +11701,6 @@ box-sizing:content-box，表示标准盒模型。</p>
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>CSS</category>
-      </categories>
   </entry>
   <entry>
     <title>应用场景</title>
@@ -12461,10 +11886,6 @@ box-sizing:content-box，表示标准盒模型。</p>
 <p>1px问题就是在一些移动端页面上1px会变得很粗，原因时css中的1px并不能和移动设备上的1px划等号，它们之间的比例关系有一个专门的属性来描述。<br>
 window.devicePixelRatio = 设备的物理像素 / css像素</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>CSS</category>
-      </categories>
   </entry>
   <entry>
     <title>页面布局</title>
@@ -12514,10 +11935,6 @@ window.devicePixelRatio = 设备的物理像素 / css像素</p>
 <h3 id="响应式设计的概念及基本原理代码、展示">响应式设计的概念及基本原理<a href="../../Test/interview/CSS/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2.html">代码</a>、<a href="https://gulinga.github.io/1514-blog/Test/interview/CSS/%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2.html">展示</a></h3>
 <p>响应式网站设计就是一个网站兼容多个平台，而不是pc一个版本，移动端一个版本。响应式设计是通过媒体查询(@media)检测不同设备的屏幕尺寸来做处理。关于兼容：页面头部必须有mate声明的viewport</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>CSS</category>
-      </categories>
   </entry>
   <entry>
     <title>HTML常见面试题</title>
@@ -12686,10 +12103,6 @@ title没有明确的意义只表示是个标题，h1表示层次明确的标题�
 <p>[1]<a href="https://juejin.cn/post/6894629999215640583">图解 script 标签中的 async 和 defer 属性</a><br>
 [2]<a href="https://juejin.cn/post/6905294475539513352">「2021」高频前端面试题汇总之HTML篇</a></p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>HTML</category>
-      </categories>
   </entry>
   <entry>
     <title>react hooks性能优化</title>
@@ -12895,14 +12308,6 @@ title没有明确的意义只表示是个标题，h1表示层次明确的标题�
 <p>[1]<a href="https://juejin.cn/post/7076123870063198216">React Hooks 性能优化</a><br>
 [2]<a href="https://juejin.cn/post/6844904023808540680">关于React Hooks和Immutable性能优化的实践，我写了一本掘金小册</a></p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-        <tag>性能优化</tag>
-      </tags>
   </entry>
   <entry>
     <title>React组件基础</title>
@@ -13083,14 +12488,6 @@ export default withFetching;</code></pre>
 </li>
 </ul>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-        <tag>组件</tag>
-      </tags>
   </entry>
   <entry>
     <title>React组件通信</title>
@@ -13227,14 +12624,6 @@ export default function Children2() &#123;
   )
 &#125;</code></pre>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>React</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-        <tag>组件通信</tag>
-      </tags>
   </entry>
   <entry>
     <title>Vue2组件通信</title>
@@ -13710,14 +13099,6 @@ export default &#123;
   &#125;
 &#125;
 &lt;&#x2F;script&gt;</code></pre>]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>组件通信</tag>
-        <tag>Vue2</tag>
-      </tags>
   </entry>
   <entry>
     <title>Vue3组件通信</title>
@@ -13732,14 +13113,6 @@ export default &#123;
 <h3 id="Vuex">Vuex</h3>
 <h3 id="mitt">mitt</h3>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>组件通信</tag>
-        <tag>Vue3</tag>
-      </tags>
   </entry>
   <entry>
     <title>Vue生命周期</title>
@@ -13928,13 +13301,6 @@ beforeDestroy和destroyed都是在$destroy函数中执行的，会在$destroy的
 <h2 id="keep-alive中的生命周期有哪些？">keep-alive中的生命周期有哪些？</h2>
 <p>keep-alive是vue提供的一个内置组件，用来进行数据的缓存，在切换组件的时候，数据仍然在内存中，防止重复渲染DOM。keep-alive包裹后会多两个生命周期函数，activated和deactivated，当组件切走，会进行缓存，然后触发deactivated生命周期函数，当组件被切回来，去缓存里面找该组件，触发activated生命周期函数。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
   </entry>
   <entry>
     <title>Promise通过什么消灭了回调地狱？</title>
@@ -13949,14 +13315,6 @@ beforeDestroy和destroyed都是在$destroy函数中执行的，会在$destroy的
 <p>Promise返回的仍然是一个Promise，这就使得Promise穿透到外层，这就是返回值的穿透，这也使得Promise可以链式调用。</p>
 <p>我们不用给每个Promise.then都加上错误的回调，我们只需要在链式调用的最后加上.catch就可以捕获到上层的错误，这就是Promise的错误冒泡。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>异步</category>
-      </categories>
-      <tags>
-        <tag>异步</tag>
-        <tag>Promise</tag>
-      </tags>
   </entry>
   <entry>
     <title>async、await的运行机制</title>
@@ -14021,15 +13379,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'5'</span><span class="token punctuation">)</span></code></pre>
 <p>输出1 2 3 4 5 6 7 8 9 10</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>异步</category>
-      </categories>
-      <tags>
-        <tag>异步</tag>
-        <tag>async</tag>
-        <tag>await</tag>
-      </tags>
   </entry>
   <entry>
     <title>js异步编程方案都有什么？</title>
@@ -14051,13 +13400,6 @@ ES6中的Promise解决了回调函数回调地狱的问题，采用了链式调�
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>异步</category>
-      </categories>
-      <tags>
-        <tag>异步</tag>
-      </tags>
   </entry>
   <entry>
     <title>储存</title>
@@ -14071,10 +13413,6 @@ ES6中的Promise解决了回调函数回调地狱的问题，采用了链式调�
 0.2变成了0.200000000000000002<br>
 所以0.1+0.2=0.300000000000000004</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>js基础</category>
-      </categories>
   </entry>
   <entry>
     <title>js大数</title>
@@ -14107,10 +13445,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">BigInt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//JSON.stringify 现在生成如下字符串，而不是抛出异常</span></code></pre>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>js基础</category>
-      </categories>
   </entry>
   <entry>
     <title>js类型</title>
@@ -14193,10 +13527,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span> <span class="token comment">// -> &#123; name: 'yyy', age: 30 &#125;</span></code></pre>
 <p>因为我们传参的时候也是传递的地址值，所以<code>person.age = 26</code>将p1中的name改变了。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>js基础</category>
-      </categories>
   </entry>
   <entry>
     <title>this</title>
@@ -14279,10 +13609,6 @@ obj<span class="token punctuation">.</span><span class="token function">fn</span
   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#125;</span>
 obj<span class="token punctuation">.</span>time<span class="token punctuation">;</span></code></pre>]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>js基础</category>
-      </categories>
   </entry>
   <entry>
     <title>类型判断</title>
@@ -14344,10 +13670,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="isXXX-API">isXXX API</h3>
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token string">'fdfd'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span></code></pre>]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>js基础</category>
-      </categories>
   </entry>
   <entry>
     <title>为什么要有浏览器缓存？</title>
@@ -14367,13 +13689,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
-      <tags>
-        <tag>缓存</tag>
-      </tags>
   </entry>
   <entry>
     <title>事件代理</title>
@@ -14413,10 +13728,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
   </entry>
   <entry>
     <title>事件机制</title>
@@ -14509,10 +13820,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 nodes捕获
 nodes冒泡
 nodef冒泡</code></pre>]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
   </entry>
   <entry>
     <title>储存</title>
@@ -14602,10 +13909,6 @@ nodef冒泡</code></pre>]]></content>
 </tbody>
 </table>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
   </entry>
   <entry>
     <title>同源策略限制了什么?</title>
@@ -14626,13 +13929,6 @@ nodef冒泡</code></pre>]]></content>
 </ol>
 <p>对于<code>script</code>、<code>link</code>、<code>img</code>标签来说，他们是没有跨域限制的。所以这也就使得出现了浏览器安全的问题。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
-      <tags>
-        <tag>同源策略</tag>
-      </tags>
   </entry>
   <entry>
     <title>如果避免内存泄漏</title>
@@ -14670,13 +13966,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="参考资料">参考资料</h3>
 <p>[1]<a href="https://juejin.cn/post/6844904016325902344">一文搞懂V8引擎的垃圾回收</a></p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
-      <tags>
-        <tag>内存泄漏</tag>
-      </tags>
   </entry>
   <entry>
     <title>强缓存和协商缓存的区别</title>
@@ -14695,13 +13984,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="协商缓存">协商缓存</h3>
 <p>当没命中强缓存的时候就是进行协商缓存，进行协商缓存的时候，浏览器会携带if-None-Match和if-Modified-Since向服务器发送请求，发送的请求如果有Etag值，那么就判断Etag值和当前资源的Etag值是否相同，如果相同则使用缓存资源，返回304。如果不同则返回新的资源，并携带新的Etag和last-Modified，如果没有Etag值就判断if-Modified-Since和服务器中资源上次的修改时间是否相同，如果相同就使用缓存值返回304，如果不相同就返回新的资源，并携带新的Etag和last-Modified。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
-      <tags>
-        <tag>缓存</tag>
-      </tags>
   </entry>
   <entry>
     <title>点击刷新按钮或者按 F5、按 Ctrl+F5 （强制刷新）、地址栏回车有什么区别？</title>
@@ -14714,13 +13996,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="地址栏回车">地址栏回车</h3>
 <p>地址栏回车是走的正常流程，本地检查是否过期，然后服务器检查新鲜度，返回内容。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
-      <tags>
-        <tag>缓存</tag>
-      </tags>
   </entry>
   <entry>
     <title>浏览器缓存流程</title>
@@ -14749,13 +14024,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="/images/%E7%BC%93%E5%AD%98/1.png" alt=""></p>
 <p>很多网站都在资源后面加了版本号，这样做的目的就是当js，css版本升级的时候，防止浏览器的缓存，让用户能够得到最新的资源。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
-      <tags>
-        <tag>缓存</tag>
-      </tags>
   </entry>
   <entry>
     <title>跨域</title>
@@ -14774,10 +14042,6 @@ CSRF工具：利用用户的登录状态发起恶意请求。如果没有同源�
 <h4 id="CORS">CORS</h4>
 <p>CORS需要浏览器和后端同时支持。浏览器会自行进行CORS通信，实现CORS通信的关键是后端。服务端设置 <code>Access-Control-Allow-Origin</code> 就可以开启 CORS。该属性表示哪些域名可以访问资源，如果没有设置通配符则表示所有网站都可以访问资源。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>浏览器基础</category>
-      </categories>
   </entry>
   <entry>
     <title>常考算法题解析</title>
@@ -14834,10 +14098,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">&#125;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">bubble</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>算法</category>
-      </categories>
   </entry>
   <entry>
     <title>DNS完整查询流程</title>
@@ -14854,14 +14114,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ol>
 <p>其中DNS服务器在向各个服务器发送请求的时候，各个服务器都会先查询缓存。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>DNS</tag>
-      </tags>
   </entry>
   <entry>
     <title>DNS同时使用TCP和UDP协议吗?</title>
@@ -14879,14 +14131,6 @@ TCP是一种可靠的连接，确保了数据的准确性。</p>
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>DNS</tag>
-      </tags>
   </entry>
   <entry>
     <title>GET和POST请求的区别</title>
@@ -14918,15 +14162,6 @@ POST请求支持更多的参数类型</p>
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>GET</tag>
-        <tag>POST</tag>
-      </tags>
   </entry>
   <entry>
     <title>GET方法URL长度限制的原因</title>
@@ -14934,14 +14169,6 @@ POST请求支持更多的参数类型</p>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="GET方法URL长度限制的原因">GET方法URL长度限制的原因</h2>
 <p>HTTP对GET方法的URL长度没有限制，只是不同浏览器对GET有不同字节的限制。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTTP1.0与HTTP1.1的区别</title>
@@ -14967,14 +14194,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTTP1.1和HTTP2的区别</title>
@@ -14998,14 +14217,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTTP和HTTPS的区别</title>
@@ -15018,14 +14229,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 <li class="lvl-3">HTTP协议较简单，是无状态的，HTTPS是通过SSL和HTTP构建的可加密传输和身份认证的网络协议，比较安全</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTTP状态码304是多好还是少好</title>
@@ -15034,14 +14237,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 <p>304状态码是浏览器的缓存机制，当没有命中强缓存的时候就会进行协商缓存，如果命中了协商缓存就返回304，直接使用缓存资源，不用再次下载资源，所以304状态码不是错误，而是浏览器的缓存机制所造成的。</p>
 <p>但是304状态码如果较多，搜索引擎会减少对其的抓取次数，网站的访问量可能就会减少，网站的权重下降。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTTP的优点与缺点</title>
@@ -15072,14 +14267,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTTP请求报文和响应报文</title>
@@ -15116,14 +14303,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>OPTIONS请求方法的使用场景</title>
@@ -15134,15 +14313,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 <li class="lvl-3">查询访问权限，在进行CROS跨域的时候，就是使用OPTIONS来判断是否对资源有访问权限</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-        <tag>OPTIONS</tag>
-      </tags>
   </entry>
   <entry>
     <title>TCP和UDP的适用场景</title>
@@ -15157,15 +14327,6 @@ http1.0采用的是非持续性连接，http1.1中采用的是持续性连接，
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>TCP</tag>
-        <tag>UDP</tag>
-      </tags>
   </entry>
   <entry>
     <title>TCP拥塞控制机制</title>
@@ -15210,14 +14371,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 <p>[1]<a href="https://juejin.cn/post/6908327746473033741">「2021」高频前端面试题汇总之计算机网络篇</a><br>
 [2]<a href="https://www.bilibili.com/video/BV1L4411a7RN">计算机网络第35讲-TCP的拥塞控制（计算机网络简明教程及仿真实验）</a></p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>TCP</tag>
-      </tags>
   </entry>
   <entry>
     <title>TCP流量控制和死锁</title>
@@ -15233,15 +14386,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 <li class="lvl-3">在发送方接收到接收方发送的零窗口的通知的时候，就会启用持续计时器，如果计时器超时就会发送一个探测报文，只有1字节，去探测接收方的窗口是否是零。如果是零，那么就重新启用计时器，如果不是零就接触了死锁的局面。</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>TCP</tag>
-        <tag>死锁</tag>
-      </tags>
   </entry>
   <entry>
     <title>TCP的重传机制</title>
@@ -15250,14 +14394,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 <p>TCP的下层网络可能会出现，重复，丢失，失序等情况，TCP会重传它自己认为丢失的包，TCP的重传是根据两方面来进行的，一个是时间，一个是确认信息。</p>
 <p>TCP在发送一个数据之后就会开启一个定时器，如果在这个时间内，没有收到ACK的确认报文，则重传数据，如果多次重传都没有成功则放弃重传，并返回一个复位信号。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>TCP</tag>
-      </tags>
   </entry>
   <entry>
     <title>UDP为什么不可靠?</title>
@@ -15269,14 +14405,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 <li class="lvl-3">UDP没有阻塞控制，UDP会以一个固定的速率发送数据，当网络不好时也不会减慢速率，这就导致了可能丢包，数据不完整。</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>UDP</tag>
-      </tags>
   </entry>
   <entry>
     <title>URL有哪些组成部分</title>
@@ -15292,14 +14420,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 <li class="lvl-3">锚点</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>URL</tag>
-      </tags>
   </entry>
   <entry>
     <title>什么是DNS？</title>
@@ -15307,14 +14427,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="什么是DNS？">什么是DNS？</h2>
 <p>DNS服务器将域名解析成IP地址。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>DNS</tag>
-      </tags>
   </entry>
   <entry>
     <title>常见的HTTP请求方法</title>
@@ -15330,14 +14442,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 <li class="lvl-3">REACT：回显服务器收到的请求，用来诊断错误</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>HTTP</tag>
-      </tags>
   </entry>
   <entry>
     <title>迭代查询与递归查询</title>
@@ -15354,14 +14458,6 @@ cnwd &gt; ssthresh，执行拥塞避免算法，每次数据发送成功后将cn
 </ol>
 <p>DNS域名解析的时候，浏览器向本地DNS服务器发送请求是用的递归查询，只需要发送一次请求。本地DNS服务器向各个级别服务器发送请求用的是迭代查询，需要发送多次请求。</p>
 ]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-        <tag>DNS</tag>
-      </tags>
   </entry>
   <entry>
     <title>键入网址按下回车后究竟发生了什么</title>
@@ -15489,13 +14585,6 @@ co1(yes)->co2
 co1(no)->e
 co2(yes)->op2->op1
 co2(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>]]></content>
-      <categories>
-        <category>面试准备</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>网络</tag>
-      </tags>
   </entry>
   <entry>
     <title>创建数组</title>
@@ -15557,10 +14646,6 @@ Array<span class="token punctuation">.</span><span class="token function">from</
 <p>[1]<a href="https://juejin.cn/post/6844903614918459406">【干货】js 数组详细操作方法及解析合集</a><br>
 [2]<a href="https://developer.mozilla.org/en-US/">MDN</a></p>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-        <category>数组</category>
-      </categories>
   </entry>
   <entry>
     <title>遍历数组</title>
@@ -15645,10 +14730,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>[1]<a href="https://juejin.cn/post/6844903614918459406">【干货】js 数组详细操作方法及解析合集</a><br>
 [2]<a href="https://developer.mozilla.org/en-US/">MDN</a></p>
 ]]></content>
-      <categories>
-        <category>前端学习</category>
-        <category>数组</category>
-      </categories>
   </entry>
   <entry>
     <title>后端接口开发及其生活总结</title>
@@ -15687,15 +14768,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="力扣">力扣</h3>
 <p>我的力扣估计还差四题就到10%，刷的不多，可能有好多题再写也不一定会。确定了，自己很菜。明天力扣周赛，加油。</p>
 ]]></content>
-      <categories>
-        <category>开发</category>
-        <category>live</category>
-      </categories>
-      <tags>
-        <tag>开发笔记</tag>
-        <tag>云文档</tag>
-        <tag>live</tag>
-      </tags>
   </entry>
   <entry>
     <title>坎坎坷坷的一周</title>
@@ -15722,13 +14794,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="看书">看书</h3>
 <p>我本来想买卢思浩的书来着，但是不知道为啥，我还没买，就忽然多了一本他的书《你也走了很远的路吧》，明天就开始看，哈哈。</p>
 ]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>开发笔记</tag>
-        <tag>云文档</tag>
-      </tags>
   </entry>
   <entry>
     <title>十二月最后一段时间的规划</title>
@@ -15772,9 +14837,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="了解前端发展">了解前端发展</h3>
 <p>要多多了解前端目前的发展形式。</p>
 ]]></content>
-      <categories>
-        <category>live</category>
-      </categories>
   </entry>
   <entry>
     <title>JSX是什么，React为什么使用JSX，babel怎么转译JSX的</title>
@@ -15805,14 +14867,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 </ol>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/03/04/frame/React/React%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</url>
+    <title>React数据管理</title>
+    <url>/2023/03/06/frame/React/React%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="React数据管理">React数据管理</h2>
 <h3 id="React批量更新">React批量更新</h3>
 <p>React中的批量更新就是将多次更新合并处理，最终只渲染一次，来获得更好的性能。</p>
@@ -16266,9 +15324,5 @@ React新的架构，增加了Scheduler（调度器），调度任务的优先级
 <p>为了使React从旧版本平滑过渡到新版本，React团队采用了“渐进升级”方案。v16.3新增了StrictMode针对开发者编写的“不符合并发更新规范的代码”给提示出来。为了使不同模式的应用可能在同一个页面内工作，将大多数事件统一冒泡到HTML元素调正为冒泡到所在的根元素。</p>
 <h3 id="Fiber框架">Fiber框架</h3>
 ]]></content>
-      <categories>
-        <category>框架</category>
-        <category>react</category>
-      </categories>
   </entry>
 </search>

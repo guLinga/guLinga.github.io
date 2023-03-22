@@ -16954,4 +16954,218 @@ guang__aaa--warning guang__bbb--success</code></pre>
         <category>typescript</category>
       </categories>
   </entry>
+  <entry>
+    <title>ts常见面试题</title>
+    <url>/2020/03/10/typeScript/ts%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="什么是TypeScript？">什么是TypeScript？</h2>
+<p>ts就是一个js的超集，ts不能直接在浏览器上运行，需要转译成js。他给js的变量提供了类型，让代码在编写的时候就能检测错误。让代码更加的健壮。</p>
+<h2 id="ts相对于js的优势？">ts相对于js的优势？</h2>
+<p>js在运行的时候才知道哪里错误，ts在编写的时候就可以检测是否有写错误的代码。避免写变量名的时候写错。<br>
+ts写类型，让代码能更好的看懂，比如函数传入的每个参数都是什么类型。写ts代码的时候会提示该输入什么参数类型的值。让代码的质量更好，更加的健壮，避免传入的类型不同而引起的问题。</p>
+<h2 id="ts中const和readonly的区别">ts中const和readonly的区别</h2>
+<p>const使变量不能修改，readonly使将参数变成只读的，避免修改。</p>
+<h2 id="TypeScript-中-any-类型的作用是什么？">TypeScript 中 any 类型的作用是什么？</h2>
+<p>如果你不清楚一个值是什么类型就可以设置成any，any类型可以赋值给任何类型，任何类型也可以赋值给any，any被称为顶级类型。但是any存在一些问题：</p>
+<ol>
+<li class="lvl-3">
+<p>类型污染，any类型的对象，会将参数也全部变成any值</p>
+</li>
+<li class="lvl-3">
+<p>完全失去类型检测功能，当我们使用不存在的方法或属性也不会报错。可以使用unknown来代替any</p>
+</li>
+</ol>
+<h2 id="TypeScript-中-any、never、unknown、null-undefined-和-void-有什么区别？">TypeScript 中 any、never、unknown、null &amp; undefined 和 void 有什么区别？</h2>
+<p>any：ny类型可以赋值给任何类型，任何类型也可以赋值给any，但是any类型失去了类型检测功能，可能导致使用一个不存在的方法和属性也不会报错。<br>
+never：never表示不存在的类型<br>
+void：没有任何类型<br>
+unknown：所有类型都可以赋值给unknown类型，但是unknown类型只能赋值给unknown类型和any类型，他和any相似，但是他不会失去类型检测，一般使用unknown代替any<br>
+null &amp; undefined：null和undefined是所有类型的子类型，</p>
+<h2 id="TypeScript-中可以使用-String、Number、Boolean、Symbol、Object-等给类型做声明吗？">TypeScript 中可以使用 String、Number、Boolean、Symbol、Object 等给类型做声明吗？</h2>
+<pre class="language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">/* 可以 */</span>
+<span class="token keyword">let</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">"bob"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> decLiteral<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> isDone<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> sym<span class="token operator">:</span> <span class="token builtin">symbol</span> <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">&#123;</span>
+ name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+ age<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<h2 id="TypeScript-中的-this-和-JavaScript-中的-this-有什么差异？">TypeScript 中的 this 和 JavaScript 中的 this 有什么差异？</h2>
+<ol>
+<li class="lvl-3">
+<p><code>noImplicitThis: true</code>的情况下，必须去声明this的类型，才能在函数或对象中使用this。</p>
+</li>
+<li class="lvl-3">
+<p>ts中箭头函数的this和ES6中的一样。</p>
+</li>
+</ol>
+<h2 id="TypeScript-中使用-Union-Types-（联合类型）时有哪些注意事项？">TypeScript 中使用 Union Types （联合类型）时有哪些注意事项？</h2>
+<p>当不确定联合类型到底是哪个类型的时候就只能访问联合类型的所有类型。</p>
+<h2 id="TypeScript-如何设计-Class-的声明？">TypeScript 如何设计 Class 的声明？</h2>
+<pre class="language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">Greeter</span> <span class="token punctuation">&#123;</span>
+   greeting<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+   <span class="token function">constructor</span><span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span>greeting <span class="token operator">=</span> message<span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+   <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">&#123;</span>
+       <span class="token keyword">return</span> <span class="token string">"Hello, "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>greeting<span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">let</span> greeter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Greeter</span><span class="token punctuation">(</span><span class="token string">"world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 在声明类的时候，一般类中都会包含，构造函数、对构造函数中的属性进行类型声明、类中的方法。</span></code></pre>
+<h2 id="TypeScript-中如何联合枚举类型的-Key">TypeScript 中如何联合枚举类型的 Key?</h2>
+<pre class="language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">enum</span> str <span class="token punctuation">&#123;</span>
+   <span class="token constant">A</span><span class="token punctuation">,</span>
+   <span class="token constant">B</span><span class="token punctuation">,</span>
+   <span class="token constant">C</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">type</span> <span class="token class-name">strUnion</span> <span class="token operator">=</span>  <span class="token keyword">keyof</span> <span class="token keyword">typeof</span> str<span class="token punctuation">;</span> <span class="token comment">// 'A' | 'B' | 'C'</span></code></pre>
+<h2 id="TypeScript-中-、-、-、-、-、-等符号的含义？">TypeScript 中 ?.、??、!、!.、_、** 等符号的含义？</h2>
+<p>?. 可链用 遇到null或undefined立即停止表达式的执行<br>
+?? 空值合并运算符 当左边的值为null或undefined时就返回右边的值，否则返回左边的值<br>
+_ 数字分割符 分隔符不会改变数值字面量的值，使人更容易读懂数字 1_101_324，不允许多个分隔符连用<br>
+!.加载变量后面，也是排除undefined和null类型<br>
+!在变量前表示取反，在变量后表示使null和undefined类型可以赋值给其他类型，并编译通过<br>
+** 求幂</p>
+<h2 id="简单介绍一下-TypeScript-模块的加载机制？">简单介绍一下 TypeScript 模块的加载机制？</h2>
+<p>假设有一个导入语句 import { a } from “moduleA”;</p>
+<ol>
+<li class="lvl-4">
+<p>首先，编译器会尝试定位需要导入的模块文件，通过绝对或者相对的路径查找方式；</p>
+</li>
+<li class="lvl-4">
+<p>如果上面的解析失败了，没有查找到对应的模块，编译器会尝试定位一个外部模块声明（.d.ts）；</p>
+</li>
+<li class="lvl-4">
+<p>最后，如果编译器还是不能解析这个模块，则会抛出一个错误 error TS2307: Cannot find module ‘moduleA’.</p>
+</li>
+</ol>
+<h2 id="如何使-TypeScript-项目引入并识别编译为-JavaScript-的-npm-库包？">如何使 TypeScript 项目引入并识别编译为 JavaScript 的 npm 库包？</h2>
+<ol>
+<li class="lvl-3">
+<p>安装对应的ts包，npm install @type/包名 --save</p>
+</li>
+<li class="lvl-3">
+<p>如果没有对应的ts包，那就在编写同名的.d.ts文件</p>
+</li>
+</ol>
+<h2 id="TypeScript-的-tsconfig-json-中有哪些配置项信息？">TypeScript 的 tsconfig.json 中有哪些配置项信息？</h2>
+<h2 id="TypeScript-中如何设置模块导入的路径别名？">TypeScript 中如何设置模块导入的路径别名？</h2>
+<h2 id="对-TypeScript-类中成员的-public、private、protected、readonly-修饰符的理解？">对 TypeScript 类中成员的 public、private、protected、readonly 修饰符的理解？</h2>
+<p>public: 成员都默认为public，被此限定符修饰的成员是可以被外部访问；<br>
+private: 被此限定符修饰的成员是只可以被类的内部访问；<br>
+protected: 被此限定符修饰的成员是只可以被类的内部以及类的子类访问;<br>
+readonly: 关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。</p>
+<h2 id="keyof-和-typeof-关键字的作用？">keyof 和 typeof 关键字的作用？</h2>
+<p>typeof是获取变量的类型<br>
+keyof是获取索引类型的属性名，并构造成联合类型</p>
+<h2 id="数组定义的两种方式">数组定义的两种方式</h2>
+<ol>
+<li class="lvl-3">
+<p>Array<string></p>
+</li>
+<li class="lvl-3">
+<p>string[]</p>
+</li>
+</ol>
+<h2 id="TypeScript-的内置数据类型有哪些？">TypeScript 的内置数据类型有哪些？</h2>
+<p>boolean string undefined null number void never any unknown<br>
+array tuple（元组）object enum（枚举）</p>
+<h2 id="any与unknown的区别">any与unknown的区别</h2>
+<p>any类型可以赋值给任何类型，任何类型也可以赋值给any类型。任何类型可以赋值给unknown类型，但是unknown类型只能赋值给unknown类型和any类型。<br>
+unknown类型相比any类型更加的严格。any类型完全失去了类型检测能力，但是unknown在大多数操作之前仍然会进行类型检测。设置any类型，如果这个值是undefined，调用他上面的属性也不会报错，但是unknown会报错，因为unknown类型属于未知类型，所以不允许访问属性值。</p>
+<h2 id="使用ts实现一个判断入参是否是数组类型的方法？">使用ts实现一个判断入参是否是数组类型的方法？</h2>
+<pre class="language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">isArray</span><span class="token punctuation">(</span>value<span class="token operator">:</span><span class="token builtin">unknown</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">boolean</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<h2 id="如何在TypeScript中实现继承？">如何在TypeScript中实现继承？</h2>
+<p>extends关键字</p>
+<h2 id="接口和类型别名">接口和类型别名</h2>
+<p>接口和类型别名都可以用来定义对象，函数，类的类型，但是类型别名的话可以定义其他类型，比如，基本类型，元组，联合类型。类型别名名称一样会报错，但是接口名称一样，如果合法会产生接口合并。接口使用extends继承，类型别名使用交叉类型继承。接口继承如果有同样类型和名称的参数会报错，类型别名有同样的参数和类型会返回never。<br>
+type结合泛型和extends infer可以写一下工具类型</p>
+<h2 id="Typescript中never-和-void-的区别？">Typescript中never 和 void 的区别？</h2>
+<p>never表示永远不存在的类型，void表示没有任何类型。返回值为void的函数能够正常运行，返回值为never的函数会报错。<br>
+void类型，只能将undefined和null赋值给他。<br>
+never是所有类型的子类型，可以把never赋值给任何类型，除了never类型本身，any类型也不能赋值给他自身。<br>
+never可以赋值给哪些返回错误的函数或根本无法到达终点的类型。</p>
+<h2 id="类型断言">类型断言</h2>
+<p>类型断言就是，如果你知道一个实体具有比现在类型更确切的类型就可以使用类型断言，通过类型断言就是告诉编译器，“相信我，我知道我在做什么”。他有两种表现方式，一种是<code>尖括号</code>方法，一种是<code>as</code>，但是在ts中使用jsx只有as这种类型断言被允许。</p>
+<h2 id="重载">重载</h2>
+<p>js是一个动态语言，比如一个函数可能因为出入的类型不同返回不同的类型，这就需要重载，重载的函数在调用的时候会进行正确的类型检查。它会先尝试第一个重载定义，如果能够匹配就使用这个，所以要把最精确的放到最上面。</p>
+<h2 id="Typescript中泛型是什么？">Typescript中泛型是什么？</h2>
+<p>我感觉泛型更像一种类型变量，泛型的值通常在使用的时候才会设置。泛型可以在interface，type，函数中使用。函数使用时比如函数的返回值类型与传入值类型有关的时候。<br>
+type中使用泛型，可以来写一下工具。因为泛型没有约束造成了一些问题，比如，因为不确定泛型的具体类型，所以访问泛型类型的属性会报错。可以使用extends来对泛型进行约束。</p>
+<h2 id="解释一下TypeScript中的枚举。">解释一下TypeScript中的枚举。</h2>
+<p>枚举就是创建一组命名的常量，可以是字符串也可以是数组，默认是从0递增的。如果你给一个常量命名为数字，那么后面的值就会从这个数字开始递增，但是如果你设置的是字符串，那么下面的值也必须设置，否者报错。枚举在运行的时候是真实存在的对象，你可以通过枚举值向枚举名泛型映射。如果枚举只是让代码可读性更好，不需要创建对象那么就使用常量枚举。</p>
+<h2 id="declare关键字">declare关键字</h2>
+<p>当我们使用第三方库的时候，第三方库可能给window上添加属性，如果我们在ts中直接获取这个元素会出现错误，因为ts编译器不认识这个全局变量，所以就需要declare关键字来声明这个全局变量，从而让ts编译器可以识别这个变量。</p>
+<h2 id="说说对-TypeScript-中命名空间的理解？模块与命名空间的区别？">说说对 TypeScript 中命名空间的理解？模块与命名空间的区别？</h2>
+<p>在ts1.5版本中，“内部模块”被改成了“命名空间”，“外部模块”被称为“模块”。模块：在ts中，任何包含顶级<code>import</code>或<code>export</code>的文件都会被当作一个模块。如果没有顶级的<code>import</code>或<code>export</code>则会被当作一个全局可见。命名空间：命名空间的定义是使用的namespace关键字，如果想要外部可以访问命名空间中的值那么就需要使用export导出。命名空间的本质就是一个对象。</p>
+<p>命名空间和模块一样都包含代码和声明，不同的是模块可以声明它的依赖。命名空间可以使用<code>import x = NameSpace.polygons</code>的方法给命名空间设置别名。相同名称的命名空间会进行合并。在ts项目开发过程中一般不使用命名空间，通常在为没有ts的js库，定义.d.ts文件的时候使用。</p>
+<h2 id="装饰器">装饰器</h2>
+<h2 id="简单聊聊你对-TypeScript-类型兼容性的理解？">简单聊聊你对 TypeScript 类型兼容性的理解？</h2>
+<h2 id="协变、逆变、双变和抗变的理解？">协变、逆变、双变和抗变的理解？</h2>
+<h2 id="类型的全局声明和局部声明">类型的全局声明和局部声明</h2>
+<h2 id="说一说TypeScript中的类及其特性。">说一说TypeScript中的类及其特性。</h2>
+<h2 id="TypeScript-中的类是什么？你如何定义它们？">TypeScript 中的类是什么？你如何定义它们？</h2>
+<h2 id="TypeScript-中的-getter-setter-是什么？你如何使用它们？">TypeScript 中的 getter/setter 是什么？你如何使用它们？</h2>
+<h2 id="TypeScript中的方法重写是什么">TypeScript中的方法重写是什么?</h2>
+<h2 id="Typescript什么是方法重载？">Typescript什么是方法重载？</h2>
+<h2 id="TypeScript-中-interface-可以给-Function-Array-Class（Indexable）做声明吗？">TypeScript 中 interface 可以给 Function / Array / Class（Indexable）做声明吗？</h2>
+<h2 id="用过哪些工具类型">用过哪些工具类型</h2>
+]]></content>
+      <categories>
+        <category>typescript</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>手写ahooks的useEventEmitter</title>
+    <url>/2023/03/22/write/%E6%89%8B%E5%86%99ahooks%E7%9A%84useEventEmitter/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="手写ahooks的useEventEmitter">手写ahooks的useEventEmitter</h2>
+<pre class="language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> useRef<span class="token punctuation">,</span> useEffect <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">type</span> <span class="token class-name">Subscription<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span> <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">EventEmitter<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> subscriptions <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set<span class="token operator">&lt;</span>Subscription<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function-variable function">emit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>val<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> subscription <span class="token keyword">of</span> <span class="token keyword">this</span><span class="token punctuation">.</span>subscriptions<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">subscription</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+  <span class="token function-variable function">useSubscription</span> <span class="token operator">=</span> <span class="token punctuation">(</span>callback<span class="token operator">:</span> Subscription<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// eslint-disable-next-line react-hooks/rules-of-hooks</span>
+    <span class="token keyword">const</span> callbackRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>Subscription<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    callbackRef<span class="token punctuation">.</span>current <span class="token operator">=</span> callback<span class="token punctuation">;</span>
+    <span class="token comment">// eslint-disable-next-line react-hooks/rules-of-hooks</span>
+    <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">function</span> <span class="token function">subscription</span><span class="token punctuation">(</span>val<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>callbackRef<span class="token punctuation">.</span>current<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          callbackRef<span class="token punctuation">.</span><span class="token function">current</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>subscription<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>subscriptions<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>subscription<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">useEventEmitter</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token operator">=</span> <span class="token keyword">void</span><span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> ref <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>EventEmitter<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">>></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ref<span class="token punctuation">.</span>current<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    ref<span class="token punctuation">.</span>current <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> ref<span class="token punctuation">.</span>current<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>]]></content>
+      <categories>
+        <category>write</category>
+      </categories>
+  </entry>
 </search>

@@ -17168,4 +17168,598 @@ type中使用泛型，可以来写一下工具。因为泛型没有约束造成�
         <category>write</category>
       </categories>
   </entry>
+  <entry>
+    <title>webpack loader</title>
+    <url>/2023/04/15/webpack/loader/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="webpack-loader">webpack loader</h2>
+<h3 id="定义">定义</h3>
+<p>简单来说loader就是把webpack不能直接处理的资源变成可以直接处理。<br>
+loader本质上是一个js模块，导出的是一个函数。</p>
+<h3 id="loader函数的结构">loader函数的结构</h3>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
+ * 
+ * @param &#123;string|Buffer&#125; context 
+ * @param &#123;object&#125; map 可以被 https://github.com/mozilla/source-map 使用的 SourceMap 数据
+ * @param &#123;any&#125; meta meta 数据，可以是任何内容
+ * @returns context
+ */</span>
+<span class="token comment">// 其中 map 和 meta 是可选参</span>
+<span class="token keyword">function</span> <span class="token function">Demo</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span>map<span class="token punctuation">,</span>meta</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"context"</span><span class="token punctuation">,</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"map"</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"meta"</span><span class="token punctuation">,</span>meta<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> context<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Demo<span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/demo.js'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<h3 id="loader优先级及其执行顺序">loader优先级及其执行顺序</h3>
+<p>loader中有四类：</p>
+<ol>
+<li class="lvl-3">
+<p>pre 前置loader</p>
+</li>
+<li class="lvl-3">
+<p>normal 普通loader</p>
+</li>
+<li class="lvl-3">
+<p>inline 内联loader</p>
+</li>
+<li class="lvl-3">
+<p>post后置loader</p>
+</li>
+</ol>
+<p>默认的执行优先级为 pre，normal，inline，post<br>
+相同优先级的loader执行顺序为 从右往左，从下往上</p>
+<p>通过下面的代码输出顺序为<code>Three</code>、<code>Second</code>、<code>First</code>，可以验证相同优先级的loader执行顺序为<code>从右往左，从下往上</code>。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/first.js'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/second.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/three.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>给loader加上不同的优先级来改变执行顺序。输出顺序为<code>First</code>、<code>Three</code>、<code>Second</code>。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/first.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">enforce</span><span class="token operator">:</span> <span class="token string">'pre'</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/second.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/three.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">enforce</span><span class="token operator">:</span> <span class="token string">'post'</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<h3 id="限制loader在哪些位置查找">限制loader在哪些位置查找</h3>
+<p>可以使用<code>resolveLoader.modules</code>来限制loader的查找位置。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// webpack.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/first.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">enforce</span><span class="token operator">:</span> <span class="token string">'pre'</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/second.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/three.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">enforce</span><span class="token operator">:</span> <span class="token string">'post'</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">resolveLoader</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">modules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'node_modules'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'webpack-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<h3 id="loader的使用方式分类">loader的使用方式分类</h3>
+<p>loader在使用方式上分为<code>同步loader</code>、<code>异步loader</code>、<code>raw loader</code>、<code>pitch loader</code>四类。</p>
+<ol>
+<li class="lvl-3">
+<p>同步loader</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Sync</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>meta</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'同步loader'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>meta<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Sync<span class="token punctuation">;</span></code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>异步loader<br>
+异步loader并不是让出当前loader的执行权力让下一个的loader先执行，而是卡住当前执行进程，方便你再异步的时间里进行一些额外的操作。等到操作完成后任务进程交给下一个loader。</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Async</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>mate</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span> 
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步 loader 外'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// this.async 告诉 loader-runner 这个 loader 将会异步地回调。返回 this.callback。</span>
+  <span class="token keyword">const</span> callback <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步 loader 内'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 调用 callback 后，才会执行下一个 loader</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>mate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Async<span class="token punctuation">;</span></code></pre>
+<p>下面代码输出<code>Second</code>、<code>异步 loader 外</code>、<code>异步 loader 内</code>、<code>First</code>，<code>Second</code>、<code>异步 loader 外</code>输出后等到0.5s后再输出后面的，说明异步的loader类似于async中的await机制，等到结果返回后再继续执行后面的代码。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/first.js'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/async.js'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/second.js'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">resolveLoader</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">modules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'node_modules'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'webpack-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>raw loader<br>
+raw loader一半用于处理 Buffer 数据流文件，在处理图片，字体图标经常用到。</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Raw</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> content<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+Raw<span class="token punctuation">.</span>raw <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Raw<span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'raw'</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">resolveLoader</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">modules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'node_modules'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'webpack-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>上面代码输出内容为：</p>
+<pre class="language-text" data-language="text"><code class="language-text">&lt;Buffer 2f 2f 20 69 6d 70 6f 72 74 20 42 75 74 74 6f 6e 20 66 72 6f 6d 20 27 2e 2f 63 6f 6d 70 6f 6e 65 6e 74 73 2f 42 75 74 74 6f 6e 27 0d 0a 0d 0a 2f 2f 20 ... 113 more bytes></code></pre>
+<ol start="4">
+<li class="lvl-3">
+<p>pitch loader</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// loader1.js</span>
+<span class="token keyword">function</span> <span class="token function">loader1</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>mate</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'同步 loader1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>mate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">pitch1</span><span class="token punctuation">(</span><span class="token parameter">remainingRequest<span class="token punctuation">,</span> precedingRequest<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> loader1<span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>pitch <span class="token operator">=</span> pitch1<span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// loader2.js</span>
+<span class="token keyword">function</span> <span class="token function">loader2</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步 loader2 外'</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> callback <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步 loader2 内'</span><span class="token punctuation">)</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta<span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">pitch2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> loader2
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>pitch <span class="token operator">=</span> pitch2</code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// loader3.js</span>
+<span class="token keyword">function</span> <span class="token function">loader3</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'loader3'</span><span class="token punctuation">)</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">pitch3</span><span class="token punctuation">(</span><span class="token parameter">remainingRequest<span class="token punctuation">,</span> precedingRequest<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader3'</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> loader3
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>pitch <span class="token operator">=</span> pitch3</code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span><span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'loader1'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'loader2'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'loader3'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">resolveLoader</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">modules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'node_modules'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'webpack-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>上面代码的执行顺序是<code>pitch loader1</code>、<code>pitch loader2</code>、<code>pitch loader3</code>、<code>loader3</code>、<code>异步 loader2 外</code>、<code>异步 loader2 内</code>、<code>同步 loader1</code>。由此可见，pitch的执行顺序是<code>从上到下，从左到右</code>。</p>
+<p>上面的pitch loader都是无返回值的情况，如果有返回值执行顺序又会发生改变。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">pitch2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader2'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token string">'console.log("pitch2 return")'</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>讲pitch2改成上面的代码，运行程序后输出<code>pitch loader1</code>、<code>pitch loader2</code>、<code>同步 loader1</code>，如果pitch有返回值会阻断后面的执行，直接执行前一个loader的normal loader（没有enforce属性默认是normal loader）。</p>
+<p><strong>熔断时要注意，如果pitch中return一个不可执行字符串，例如&quot;pitch loader&quot;，在normal loader中return需要做处理，处理成可执行字符串，例如console.log(“pitch loader”)，否则会报错<code>You may need an additional loader to handle the result of these loaders.</code>，还要注意的是如果pitch中return的是一个连贯的字符串，也不会报错，例如return “123”。</strong></p>
+<p><strong>我费劲心思的想在pitch中获取对应loader的content参数，还尝试在loader中获取原本的content，但是都失败了，所以如果想pitch想要想loader传参还是推荐使用data的方式。</strong></p>
+<ol start="5">
+<li class="lvl-3">
+<p>pitch传参</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// loader1.js</span>
+<span class="token keyword">function</span> <span class="token function">loader1</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>meta</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'同步 loader1'</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>meta<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span>map<span class="token punctuation">,</span>meta<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">pitch1</span><span class="token punctuation">(</span><span class="token parameter">remainingRequest<span class="token punctuation">,</span> precedingRequest<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader1'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> loader1<span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>pitch <span class="token operator">=</span> pitch1<span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// loader2.js</span>
+<span class="token keyword">function</span> <span class="token function">loader2</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步 loader2 外'</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> callback <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'异步 loader2 内'</span><span class="token punctuation">)</span>
+    <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">pitch2</span><span class="token punctuation">(</span><span class="token parameter">remainingRequest<span class="token punctuation">,</span> precedingRequest<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  data<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader2'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> loader2
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>pitch <span class="token operator">=</span> pitch2</code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// loader3.js</span>
+<span class="token keyword">function</span> <span class="token function">loader3</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'loader3'</span><span class="token punctuation">,</span>content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta<span class="token punctuation">)</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> content<span class="token punctuation">,</span> map<span class="token punctuation">,</span> meta<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">pitch3</span><span class="token punctuation">(</span><span class="token parameter">remainingRequest<span class="token punctuation">,</span> precedingRequest<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'pitch loader3'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> loader3
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>pitch <span class="token operator">=</span> pitch3</code></pre>
+<p>运行webpack进行打包，输出为:</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">pitch loader1 <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+pitch loader2 <span class="token punctuation">&#123;</span> <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">&#125;</span>
+pitch loader3 <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+loader3 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'index入口'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">undefined</span> <span class="token keyword">undefined</span>
+异步 loader2 外 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'index入口'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">undefined</span> <span class="token keyword">undefined</span>
+异步 loader2 内
+同步 loader1 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'index入口'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">undefined</span> <span class="token number">1</span></code></pre>
+<p>我们可以看到，我们在pitch2中给data添加了value属性，在loader2中可以通过this.data.value来获取。在loader2中callback让后面的loader可以通过meta获取到该参数。</p>
+<h3 id="手写loader练习">手写loader练习</h3>
+<ol>
+<li class="lvl-3">
+<p>clean-log-loader 清除所有的console.log语句</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">CleanLogLoader</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">console\.log\(.*\);?</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> CleanLogLoader<span class="token punctuation">;</span></code></pre>
+<ol start="2">
+<li class="lvl-3">
+<p>banner-loader 用于给代码添加注释信息</p>
+</li>
+</ol>
+<pre class="language-json" data-language="json"><code class="language-json"><span class="token comment">// banner-loader.json</span>
+<span class="token punctuation">&#123;</span>
+  <span class="token property">"type"</span><span class="token operator">:</span><span class="token string">"object"</span><span class="token punctuation">,</span>
+  <span class="token property">"properties"</span><span class="token operator">:</span><span class="token punctuation">&#123;</span>
+    <span class="token property">"author"</span><span class="token operator">:</span><span class="token punctuation">&#123;</span>
+      <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"string"</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token property">"additionalProperties"</span> <span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// banner-loader.js</span>
+<span class="token keyword">const</span> schema <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./banner-loader.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">BannerLoader</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getOptions</span><span class="token punctuation">(</span>schema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> prefix <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    /**
+     * author: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>options<span class="token punctuation">.</span>author<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">
+     */ 
+  </span><span class="token template-punctuation string">`</span></span>
+  <span class="token keyword">return</span> prefix <span class="token operator">+</span> content<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> BannerLoader<span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// webpack.config.js</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'build.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span><span class="token literal-property property">test</span><span class="token operator">:</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.js$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span><span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">&#123;</span><span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'banner-loader'</span><span class="token punctuation">,</span><span class="token literal-property property">options</span><span class="token operator">:</span><span class="token punctuation">&#123;</span>
+          <span class="token literal-property property">author</span><span class="token operator">:</span> <span class="token string">'test'</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">resolveLoader</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">modules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'node_module'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'./webpack-loader/write'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<h3 id="loader执行原理">loader执行原理</h3>
+<p>小结： normal loader 从下往上，从右往左；pitch loader 与之相反。优先级权重为 pre，normal，inline，post。熔断时 pitch loader 返回上一个loader的 normal loader。</p>
+<ol>
+<li class="lvl-3">
+<p>loader执行栈</p>
+</li>
+</ol>
+<p>loader执行栈分为<code>loader分类</code>和<code>生成执行栈</code>，loader分类主要是webpack将获取到的loader按照pre、normal、inline、post分类。</p>
+<p>webpack会将匹配到的loader按照post、inline、normal、pre的顺序压入执行栈。这与上面说的按照pre、normal、inline、post顺序执行正好相反，这是因为loader运行的时候顺序是反向的。</p>
+<ol start="2">
+<li class="lvl-3">
+<p>loader runner的运行<br>
+loader runner运行loader，主要包括pitch和normal两个阶段。分别对应loader runner的iteratePitchingLoader和iterateNormalLoader两个方法。<br>
+interatePitchingLoader递归执行，同时记录loader的pitch状态，与当前的loaderIndex，当到达最大值时也就是执行栈的长度，所有的loader pitch已经执行完毕。开始处理module，调用processResource方法处理模块，loaderIndex–，并递归调用interateNormalLoader。</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// abort after last loader</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>loaderContext<span class="token punctuation">.</span>loaderIndex <span class="token operator">>=</span> loaderContext<span class="token punctuation">.</span>loaders<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+   <span class="token keyword">return</span> <span class="token function">processResource</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> loaderContext<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// iterate</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>currentLoaderObject<span class="token punctuation">.</span>pitchExecuted<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  loaderContext<span class="token punctuation">.</span>loaderIndex<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">iteratePitchingLoaders</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> loaderContext<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">loaderContext<span class="token punctuation">.</span>loaderIndex<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token function">iterateNormalLoaders</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> loaderContext<span class="token punctuation">,</span> args<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ol start="3">
+<li class="lvl-3">
+<p>熔断原理在 loader runner 中，当 loaderIndex 达不到 loader 本身的长度时（有 pitch loader 提前 return 发生了熔断）时， processResource 这个方法是不会触发的，这就导致 addDependency 这个方法也不会触发，因此不会将该模块资源添加进依赖，无法读取模块的内容。继而熔断后续操作。</p>
+</li>
+<li class="lvl-3">
+<p>loader异步处理在loader中调用 this.async 时，实际是将 loaderContext 上的 async 属性赋值为一个函数。isSync 变量默认为 true，当 loader 中使用 this.async 时，它被置为 false，并返回一个 innerCallback 作为异步回调完成的通知。</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript">context<span class="token punctuation">.</span><span class="token function-variable function">async</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>isDone<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>reportedError<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// ignore</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">"async(): The callback was already called."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  isSync <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> innerCallback<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>当 isSync 为 true 时，会在 loader function 执行完毕后同步回调 callback 继续 loader runner 的执行流程。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span><span class="token punctuation">(</span>isSync<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  isDone <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>result <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>result <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> result <span class="token operator">===</span> <span class="token string">"object"</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> result<span class="token punctuation">.</span>then <span class="token operator">===</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">r</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<ol start="5">
+<li class="lvl-3">
+<p>loader中的this<br>
+webpack官方对于loader的定义中有这样一段，函数中的 this 作为上下文会被 webpack 填充。那这个this到底是什么呢？是webpack的实例吗，其实不是，这个this是 loader runner 中的 loaderContext，我们熟悉的 async，callback 等都来自于这个对象。</p>
+</li>
+</ol>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// prepare loader objects</span>
+loaders <span class="token operator">=</span> loaders<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>createLoaderObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+loaderContext<span class="token punctuation">.</span>context <span class="token operator">=</span> contextDirectory<span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>loaderIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>loaders <span class="token operator">=</span> loaders<span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>resourcePath <span class="token operator">=</span> resourcePath<span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>resourceQuery <span class="token operator">=</span> resourceQuery<span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>resourceFragment <span class="token operator">=</span> resourceFragment<span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>async <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+loaderContext<span class="token punctuation">.</span>callback <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token comment">// ...</span></code></pre>
+<p>你可以在这上面查看this的参数<a href="https://webpack.docschina.org/api/loaders/#the-loader-context">官网Loader Context</a></p>
+<h3 id="小结">小结</h3>
+<ol>
+<li class="lvl-3">
+<p>loader的优先级顺序为pre、normal、inline、post。</p>
+</li>
+<li class="lvl-3">
+<p>loader在normal中的执行顺序为<code>从下到上，从右到左</code>。</p>
+</li>
+<li class="lvl-3">
+<p>loader中pitch的执行顺序正好和normal相反，为<code>从上到下，从左到右</code>。loader的熔断机制可以改变执行顺序。</p>
+</li>
+<li class="lvl-3">
+<p>介绍了loader的四种类型，同步loader、异步loader、raw loader、pitch loader。</p>
+</li>
+<li class="lvl-3">
+<p>手写练习了两个loader。</p>
+</li>
+<li class="lvl-3">
+<p>了解了loader runner运行的机制和熔断机制。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>webpack compiler 钩子</title>
+    <url>/2023/04/15/webpack/webpack%20compiler%20%E9%92%A9%E5%AD%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="webpack-compiler-钩子">webpack compiler 钩子</h2>
+<h3 id="compiler">compiler</h3>
+<p>compiler的hooks属性上面携带了插件执行的生命周期钩子。你可以调用不同的钩子来控制不同时刻的执行。</p>
+<h3 id="compilation">compilation</h3>
+<p>compilation对象记录模块的信息，只要项目文件改动，就会重新生成compilation，compilation上面有很多方法可以供我们使用。<br>
+<a href="https://webpack.docschina.org/api/compilation-object/">webpack官网compilation对象</a></p>
+<h3 id="compiler-钩子">compiler 钩子</h3>
+<p><a href="https://webpack.docschina.org/api/compiler-hooks/">官网compiler钩子地址</a></p>
+<p>常用生命周期钩子</p>
+<ol>
+<li class="lvl-3">
+<p>beforeRun 编译器执行前</p>
+</li>
+<li class="lvl-3">
+<p>run 编译器开始读取记录前</p>
+</li>
+<li class="lvl-3">
+<p>beforeCompile 开始编译之前</p>
+</li>
+<li class="lvl-3">
+<p>compile 新的compilation创建之前</p>
+</li>
+<li class="lvl-3">
+<p>compilation compilation 创建之后执行</p>
+</li>
+<li class="lvl-3">
+<p>emit 文件提交到dist目录前</p>
+</li>
+<li class="lvl-3">
+<p>afterEmit 输出 asset 到 output 目录之后执行</p>
+</li>
+<li class="lvl-3">
+<p>make compilation 结束之前执行</p>
+</li>
+<li class="lvl-3">
+<p>done 在 compilation 完成时执行</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+  </entry>
 </search>

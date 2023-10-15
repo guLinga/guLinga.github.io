@@ -6,7 +6,7 @@
   <link href="http://gulinga.github.io/atom.xml" rel="self"/>
   
   <link href="http://gulinga.github.io/"/>
-  <updated>2023-10-15T13:45:48.028Z</updated>
+  <updated>2023-05-13T09:27:53.241Z</updated>
   <id>http://gulinga.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>1514</title>
-    <link href="http://gulinga.github.io/2023/10/15/past/1514/"/>
-    <id>http://gulinga.github.io/2023/10/15/past/1514/</id>
-    <published>2023-10-15T13:04:28.987Z</published>
-    <updated>2023-10-15T13:45:48.028Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="1514">1514</h2><p>    1514 是啥啊，这是当时我 16 岁的时候我高中的一个朋友问我的。1514 只是一个编号，当我能看到这个编号的时候就说明我父母已经不在了。这要从很久以前开始说了，那时我才 7 岁。</p><p>    “父母是隔在我们和死亡之间的帘子你和死亡好象隔着什么，没有什么感受，你的父母挡在你们中间，等到你的父母过世了，你才会直面这些东西，不然你看到的死亡是很抽象的，你不知道。亲戚、朋友、邻居、隔代，他们去世对你的压力不是那么直接，父母是隔在你和死亡之间的一道帘子，把你挡了一下，你最亲密的人会影响你的生死观。”这是《百年孤独》中的一句话。也就是在我 7 岁的时候我和死亡之间的帘子被撕开了。这个编号也就是那个时候知道的。其实吧我并不是独特的，那一个事件过后好多我的同龄人也都知道了自己的编号。</p><p>    父母离开后我很不想回家，放学后就坐在学校后面的小山坡上发呆，等到天黑才回家不情愿的睡去。当时对我重要的人都还没出现在我的生活里，我就一个人这样发呆，重复了好多天。</p><p>    我和吉利的认识也是在这段时间。我还是在放学后在小山坡上发呆，不知道多少天了。这次黄昏的时候吉利来上坡上找我了，我并不认识她，我们是同年龄的，同一学校同一届同一专业，学校很大，我们之前并没有交集。我对她的到来并没有很诧异，也许我真的很需要找人说说话。我当时和她说了很多，看了星星，我们还一起解读了一下星象。她邀请我之后和她一起生活，我真的很无助，我不知道我该怎么选择，我不知道我以后的每一步选择是否正确。但是我真的想有个人陪陪我，安慰一下我，我同意了。当时我并不知道她母亲和我母亲是很要好的朋友。那天我去到她家里过夜，我哭了，我不知道为什么哭，就是很委屈，很无助。</p><p>    不久后，军方就来了。我的家被封了起来，军方也来吉利家里了解了我的现状。说之后会有人来接我，到时候再让我做决定。</p><p>    这个不久后要来的人就是我人生中很重要的老师。她的名字我并不知道，我之前一直喊她老师，之后喊她前辈。当她来接我的时候我选择了跟她走，但是因为和吉利家距离很近，所以我基本上是不是两边都生活一段时间。前辈教会了我很多，甚至说我就是她从小教导大的。我跟着前辈学习“暗大局”，主要是“暗大局”，其他职业也需要学习，很累。吉利仍然在原来的学校学习，我并不知到她们的课程，但是我知道吉利也是学的“大局观”。</p><p>    我已经很多年没见过她们了。我真的很想她们。想和她们说说话。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
-      
-    
-    
-    
-    <category term="past" scheme="http://gulinga.github.io/categories/past/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>五月中旬总结</title>
@@ -483,6 +461,34 @@
     <updated>2022-11-24T05:40:31.372Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP1-1和HTTP2的区别">HTTP1.1和HTTP2的区别</h2><ol><li class="lvl-3"><p>二进制协议在http1.1中，头部信息是文本，数据可以是文本也可以是二进制，而http2中都必须是二进制，这个概念称为&quot;帧&quot;，分为头部信息帧和数据帧，帧也是http2中多路复用的基础。</p></li><li class="lvl-3"><p>多路复用在http2中，同样复用了tcp连接，但是http2中可以同时接收和发送多个请求和响应，不用按照顺序一一发送。对头阻塞：在http1.1中，报文是一发一收的，在http1.1中没有优先级，只有入队的先后顺序，先入队的先执行，如果对首的请求处理的时间过长，后面的请求需要等待对首的执行完毕才能继续执行，这就是对头阻塞。</p></li><li class="lvl-3"><p>数据流在http2中引入了数据流的概念，并不是按顺序发送的，所以每个数据流都有一个独一无二的编号，用来区分是哪个数据流。</p></li><li class="lvl-3"><p>头部信息压缩在http1.1每次都要附带上所有的信息发送请求，例如cookien，这就使得附带的信息可能有重复的，所以，在http2中会使用gzip或compress进行头部信息的压缩，而且服务器和客户端会共同维护一个头部信息表，所有的字段存入这个表中，生成一个索引值，当下次携带相同的信息的时候只携带索引值。</p></li><li class="lvl-3"><p>服务器推送在http2中，服务器在没有收到请求的情况下，主动向客户端推送资源，减少一些延迟时间，推送的资源只能是静态资源。websocket向服务端请求的及时数据是不推送的。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="面试准备" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    
+    <category term="网络" scheme="http://gulinga.github.io/categories/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="http://gulinga.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="HTTP" scheme="http://gulinga.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP和HTTPS的区别</title>
+    <link href="http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E5%92%8CHTTPS%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://gulinga.github.io/2022/11/24/interview/%E7%BD%91%E7%BB%9C/HTTP%E5%92%8CHTTPS%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2022-11-23T16:00:00.000Z</published>
+    <updated>2022-11-24T02:31:38.928Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="HTTP和HTTPS的区别">HTTP和HTTPS的区别</h2><ol><li class="lvl-3">HTTPS需要CA证书，费用较高，而HTTP不需要</li><li class="lvl-3">HTTP是超文本传输协议，是明文传输，而HTTPS是具有安全性的SSL加密的传输协议</li><li class="lvl-3">HTTP的端口号是80，HTTPS的端口号是443</li><li class="lvl-3">HTTP协议较简单，是无状态的，HTTPS是通过SSL和HTTP构建的可加密传输和身份认证的网络协议，比较安全</li></ol>]]></content>
     
     
       

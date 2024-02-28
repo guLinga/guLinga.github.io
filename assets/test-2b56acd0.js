@@ -1,0 +1,1 @@
+import{j as n,F as r}from"./client-entry-cfd092c7.js";const c={pageType:"test"},s=[];function o(t){return n(r,{})}function u(t={}){const{wrapper:e}=t.components||{};return e?n(e,Object.assign({},t,{children:n(o,t)})):o()}export{u as default,c as frontmatter,s as toc};

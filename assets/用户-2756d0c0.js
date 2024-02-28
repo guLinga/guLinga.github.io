@@ -1,0 +1,1 @@
+import{j as e}from"./client-entry-cfd092c7.js";const r=void 0,s=[];function o(n){const t=Object.assign({p:"p"},n.components);return e(t.p,{children:"测试"})}function a(n={}){const{wrapper:t}=n.components||{};return t?e(t,Object.assign({},n,{children:e(o,n)})):o(n)}export{a as default,r as frontmatter,s as toc};

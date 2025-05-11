@@ -1507,6 +1507,11 @@ hue-6-2: #e6c07b
   margin-top: -64px !important;
   transition: margin-top 0.8s ease-in-out;
 }
+.header-body-background {
+  background-image: url('../image/cover.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .header-body-background-content span {
   height: 150px;
   width: 150px;

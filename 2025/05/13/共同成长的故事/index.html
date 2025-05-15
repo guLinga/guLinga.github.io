@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-共同成长的故事</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="分享一下关于我们共同成长的故事。">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="分享一下关于我们共同成长的故事。">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<!--
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/image/logo.png" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										HOME
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										ARCHIVE
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										CATEGORIES
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										TAGS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										LINKS
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										ABOUT
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>徐佳恩</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">HOME</a>
+        </li>
+        
+        <li>
+            <a href="/archives">ARCHIVE</a>
+        </li>
+        
+        <li>
+            <a href="/categories">CATEGORIES</a>
+        </li>
+        
+        <li>
+            <a href="/tags">TAGS</a>
+        </li>
+        
+        <li>
+            <a href="/links">LINKS</a>
+        </li>
+        
+        <li>
+            <a href="/about">ABOUT</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 66%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					right: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					right: "-100%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script> -->
+
+<div class="post">
+    <div
+  class="post-header-background post-header-img"
+  style="
+    background: url('https://gulinga-github-io.pages.dev/image/liupanpan/20250513_2.png');
+  "
+>
+  <div class="post-header-background-content">
+    <ul class="post-header-tag">
+      
+    </ul>
+
+    <h1>共同成长的故事</h1>
+    <div class="post-header-info">
+      <div class="post-header-info-author">
+        
+        <svg
+          t="1604839279282"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="2901"
+          width="20"
+          height="20"
+        >
+          <path
+            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+            p-id="2902"
+            fill="#ffffff"
+          ></path>
+        </svg>
+        
+        <!-- <span class="post-header-info-author-text"> <a href="../../about">刘盼盼</a></span> -->
+        <span class="post-header-info-author-text"
+          >刘盼盼</span
+        >
+        <div class="post-header-info-author-categories">
+          
+        </div>
+        <p>2025-05-13 20:58:02</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    <p>我亲爱的朋友：</p>
+<p>&ensp;&ensp;&ensp;&ensp;主内平安！我想以无比激动且喜乐的心，想向大家分享一个主题，就是《共同的扶持 勉励的力量》。我想分享一下关于我们的故事。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我们的故事很长，长到很难有时间去讲完。我们的故事又很短，短到见面的时光，只要看到对方，就看到了对方的故事。我们的故事又很奇特，我们的故事依存于过去，现在，未来。因为我们都是活在当下的人，所以只好用短暂的时间去讲一讲今天。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我们的相遇本就是存在一定的意义，她是我第一个还未见面就已经聊了许久的朋友。好像，从微信通过验证的那一刻起，就把我们之间的“信”交织在了一起，把我们变熟了。她真的在许多方面都带给我无法言说的惊喜，给我的生命带来了很大的鼓舞。以此有力量去做了很多事情，捕捉了生命的另一种可能，造就了生命所赋予的性情。</p>
+<p>&ensp;&ensp;&ensp;&ensp;还记得第一次见面的时候，她跟我说了一句话，我一直记到现在。她说：“她对我好 并不是要求我回报她什么，而是希望如果以后遇到和我相似的人，可以用自己的力量去帮助他人。造就他人，成就自己。”她在我觉得爱自己都没有能力的时候，十分坚定地告诉我说：“爱是一种传递，有一天 你肯定会成为一个给予爱的人的，并给人带来能量。”但当时，我失去了所有相信的力量，爱也变得很含糊，对于未来，一点都不敢想，任凭眼睛，都失去了展望未来的勇气。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我自己都差点放弃了我自己的时候，神没有放弃我，她也没有放弃我。一直在用自己的方式带给我力量，陪伴在我左右，给我带来了很多很多的激励，因此，让我成为了真的很不一样的自己。</p>
+<p>&ensp;&ensp;&ensp;&ensp;上午的时候，我们聊到不断的更新与改变。我说：“真的，感觉世界很大，和一个人的相遇太不容易了。特别是原本就和这么好的你相处。昨天我向别人诉说你的时候，我感觉我的脸上都带着一种油然而生的笑容，比单纯说我自己都开心。”她说：“我也超级超级开心遇见你，和你成为好朋友，真的真的特别珍惜，也非常满足。”我说：“真的，从人的某个方面，看到了神的另一个方面，真的很感动。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;两个人看似就是非常简短的聊天儿，感觉也没聊什么。但是这是人看来，言语中真的有神的同在，我立马就想起了一句话：“你是我脸上的荣光”。然后就去搜了搜，原句是在诗篇 43 篇 5 节，经文是，“我的心哪，你为何忧闷？为何在我里面烦躁？应当仰望神，因我还要称赞祂。祂是我脸上的荣光（原文是帮助），是我的神。”我当即就表示，太好了，又因为咱俩聊天得到一句话，太珍贵了。真的特别宝贵。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当她告诉我说她也想挑战一下自己，想去更深地了解一个人物时，我告诉她说：“你要相信，在你准备的时候，神一定与你同在。”我向她说这句话的时候，她说：“叫我想起一句话，你是我随时的帮助。”然后问我有这句话吗？我们当即搜了搜，确实有，而且非常好的一句话。也在诗篇上，诗篇 46 篇 1 节，“神是我们的避难所，是我们的力量，是我们在患难中随时的帮助。”真的很有力量，那种感觉就像不仅仅是我们之间单纯的聊天，还有更多的是神在我们中间，成为我们持久的力量。</p>
+<p>&ensp;&ensp;&ensp;&ensp;她说：“在我身上学会了很多，她发现我是一个喜欢记录的人，她很少用这样的方式去表达自己的情感，但她从我身上看到，这确实是一个很好的方式，并且因此她也非常愿意去尝试做这样的事情。之前觉得麻烦，但现在觉得真的很有意义，她说 每次看到我，都能想到神的恩典。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;我何尝也不是这样？从她那里实在得到了太多太多的力量。我当即就觉得特别具象化，自己所做的事儿，当时不以为然，但或许就在未来的某一天 造就了自己，也成就了他人，真的很有意义。</p>
+<p>&ensp;&ensp;&ensp;&ensp;并且发现语言真的是在某方面有这种特殊的魅力所存的。神赐给人的口，让人说话，本身就是一种很大的恩典。因为当你开口的时候，会有很多意想不到的事发生。自己受益匪浅，真正具象化的体现“讲的人和听的人都受益。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;彼时，我越发清晰地觉察到记录所依存的蕴含的意义。感觉网站和所要记录的东西都有意义，就我以为没有什么东西可以分享，有了圣灵的感动 才可以分享之类的。但我现在发现，把我们聊天之中突然之间所发现的话，记录下来，往回看的时候，也是一种幸福，会比原来更幸福。</p>
+<p>&ensp;&ensp;&ensp;&ensp;她说：“她想的是，我们俩可以一块儿写一篇，或者有感动的可以一人写一篇，那样就特别有意义，反正也没有字数要求，想尝试一下，学习记录，一起成长。”当即我俩的感觉就像是虽然还没写，但感觉已经可以想象到未来了。仿佛还未记录，就已经成型了，就像我俩刚开始的相遇一样。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当即 我就又认识到我的一个收获。那句“你鼓励了我，使我心中有能力。”完全具象化。有人的言语，一定有神的同在。然后因着她曾经告诉我的，再去安慰其他人的时候 就会产生一种力量，就真的能感受到是一种爱的传递，你帮助了我，使是我 快跑，在某一天 我也帮助了别人，真的，当即就觉得，在一间教会，一个团体里面，爱的传递真的太重要了。</p>
+<p>&ensp;&ensp;&ensp;&ensp;虽然人真的很难安慰一个人，因为人的言语大多数都是显得苍白无力，但是神的话是好的，是有力量的。如果有一天 神借着你的口去安慰一个人的时候，祂就会在里面做工，像神借巴兰的口一样。认识这点的时候，特别能感受到神真的无时无刻不在带领着我们，陪伴着我们，陶造着我们，使我们成为更加完备的器皿。</p>
+<p>&ensp;&ensp;&ensp;&ensp;她跟我说：“对对对，就像我有时跟你聊天儿，其实也不知道应该如何说，但就是很奇妙的是，上帝就会让你有特别的感动，来帮助彼此，真的特别感恩。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;真的是这样，我每次不开心的时候，或者极度失落的时候，她就会和我打电话，说的全部都是闲言碎语，很少有在说圣经上的话，很难想象到圣经上的话。但很神奇的是，每次都特别受安慰，言语之间 必然会有神的同在。</p>
+<p>&ensp;&ensp;&ensp;&ensp;昨天和一个非常有恩赐的人聊天儿，一下子聊了四个多小时，一下子聊破微信记录了。2025 年 1 月份到现在，微信上的最久的一次聊天，四个多小时。我现在都无法想象当时的自己，哪里来的力量和勇气，一下子说出那么多话，而且还是在一个强者面前。就很意难平，有时候自己想象不到的事情太多了。我想大体上是受到了她的感染了吧，因她曾经帮助了我，所以我才会有胆量。就像她的笑容一样 ，明媚又自信，感染到了我。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我已经忘了我们的之间的四个多小时，我都说了点什么。因为我在这点上实在不好，口直心快，说的快，忘的也快。我不知道听完我的言语，他内心是一种怎样的感受。但人无论说再多，说多久，也都是苍白无力的，有时候的言语不去伤害一个人就够了，哪里何谈安慰呢？因为使人成长的是神，改变人的也是神。但我相信我们的对话之间，一定也会有神的同在，哪怕是我们看不见，感受不到，但祂依然在。我也想像我的朋友第一次那么坚定地告诉我说：“有一天 你也会成为一个给予爱的人的”一样，告诉他，像他这般有恩赐的人，神也一定会排除他心中的一切的思虑，一定会改变他的，无比坚定。因为在人不能，在神 凡事都能。</p>
+<p>&ensp;&ensp;&ensp;&ensp;后来，我们又谈到一个问题。人很容易陷入自己的迷雾中，就像是圣经说的自怜，自己看自己都觉得可怜。因而像约伯一样祝祝自己的生日。真的是这样，人真的只是人，总会有这种情况的。但她告诉我说：“就像那句话，当局者迷，旁观者清，自己看自己，就很容易看不到自己的优点，看到的全是自己的缺点。而自己去看别人的时候，就总能发现别人的优点，别人的进步，人都是这样的。所以还是要适当听听别人对我们的评价，特别是同路人对你的评价，而不是世上的人。当身边很多同路人都对你说，你进步了，你改变很大，那你就是改变很大了。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;真的是这样，一个属灵的朋友 跟世上的朋友真的有很大的不同。从最简单的例子开始，送礼物。就不知道为什么，这可能就是属灵朋友最大的恩赐吧，总是能够透过现象看本质。切实地体会到你的需要。或许是一束鲜花所带来的好运，一件衣服所带来的华美的装饰，哪怕是一杯最常见的橙汁儿，总能感觉到与其他非同一般的含糖量。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当时果真又想到一句经文，脑子里突然划过：“在我还幼小的时候，你就安慰我。”搜了一下，经文是在哥林多后书的一章四节，说到：“在我们的一切患难中，祂就安慰我们，叫我们用造物主所赐的安慰，去安慰那遭各样患难的人。”真的是很不一样的感觉，神的言语所带来的力量 真的胜过世上的千言万语。</p>
+<p>&ensp;&ensp;&ensp;&ensp;当她读到一些非常好的话语时，也会分享给我，比如说“耶和华啊，愿你的仇敌都这样灭亡！愿爱你的人如日头出现，光辉烈烈！”耶和华啊，愿你的仇敌都这样灭亡！愿爱你的人如日头出现，光辉烈烈！”共同勉励，共同获取力量。</p>
+<p>&ensp;&ensp;&ensp;&ensp;真的是这样，两个人同心在一起，共同去经历主的话语，真的是一件特别值得喜悦的事儿。因为我变得更好，从而映射了那个更好的人 。是我的朋友，更是神在我们中间的带领。</p>
+<p>&ensp;&ensp;&ensp;&ensp;言语还有很多，写不完 ，真的写不完，我相信我们的故事始终都是未完待续……世人老爱说，最好的你和最好的我之间差了一整个青春 ，因此 我们不能共同成长。我在小说里也常用到过这样的句子。但在属灵的友谊里，我是破碎的我，她是本身就很好的她，在我们之间，也有很大的距离，但我们依然可以成为朋友，因为我们知道，神已经在我们身上做了更伟大的工作，祂一直在中间，与我们同在。</p>
+<p>&ensp;&ensp;&ensp;&ensp;希望我们今天的故事可以照亮你们的道路，也希望大家每个人的故事都熠熠生辉。或许是刚开始碰撞的火花，但多分享一点，或许就成为了茁壮的火苗，为祂所用。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我亲爱的朋友，希望我们都能成为明媚的人，明媚的灵里和身体，每天一抬头，无论晴天还是多云，看到的都是明媚，愿神赐福于大家，阿门！</p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+
+    
+    <a href="/2025/05/13/%E6%88%91%E4%BB%A5%E8%89%B0%E9%9A%BE%E7%BB%99%E4%BD%A0%E5%BD%93%E9%A5%BC/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>我以艰难给你当饼</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2025 By 徐佳恩. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

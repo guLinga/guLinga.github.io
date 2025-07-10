@@ -40,243 +40,194 @@
 	<meta name="generator" content="Hexo 7.3.0"></head>
 
 	<body>
-		<!--
-	<div class="header">
-		<div class="header-top" id="header-top">
-			<div class="h-left">
-				<a href="/">
-					<img src="/image/logo.png" alt="Quiet">
-				</a>
-			</div>
-			<div class="h-right">
-				<ul>
-					
-						
-							<li class="select">
-								<a href="/">
-									HOME
-								</a>
-								<span class="dot"></span>
-							</li>
-							
-									
-						
-								<li>
-									<a href="/archives">
-										ARCHIVE
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/categories">
-										CATEGORIES
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/tags">
-										TAGS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/links">
-										LINKS
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-						
-								<li>
-									<a href="/about">
-										ABOUT
-									</a>
-									<span class="dot"></span>
-								</li>
-								
-									
-				</ul>
-			</div>
-			<div class="h-right-close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-					<path fill="none" d="M0 0h24v24H0z" />
-					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="sidebar">
-    <div class="topo">
-        <h2>徐佳恩</h2>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
     </div>
-    <ul>
-        
-        <li>
-            <a href="/">HOME</a>
+    <div class="h-right">
+      <ul>
+         
+        <li class="select">
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
         </li>
-        
+          
         <li>
-            <a href="/archives">ARCHIVE</a>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
         </li>
-        
-        <li>
-            <a href="/categories">CATEGORIES</a>
-        </li>
-        
-        <li>
-            <a href="/tags">TAGS</a>
-        </li>
-        
-        <li>
-            <a href="/links">LINKS</a>
-        </li>
-        
-        <li>
-            <a href="/about">ABOUT</a>
-        </li>
-        
-    </ul>
-    <div class="my_foot">
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
         
         <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
             <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
         </a>
         
-    </div>
+    </div> -->
 </div>
-<div class='shelter'>
-</div>
+<div class="shelter"></div>
 <style>
-    .shelter{
-        background-color: #333;
-        opacity:0.5;
-        cursor: pointer;
-        display: none; 
-        position: fixed;
-        left: 0;
-        top: 0; 
-        right: 0;
-        bottom: 0;
-        z-index: 1998;
-    }
-    .sidebar {
-        width: 66%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        background: #fff;
-        z-index: 1999;
-        text-align: center;
-        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
-    }
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
 
-    .topo {
-        width: 100%;
-        height: 200px;
-        background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-        display: flex;
-        align-items: flex-end
-    }
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://api.ixiaowai.cn/gqapi/gqapi.php) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
 
-    .topo h2 {
-        color: #fff;
-        z-index: 1;
-        position: relative;
-        margin: 0 0 10px 10px;
-        font-size: 1.2em;
-        box-sizing: border-box
-    }
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
 
-    .topo:before {
-        content: '';
-        background-image: url(/image/pattern.png);
-        background-repeat: repeat;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1
-    }
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
 
-    .sidebar ul {
-        width: 100%;
-        margin-top: 50px
-    }
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
 
-    .sidebar ul li {
-        height: 50px;
-        list-style: none;
-        font-size: 1.2em;
-        text-align: right;
-        margin-right: 10px
-    }
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
 
-    .sidebar ul li a {
-        display: grid;
-        color: #5d606a;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-decoration: none
-    }
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
 
-    .my_foot {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: absolute;
-        bottom: 0
-    }
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
 
-    .my_foot a {
-        text-decoration: none;
-        margin-right: 10px;
-        display: inline-block
-    }
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
 
-    .my_foot a img {
-        width: 30px;
-        height: 30px
-    }
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
 </style>
 
 <script>
-    $( function () {
-	$( '.h-right-close>svg' )
-		.click( function () {
-			$( '.sidebar' )
-				.animate( {
-					right: "0"
-				}, 500 );
-			$( '.shelter' )
-				.fadeIn( "slow" )
-		} );
-	$( '.shelter' )
-		.click( function ( e ) {
-			$( '.sidebar' )
-				.animate( {
-					right: "-100%"
-				}, 500 );
-			$( '.shelter' )
-				.fadeOut( "slow" )
-		} )
-} )
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
 
-</script> -->
 
 <div class="home">
   <div class="header-body-background">
@@ -307,7 +258,7 @@
           <div class="post-block-content-info-exhibition">
             <div class="post-block-content-info-exhibition-tags">
               <span class="post-tag">
-                <!-- 徐佳恩 -->
+                <!-- 迦南书简 -->
                 徐佳恩
               </span>
               <span class="post-tag">
@@ -335,7 +286,7 @@
 
 		<div class="footer">
   <!-- <div class="Copyright">
-		©2025 By 徐佳恩. 主题：<a
+		©2025 By 迦南书简. 主题：<a
 			style="text-decoration: none;display: contents; color: #898F9F;"
 			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
 	</div>

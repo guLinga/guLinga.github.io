@@ -287,7 +287,7 @@
         <input type="radio" id="orange" name="color" value="orange" />
         <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
       </fieldset>
-      <div>
+      <div class="love">
         <div class="hearts">
           <div class="heart heart--is-yellow heart--top-left"></div>
           <div
@@ -487,6 +487,15 @@
     color: red !important;
   }
 
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .card {
     position: relative;
     width: calc(100%);
@@ -509,6 +518,11 @@
     p {
       margin: 0 0 1rem 0;
     }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
   }
 
   .heart {
@@ -580,53 +594,57 @@
     --bg-color: #e8874e;
   }
 
+  /* 完成 */
   .heart--top-left {
-    left: -25%;
-    top: -2%;
+    left: -30px;
+    top: 50%;
     rotate: -7deg;
-    z-index: 2;
+    z-index: -1;
     --scale: 4.6;
     animation-delay: 0.1s;
   }
 
+  /* 完成 */
   .heart--top-center {
-    left: 64%;
-    top: -5%;
+    left: 0;
+    top: -20px;
     rotate: -42deg;
-    z-index: -1;
+    z-index: 2;
     --scale: 4.6;
     animation-delay: 0.2s;
   }
 
+  /* 完成 */
   .heart--top-right {
-    left: 118%;
-    top: 8%;
+    right: -30px;
+    top: 0;
     rotate: 10deg;
     z-index: -1;
     --scale: 3.6;
     animation-delay: 0.3s;
   }
 
+  /* 完成 */
   .heart--left-center {
-    left: -20%;
-    top: 64%;
+    left: -20px;
+    bottom: 0;
     rotate: -23deg;
-    z-index: 2;
+    z-index: -1;
     --scale: 6.2;
     animation-delay: 0.2s;
   }
 
   .heart--bottom-center {
     --scale: 4.2;
-    left: 38%;
-    top: 101%;
+    right: -10px;
+    bottom: 0;
     rotate: 40deg;
     animation-delay: 0.3s;
   }
 
   .heart--bottom-right {
-    left: 102%;
-    top: 78%;
+    right: -30px;
+    top: 50%;
     rotate: 12deg;
     z-index: -1;
     --scale: 5.4;

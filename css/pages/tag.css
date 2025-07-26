@@ -1,0 +1,15 @@
+.tag-content {
+  display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.tag-content-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

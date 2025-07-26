@@ -167,6 +167,13 @@
   background: linear-gradient(0deg, #f1f5fb, #f9fcff) !important;
 }
 .post-content {
+  display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  flex-direction: column;
   position: relative;
   z-index: 2;
 }

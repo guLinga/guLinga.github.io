@@ -1,0 +1,37 @@
+.header-body-background {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  background: linear-gradient(to top, #f1f5fb, #f9fcff);
+  height: 466px;
+}
+.header-body-background-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.header-body-background-content h2 {
+  display: flex;
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #12183a;
+}
+.header-body-background-content span {
+  display: flex;
+  height: 152px;
+  font-size: 36px;
+  line-height: 48px;
+  color: #12183a;
+  align-items: center;
+}
+.header-body-background-content span img {
+  width: 56px;
+  height: 56px;
+}

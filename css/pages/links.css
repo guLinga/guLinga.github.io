@@ -1,0 +1,100 @@
+.links-content {
+  display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.links-content-data {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 64px 80px;
+  font-size: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 0.4s ease-in-out;
+}
+.links-content-data img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.links-content-data-item {
+  display: flex;
+  padding: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #f8f9fb;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: ease-in-out;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.links-content-data-item:hover {
+  background: #f8f9fb;
+  top: -10px;
+  box-shadow: 0 10px 10px 0 rgba(50, 50, 50, 0.1);
+}
+.links-content-data-item a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #333333;
+}
+.links-content-data-item .card {
+  display: flex;
+}
+.links-content-data-item .card .user-link-image {
+  display: flex;
+  width: 48px;
+  height: 48px;
+}
+.links-content-data-item .card .user-link-image img {
+  border-radius: 50%;
+}
+.links-content-data-item .card .user-link-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 166px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+.links-content-data-item .card .user-link-info h1 {
+  max-width: 170px;
+  color: #3c4858;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+}
+.links-content-data-item .card .user-link-info span {
+  max-width: 170px;
+  color: #718096;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.links-content-data-info {
+  width: 100%;
+  margin-top: 20px;
+}
+@media screen and (max-width: 800px) {
+  .links-content-data {
+    padding: 64px 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .links-content-data {
+    padding: 64px 20px;
+  }
+}

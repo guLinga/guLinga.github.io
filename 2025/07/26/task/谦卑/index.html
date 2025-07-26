@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-谦卑</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="谦卑">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="谦卑">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <h2 id="谦卑"><a href="#谦卑" class="headerlink" title="谦卑"></a>谦卑</h2><h3 id="一、为什么要谦卑"><a href="#一、为什么要谦卑" class="headerlink" title="一、为什么要谦卑"></a>一、为什么要谦卑</h3><p>&ensp;&ensp;&ensp;&ensp;耶稣基督作为人的样式谦卑柔和，作为门徒，我们也当效法耶稣基督的行为。</p>
+<blockquote>
+<p>【彼前 5:5】你们年幼的，也要顺服年长的。就是你们众人也都要以谦卑束腰，彼此顺服，因为　神阻挡骄傲的人，赐恩给谦卑的人。<br>【彼前 5:6】所以你们要自卑，服在　神大能的手下，到了时候，他必叫你们升高。<br>【路 18:17】我实在告诉你们：凡要承受　神国的，若不像小孩子，断不能进去。”</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;神阻挡骄傲的人，赐恩给谦卑的人。凡要承受　神国的，若不像小孩子，断不能进去。因此，谦卑是基督徒的先决条件。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我们要做到谦卑就要首先知道符合圣经的谦卑是什么样子的，谦卑、自卑、自大的分别是什么？</p>
+<h3 id="二、区分谦卑、自卑、自大的概念："><a href="#二、区分谦卑、自卑、自大的概念：" class="headerlink" title="二、区分谦卑、自卑、自大的概念："></a>二、区分谦卑、自卑、自大的概念：</h3><p><code>谦卑</code></p>
+<p><strong>谦卑定义</strong>：客观认识自己的能力和局限，既承认自己的价值（不否定优点），也接纳自己的不足，不夸大也不贬低。</p>
+<p><strong>经文</strong>：腓立比书 2:3-4：“凡事不可结党，不可贪图虚浮的荣耀，只要存心谦卑，各人看别人比自己强。各人不要单顾自己的事，也要顾别人的事。</p>
+<p><strong>例子</strong>：为门徒洗脚：《约翰福音》13 章记载了耶稣起身给门徒洗脚的事迹，他以仆人的姿态为门徒服务，是谦卑的典范。</p>
+<p><code>自卑</code></p>
+<p><strong>自卑定义</strong>：过度否定自我价值，放大自身缺点，甚至无视自己的优势，觉得自己“不配”“不如人”。</p>
+<p><strong>经文</strong>：《罗马书》10:11：“经上说：‘凡信他的人，必不至于羞愧。’”</p>
+<p><strong>例子</strong>：【出 4:10】摩西对耶和华说：“主啊，我素日不是能言的人，就是从你对仆人说话以后，也是这样，我本是拙口笨舌的。”<br>【出 6:12】摩西在耶和华面前说：“以色列人尚且不听我的话，法老怎肯听我这拙口笨舌的人呢？”</p>
+<p><code>自大</code></p>
+<p><strong>自大的定义</strong>：指的是对自己的能力、价值或成就持有过度膨胀的认知，表现为高估自己、轻视他人，难以客观看待自身局限和他人优势的心态。</p>
+<p><strong>经文</strong>：《诗篇》10:4：“恶人因心里骄傲，说：‘耶和华必不追究。’他一切所想的，都以为没有神。”</p>
+<p><strong>例子</strong>：尼布甲尼撒王【但 4:30】他说：“这大巴比伦不是我用大能大力建为京都，要显我威严的荣耀吗？”</p>
+<hr style="background: black;">
+
+<p>&ensp;&ensp;&ensp;&ensp;谦卑是一个人，以一种降低或卑微自己的方式处在一个很低的地位上，但是又不否认自己的权利和恩赐，而是承认恩赐来自上帝，权利临到自己身上但不是来自自己。</p>
+<p>&ensp;&ensp;&ensp;&ensp;但是要注意的一点是：谦卑是一种内心的态度，而不仅仅是一种外在的行为。一个人可以装出一副谦卑的样子，但仍然有一颗充满骄傲和傲慢的心。</p>
+<h3 id="三、在哪些事情上需要谦卑或避免自卑自大："><a href="#三、在哪些事情上需要谦卑或避免自卑自大：" class="headerlink" title="三、在哪些事情上需要谦卑或避免自卑自大："></a>三、在哪些事情上需要谦卑或避免自卑自大：</h3><ol>
+<li><code>避免属灵知识的增加和为神做事的增加而自大。</code></li>
+<li><code>在恩赐和成就上避免自大</code>自己擅长的领域，有人请教时，不摆架子，用对方能听懂的语言讲解，不说“这都不知道”。</li>
+<li><code>避免轻视他人而导致的自己内心的自大。</code>与人聊天时，耐心听完对方的话再回应，不中途打断或急着反驳。</li>
+<li><code>在上帝赋予的身份上不自卑。</code>基督徒因信与上帝相连，是“蒙召的圣徒”“上帝的儿女”（《哥林多前书》1:2；《约翰一书》3:1）。这份身份不取决于人的地位、能力或过去的失败，而是基于上帝的拣选和爱，不应因此自卑。</li>
+<li><code>在传扬福音的使命上不自卑。</code>上帝呼召每个信徒传福音（《马太福音》28:19-20），即使觉得自己口才不佳、能力有限，也不必自卑。因为福音的大能在于上帝，而非人的智慧或能力（《哥林多前书》1:27-29），只要顺服见证，上帝必成就祂的工。</li>
+<li><code>在面对试探和困难时不自卑。</code>基督徒会经历试炼，但上帝应许“在你一切所行的事上，都要认定他，他必指引你的路”（《箴言》3:6），且“赐给我们的不是胆怯的心，乃是刚强、仁爱、谨守的心”（《提摩太后书》1:7）。不必因环境艰难或自身软弱而自卑，因为上帝的恩典够我们用（《哥林多后书》12:9）。</li>
+<li><code>在活出信仰生活上不自卑。</code>基督徒被教导“要站立得稳，凡所行的都要凭信心，不凭眼见”（《哥林多后书》5:7）。即使在世俗标准下显得“不合时宜”，也不必因他人的看法而自卑，因为信仰的价值在于荣耀上帝，而非迎合世界（《罗马书》12:2）。</li>
+<li><code>经常在上帝面前认罪（参路加福音 18:9-14）。</code>我们所有的人都犯了罪，亏缺了上帝的荣耀，然而很少有人定期、严格地做这种自我诚实的检查。每周甚至每天审查我们的内心和行为，加上向上帝认罪，这是谦卑的基本做法。</li>
+<li><code>向他人承认你的罪（参雅各书 3:2；5:16）。</code>在上帝面前的谦卑是不完全的，除非在人面前也谦卑。我们愿意谦卑的真正考验，是愿意与他人分享我们在上帝面前承认的软弱，然而也当有智慧，要对我们信任的人才这样做。</li>
+<li><code>对错误要有耐心（参彼得前书 3:8-17）。</code>这点对我来说特別困难，如果有不公正的事情发生，我就想回应并且纠正；然而耐心地回应他人不公正的指控和行为，表明了我们敬虔品格的力量，并提供一个谦卑的机会。</li>
+<li><code>积极顺服权柄，好的和坏的（参彼得前书 2:18）。</code>我们的文化不提倡顺服，而是崇尚个人主义。在生活中，你如何有意识地、积极地顺服那些上帝放在你周围的权柄？这样做就是谦卑自己的好办法。</li>
+<li><code>虚心地接受他人的更正和意见（参箴言 10:17；12:1）。</code></li>
+<li><code>接受一个低的地位（参箴言 25:6, 7）。</code>如果你发现你想坐在桌子的首位，或想让別人认可你的贡献，或者当其他人被尊敬或选择时感到被冒犯，那就是骄傲了。如果你的态度是支持被大家认可的人，接受并寻找一个较低的地位，这就是谦卑的表现了。</li>
+<li><code>不要不愿意接触比你地位低的人（参路加福音 7:36-39）。</code>耶稣因与穷人和那些低下层的人来往而被法利赛人嘲笑，我们的文化也非常注重身份，人们很自然地想和上层人士打交道。要抵制偏爱与有地位或富有的人交往的诱惑。</li>
+<li><code>选择服侍他人（参腓利比书 1:1；哥林多后书 4:5；马太福音 23:11）。</code>当我们服侍他人的时候，我们是在他们的生命中为上帝的缘故而服侍。如此行我们就减弱了对自身的关注，从而建立上帝的国度，而不是自我的国度。如果服侍他人没有付出任何代价，我们就该质疑这是否真仆人。</li>
+<li><code>快速饶恕（参马太福音 18:21-35）。饶恕可能是我们能做的最大的谦卑行为之一。</code>饶恕是接纳別人对我们的伤害，更进一步免去我们对伤害报复的权力。饶恕是否定自我，不坚持自己的方式和论断。</li>
+<li><code>培养感恩的心（参帖撒罗尼迦前书 5:18）。</code>我们对耶稣赐给我们的救恩和生命的恩赐越感恩，我们对自我的看法就越真实。感恩的心是一颗谦卑的心。</li>
+<li><code>对付骄傲的条件就是必须常常拥抱十字架（参路加福音 9:23）。</code>我们的本性是骄傲，拥有上帝在我们里面的属性才带来谦卑。承诺过一种向自己死向耶稣活的日常生活方式，这是真正谦卑的基础。</li>
+</ol>
+<h3 id="四、怎么样不陷入自卑"><a href="#四、怎么样不陷入自卑" class="headerlink" title="四、怎么样不陷入自卑"></a>四、怎么样不陷入自卑</h3><p>&ensp;&ensp;&ensp;&ensp;面对自卑，核心是回到对上帝的信靠和对自身在祂眼中价值的认知，以下是一些具体的指引：</p>
+<ol>
+<li><code>认识上帝赋予的价值，拒绝自我否定</code></li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;诗篇 139:14：“我要称谢你，因我受造奇妙可畏；你的作为奇妙，这是我心深知道的。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;上帝精心创造每个人，我们的价值不取决于自身的能力、成就或他人的评价，而是源于上帝的创造与爱。自卑往往源于用世界的标准衡量自己，而圣经提醒我们，我们是上帝眼中“奇妙可畏”的作品。</p>
+<ol start="2">
+<li><code>依靠上帝的力量，而非自我判断</code></li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;腓立比书 4:13：“我靠着那加给我力量的，凡事都能做。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;很多时候，自卑源于觉得自己“不够好”“做不到”，但圣经告诉我们，力量并非来自自己的完美，而是来自上帝。摩西曾因“拙口笨舌”自卑（出埃及记 4:10），但上帝应许与他同在，最终他完成了带领以色列人出埃及的使命。</p>
+<ol start="3">
+<li><code>专注上帝的呼召，而非自我局限</code></li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;哥林多后书 12:9：“他对我说：‘我的恩典够你用的，因为我的能力是在人的软弱上显得完全。’所以，我更喜欢夸自己的软弱，好叫基督的能力覆庇我。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;当我们意识到自己的不足时，不必自卑，因为上帝常使用软弱的人彰显祂的大能。承认自己的有限，反而能让我们更依靠上帝，活出祂赋予的 purpose（目的）。</p>
+<ol start="4">
+<li><code>以谦卑代替自卑，在上帝面前摆正心态</code></li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;彼得前书 5:6-7：“所以，你们要自卑，服在神大能的手下，到了时候，他必叫你们升高。你们要将一切的忧虑卸给神，因为他顾念你们。”</p>
+<p>&ensp;&ensp;&ensp;&ensp;这里的“自卑”不是否定自己，而是承认上帝的主权，知道我们的价值和力量都来自祂。将忧虑交托给神，相信祂的带领，就能摆脱自我怀疑，获得安稳。</p>
+<p>&ensp;&ensp;&ensp;&ensp;总之，圣经中解决自卑的关键，是从“以自己为中心的评价”转向“以上帝为中心的认知”——明白自己在上帝眼中被爱、被接纳，且祂的恩典足够我们面对一切，从而在信靠中获得勇气和自信。</p>
+<h3 id="五、怎么样不陷入自大"><a href="#五、怎么样不陷入自大" class="headerlink" title="五、怎么样不陷入自大"></a>五、怎么样不陷入自大</h3><p>&ensp;&ensp;&ensp;&ensp;根据《圣经》的教导，面对夸奖时不陷入自大，核心在于将荣耀归给上帝、认识自己的本相，并以谦卑的心回应。以下是具体的原则和经文支撑：</p>
+<ol>
+<li><code>将荣耀归给上帝</code>：一切能力、恩赐和成就都源于上帝，而非自己。正如《哥林多前书 10:31》所说：“所以，你们或吃或喝，无论做什么，都要为荣耀神而行。” 当得到夸奖时，应意识到这是上帝的恩典，如《彼得前书 4:11》提到“若有讲道的，要按着神的圣言讲；若有服事人的，要按着神所赐的力量服事，叫神在凡事上因耶稣基督得荣耀”，从而避免将功劳归于自己。</li>
+<li><code>认识自己的有限与不配</code>：人本质上是蒙恩的罪人，没有可夸之处。《罗马书 3:23》指出“因为世人都犯了罪，亏缺了神的荣耀”，《哥林多前书 4:7》也反问：“使你与人不同的是谁呢？你有什么不是领受的呢？若是领受的，为何自夸，仿佛不是领受的呢？” 明白这一点，就不会因他人的夸奖而自视过高，而是保持谦卑。</li>
+<li><code>以感恩和服侍的心回应</code>：耶稣基督虽为救主，却“不以自己与神同等为强夺的，反倒虚己，取了奴仆的形像，成为人的样式”（《腓立比书 2:6-7》）。面对夸奖时，可效法这种谦卑，将焦点转向他人或上帝的带领，比如用感恩回应，而非夸耀自己，正如《帖撒罗尼迦前书 5:18》所说“凡事谢恩，因为这是神在基督耶稣里向你们所定的旨意”。</li>
+</ol>
+<p>总之，面对夸奖时，牢记一切源于上帝的恩典，承认自己的不配，以感恩和谦卑的心将荣耀归给神，就能避免陷入自大。</p>
+<h3 id="六、陷入自卑怎么样走出来"><a href="#六、陷入自卑怎么样走出来" class="headerlink" title="六、陷入自卑怎么样走出来"></a>六、陷入自卑怎么样走出来</h3><p>&ensp;&ensp;&ensp;&ensp;根据《圣经》的教导，走出自卑的核心是建立对上帝的信心、认识自己在基督里的身份，并依靠神的话语获得力量，以下是具体方向及经文支撑：</p>
+<ol>
+<li><code>相信上帝对自己的拣选与爱</code>：上帝看人不是看外在或能力，而是主动拣选并爱每一个人。《以弗所书 1:4》说“就如神从创立世界以前，在基督里拣选了我们，使我们在他面前成为圣洁，无有瑕疵”，无论自己是否完美，神早已定意爱我们、使用我们，这份爱足以驱散因自我否定产生的自卑。</li>
+<li><code>认识自己在基督里的新身份</code>：成为基督徒后，我们的身份不再由失败、不足定义，而是“神的儿女”“蒙恩的人”。《哥林多后书 5:17》提到“若有人在基督里，他就是新造的人，旧事已过，都变成新的了”，明白自己在基督里的价值——被神赎回、赋予使命，就不会因过去的软弱或他人的评价而看轻自己。</li>
+<li><code>依靠神的力量，而非自己的能力</code>：自卑常源于觉得自己不够好、做不到，但《腓立比书 4:13》告诉我们“我靠着那加给我力量的，凡事都能做”。摩西曾因“拙口笨舌”自卑（《出埃及记 4:10》），但神应许与他同在；基甸曾认为自己“家是玛拿西支派中至贫穷的，我在我父家是至微小的”（《士师记 6:15》），神却使用他拯救以色列人。可见，神的能力会覆庇人的软弱，我们不必因自身有限而自卑。</li>
+<li><code>像税吏那样谦卑而非自卑</code>：《路加福音 18:13-14》中，税吏“远远站着，连举目望天也不敢，只捶着胸说：‘神啊，可怜我这个罪人！’”，他的谦卑是承认自己需要神，而非否定自己的存在价值，最终蒙神称义。真正的谦卑是倚靠神，而自卑是不信神的恩典能托住自己，前者带来提升，后者陷入困局。</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;总之，走出自卑的关键是：定睛于神的爱与拣选，确认自己在基督里的宝贵身份，相信神的能力会透过我们成就事工，以倚靠神的谦卑代替否定自己的自卑。</p>
+<h3 id="七、陷入自大怎么样走出来"><a href="#七、陷入自大怎么样走出来" class="headerlink" title="七、陷入自大怎么样走出来"></a>七、陷入自大怎么样走出来</h3><p>&ensp;&ensp;&ensp;&ensp;根据《圣经》的教导，走出自大的核心是回归对上帝的敬畏、认识自己的有限，并以谦卑的心悔改顺服，以下是具体方向及经文支撑：</p>
+<ol>
+<li><code>承认自己的有限，荣耀归于上帝</code>：自大的根源常是将成就归于自己，而忘记一切恩赐都来自神。《哥林多前书 4:7》反问：“使你与人不同的是谁呢？你有什么不是领受的呢？若是领受的，为何自夸，仿佛不是领受的呢？” 应当像大卫王那样，即使战胜仇敌，也归荣耀于神：“耶和华啊，这在你眼中还看为小，你又应许你仆人的家至于久远”（撒母耳记下 7:18），明白一切能力、机会都是神的恩典，从而放下自夸。</li>
+<li><code>以基督的谦卑为榜样</code>：耶稣基督本有神的形象，却“不以自己与神同等为强夺的，反倒虚己，取了奴仆的形像，成为人的样式”（腓立比书 2:6-7）。自大的人需效法这种谦卑，看别人比自己强（腓立比书 2:3），而非自视过高。正如先知拿单责备大卫时，大卫立刻悔改（撒母耳记下 12 章），承认自己的过犯，而非固执己见，这才是脱离自大的开始。</li>
+<li><code>敬畏神，警惕骄傲的后果</code>：《箴言 16:18》明确指出“骄傲在败坏以先，狂心在跌倒之前”，巴比伦王尼布甲尼撒因自大宣称“这不是我用大能大力建为京都吗”（但以理书 4:30），结果被神降卑，像野兽一样生活，直到他承认“在天下万国中，我的权柄、威严、荣耀、尊荣都是我的主耶和华的”（但以理书 4:37）才得恢复。这提醒我们，骄傲会使人偏离神，唯有敬畏神、承认自己的渺小，才能避免陷入败坏。</li>
+<li><code>在神面前谦卑悔改</code>：《雅各书 4:6》说“神阻挡骄傲的人，赐恩给谦卑的人”，走出自大需要主动在神面前认罪，像税吏那样承认“我是个罪人”（路加福音 18:13），而非像法利赛人自夸“我比别人更义”（路加福音 18:11-12）。神应许“务要在主面前自卑，主就必叫你们升高”（雅各书 4:10），真正的谦卑会带来神的抬举，而自大只会导致跌倒。</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;总之，脱离自大的关键是：回归对神的敬畏，承认一切来自神的恩典，效法基督的谦卑，主动悔改并以仆人的心对待他人，才能在神面前保持清醒与谦卑。</p>
+<h3 id="八、其他"><a href="#八、其他" class="headerlink" title="八、其他"></a>八、其他</h3><p><strong>问题</strong></p>
+<p><strong>一、外界的误解与压力</strong>：有时放下姿态会被误解为“好欺负”，比如主动让步时被得寸进尺，真诚请教时被嘲讽“能力差”，这些外界的反馈可能让人怀疑“谦卑是不是没用”，甚至想退回原来的强硬状态。</p>
+<p><strong>二、对“边界”的困惑</strong>：不知道谦卑和坚持原则的界限在哪里，比如该拒绝时不敢拒绝，怕被说“不谦卑”；该表达观点时选择沉默，担心“太强势”，结果压抑自己的真实需求，反而滋生委屈。</p>
+<p><strong>解答</strong></p>
+<p>&ensp;&ensp;&ensp;&ensp;圣经中所教导的“放低姿态”（即谦卑），并非无原则的退让或懦弱，而是在敬畏神的前提下，既保持温柔谦和，又坚守真理与原则，二者并不矛盾。以下是具体教导及经文支撑：</p>
+<ol>
+<li><code>谦卑不等于纵容不义，需按真理站立</code>：耶稣基督虽“心里柔和谦卑”（《马太福音 11:29》），却在圣殿中洁净污秽、斥责假冒为善的法利赛人（《约翰福音 2:13-17》、《马太福音 23 章》），显明谦卑者在真理和正义面前必须坚定。《以弗所书 6:14》劝勉“用真理当作带子束腰”，意味着坚守神的原则是根基，面对错误的对待或不公时，不能因“放低姿态”而妥协真理，正如先知阿摩司斥责以色列的罪恶时说：“惟愿公平如大水滚滚，使公义如江河滔滔”（《阿摩司书 5:24》）。</li>
+<li><code>以温柔敬畏的心坚守原则，而非争竞</code>：彼得劝勉“有人问你们心中盼望的缘由，就要常作准备，以温柔、敬畏的心回答各人”（《彼得前书 3:15》），这里的“温柔敬畏”是谦卑的态度，但“回答各人”是对信仰原则的坚守。比如，保罗面对犹太领袖的逼迫，虽谦和却明确宣告“我不以福音为耻，这福音本是神的大能，要救一切相信的”（《罗马书 1:16》），他没有因想讨好别人而放弃福音的核心，却也避免了傲慢的争竞。</li>
+<li><code>分辨“被欺负”与“舍己”，交托神判断</code>：耶稣教导“有人打你的右脸，连左脸也转过来由他打”（《马太福音 5:39》），这更多是指在非原则性的冒犯中显出宽容，而非在涉及真理、公义或他人利益的事上无底线退让。当他人的“欺负”触及原则时，应像大卫对待扫罗——虽因敬畏神而不主动伤害扫罗（《撒母耳记上 24 章》），却也在必要时躲避其追杀、保护自己和跟随者，既不激化矛盾，也不任人践踏。同时，《罗马书 12:19》提醒“亲爱的弟兄，不要自己伸冤，宁可让步，听凭主怒”，即坚守原则的同时，将最终的评判权交托给神，不凭血气行事。</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;综上，圣经中的谦卑是“以敬畏神为根基，以真理为准则，以温柔为态度”：对非原则性的冒犯存宽容，对关乎真理和正义的原则必坚守，既不因怕“被欺负”而变得刚愎，也不因“放低姿态”而失去立场，最终让神的话语成为行事的标准，而非他人的评价。</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          徐佳恩
+        </p>
+        <p style="text-align: right">
+          2025年07月26日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div>
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    cardList.forEach((item) => {
+      console.log(item.style)
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = '#e4e4e4'
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  .heart--top-left {
+    left: -25%;
+    top: -2%;
+    rotate: -7deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  .heart--top-center {
+    left: 64%;
+    top: -5%;
+    rotate: -42deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  .heart--top-right {
+    left: 118%;
+    top: 8%;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  .heart--left-center {
+    left: -20%;
+    top: 64%;
+    rotate: -23deg;
+    z-index: 2;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    left: 38%;
+    top: 101%;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    left: 102%;
+    top: 78%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+       
+    
+  <a href="/2025/07/23/task/%E4%BB%BB%E5%8A%A1%E8%AF%B4%E6%98%8E/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>任务说明</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2025 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

@@ -106,7 +106,7 @@
   margin: 4px 0 16px;
   line-height: 30px;
   text-align: justify;
-  font-size: 18px;
+  font-size: 18px !important;
   color: #12183A;
   box-sizing: border-box;
 }
@@ -116,6 +116,7 @@
 #article ol li {
   margin-left: 15px;
   padding: 7px;
+  font-size: 18px !important;
 }
 #article ul {
   margin: 5px 0;
@@ -124,6 +125,7 @@
   list-style: none;
   margin: 10px 16px;
   line-height: 30px;
+  font-size: 18px !important;
 }
 #article ul li:before {
   content: "\2022";

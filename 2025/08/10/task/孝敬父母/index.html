@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-孝敬父母</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="孝敬父母">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="孝敬父母">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <h2 id="一、为什么要孝敬父母"><a href="#一、为什么要孝敬父母" class="headerlink" title="一、为什么要孝敬父母"></a>一、为什么要孝敬父母</h2><ol>
+<li><p>出埃及记 20:12 “当孝敬父母，使你的日子在耶和华你　神所赐你的地上得以长久。 这是十诫中的一条，强调孝敬父母与蒙福长寿相关。</p>
+</li>
+<li><p>申命记 5:16 “‘当照耶和华你　神所吩咐的孝敬父母，使你得福，并使你的日子，在耶和华你　神所赐你的地上得以长久。 与出埃及记的记载呼应，再次强调这一诫命。</p>
+</li>
+<li><p>以弗所书 6:2-3 要孝敬父母，使你得福，在世长寿。这是第一条带应许的诫命。 保罗引用旧约诫命，指出这是带有应许的诫命。</p>
+</li>
+<li><p>马太福音 15:4-6 耶稣斥责违背孝敬父母诫命的行为，强调其重要性。神说：‘当孝敬父母’，又说：‘咒骂父母的，必治死他。’你们倒说：‘无论何人对父母说，我所当奉给你的，已经作了供献，他就可以不孝敬父母。’这就是你们藉着遗传，废了　神的诫命。</p>
+</li>
+</ol>
+<h2 id="二、什么是真正的孝敬父母"><a href="#二、什么是真正的孝敬父母" class="headerlink" title="二、什么是真正的孝敬父母"></a>二、什么是真正的孝敬父母</h2><p>&ensp;&ensp;&ensp;&ensp;根据《圣经》的教导，“真正的孝敬父母”并非单一的形式，而是涵盖内心的敬畏、实际的行动、生命的见证等多个层面，体现为对神所设立的家庭秩序的顺服，以及对父母的爱与责任。具体可从以下几个方面理解：</p>
+<ol>
+<li><p>内心的敬重与顺服，而非表面形式 耶稣曾斥责当时的人用“传统”作借口逃避对父母的责任（如将财物“奉献给神”却不愿供养父母），指出他们“用嘴唇尊敬神，心却远离神”（《马太福音 15:4-6》）。真正的孝敬始于内心的敬畏——承认父母是神所设立的权威（以弗所书 6:1：“你们作儿女的，要在主里听从父母，这是理所当然的”），并愿意顺服他们合神心意的教导和引导，而非仅做表面功夫。</p>
+</li>
+<li><p>实际的关爱与供给，尤其是物质与生活的照料 《提摩太前书 5:8》明确说：“人若不看顾亲属，就是背了真道，比不信的人还不好，不看顾自己家里的人，更是如此。”这里的“看顾”自然包括对父母的供养，尤其是当父母年老、软弱或缺乏时，需主动承担责任。例如，路得通过拾麦穗供养婆婆拿俄米（《路得记 2:1-18》），约瑟将父亲雅各接到埃及妥善安置（《创世记 47:1-12》），都是用实际行动践行关爱。 箴言也强调：“你母亲老了，也不可藐视她”（《箴言 23:22》），表明对年迈父母的耐心、尊重与照料，是孝敬的重要体现。</p>
+</li>
+<li><p>以生命见证荣耀父母，符合神的旨意 新约强调“凡事听从父母，因为这是主所喜悦的”（《歌罗西书 3:20》），这里的“听从”不仅是行为上的顺从，更指向在信仰与生活中活出神的荣耀，让父母因儿女的生命见证而得安慰、被荣耀。例如，耶稣在年少时“顺从父母”（《路加福音 2:51》），并以一生的顺服荣耀天父，同时也让母亲玛利亚看见神的作为。 反之，若儿女行恶、背离真理，便是“羞辱父母”（《箴言 19:26》），这恰是对“孝敬”的违背。</p>
+</li>
+<li><p>超越血缘的“属灵孝敬”，以上帝的爱为根基 圣经中的孝敬并非盲目顺从，而是以神的真理为准则——当父母的要求违背神的命令时，需像彼得、约翰那样“顺从神，不顺从人”（《使徒行传 5:29》），但这并非轻视父母，而是在坚守真理的同时，仍以温柔、尊重的态度对待他们（《彼得前书 3:15》）。 本质上，真正的孝敬源于对神的感恩（父母是神赐下的生命源头），并以神的爱为动力，将对父母的责任与对神的顺服结合，最终指向荣耀神的目的。</p>
+</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;综上，圣经中的“真正孝敬”是：以敬畏神为根基，用内心的尊重、实际的关爱、合真理的顺服与生命的见证，回报父母的养育之恩，既履行世俗责任，也彰显属灵生命，最终蒙神喜悦。</p>
+<h2 id="三、为什么如今很多人不愿意孝敬父母？"><a href="#三、为什么如今很多人不愿意孝敬父母？" class="headerlink" title="三、为什么如今很多人不愿意孝敬父母？"></a>三、为什么如今很多人不愿意孝敬父母？</h2><h3 id="第一、不尊重神的诫命"><a href="#第一、不尊重神的诫命" class="headerlink" title="第一、不尊重神的诫命"></a>第一、不尊重神的诫命</h3><p>&ensp;&ensp;&ensp;&ensp;⼤部分基督徒之所以没有孝敬⽗⺟，是因为不尊重神的诫命。我们不觉得这是⼀条神给我们的命令，不觉得这有什么了不起。事实上，今天很多基督徒读圣经的态度常常是不太好的，只喜欢那些安慰我们的话、⿎舞我们的话，忽视那些造就我们的诫命。但是，你要知道⼀件事，⼀个基督徒在神那⾥能够蒙福，最重要的就是要听主的话。主耶稣说：如果有⼈爱我，他就⼀定遵守我的诫命。如果⼀个基督徒说他很爱主，但是他对主的话却不把它当作⼀回事，那他就是⾃⼰骗⾃⼰了。</p>
+<p>&ensp;&ensp;&ensp;&ensp;《雅各书》第⼀章22 节说：「只是你们要⾏道，不要单单听道，⾃⼰欺哄⾃⼰。」你不要⾃⼰欺⾃⼰，⾃⼰跟⾃⼰讲：我已经听了，我知道；以为我已经听过了，我就有了。其实不是的，神的话听了以后，没有做出来，不是我们的，我们还是没有。所以，很多的时候我们不能够孝敬⽗⺟，是因为我们不觉得这是神很看重的⼀条诫命，我们觉得这好象⽆所谓。就好象我刚开始的时候提过的，我们最敢得罪的⼈就是⽗⺟，为什么？⽗⺟⼀定会原谅我们的嘛！所以我们最不怕的，我们最最不在乎、最不在意的就是他们。但是，你如果知道这是神的诫命，你要孝敬⽗⺟，那就不⼀样了。</p>
+<h3 id="第二、未独立成熟"><a href="#第二、未独立成熟" class="headerlink" title="第二、未独立成熟"></a>第二、未独立成熟</h3><p>&ensp;&ensp;&ensp;&ensp;很多⼈不能够孝敬⽗⺟，是因为他这个⼈没有独⽴。《创世记》第⼆章24节说：「因此，⼈要离开⽗⺟，与妻⼦连合，⼆⼈成为⼀体。」这⾥就是讲到说，我们每⼀个⼈都需要离开⽗⺟。离开⽗⺟不是说，你不理⽗⺟了，从此宣告独⽴，再也不听⽗⺟的话了，那不叫离开⽗⺟。</p>
+<p>&ensp;&ensp;&ensp;&ensp;圣经⾥⾯讲的离开⽗⺟，最重要的⼀个观念，就是我们这个⼈要独⽴的活在神的⾯前，我们这个⼈要为我们⾃⼰的⼀切负责任，我们这个⼈要做⼀个成熟的⼈。这个叫离开⽗⺟。</p>
+<h3 id="第三、对父母有不切实际的期待"><a href="#第三、对父母有不切实际的期待" class="headerlink" title="第三、对父母有不切实际的期待"></a>第三、对父母有不切实际的期待</h3><h3 id="第四、自私不愿付代价"><a href="#第四、自私不愿付代价" class="headerlink" title="第四、自私不愿付代价"></a>第四、自私不愿付代价</h3><h3 id="第五、存在误会与偏见"><a href="#第五、存在误会与偏见" class="headerlink" title="第五、存在误会与偏见"></a>第五、存在误会与偏见</h3><h3 id="第六、难以饶恕过去的伤害"><a href="#第六、难以饶恕过去的伤害" class="headerlink" title="第六、难以饶恕过去的伤害"></a>第六、难以饶恕过去的伤害</h3><p>&ensp;&ensp;&ensp;&ensp;就是过去的那些伤害，会造成我们没有办法孝敬⽗⺟。这个伤害有深有浅。这个世界上确实有⼀些很不是的⽗⺟，真的是给⼉⼥带来很深的伤害。</p>
+<p>&ensp;&ensp;&ensp;&ensp;怎么来解决这个问题呢？对着过去所受的伤害怎么解决呢？尤其是这样⼦的伤害，使我们⾥⾯恨⽗⺟。</p>
+<h4 id="⼀、以饶恕化解恨"><a href="#⼀、以饶恕化解恨" class="headerlink" title="⼀、以饶恕化解恨"></a>⼀、以饶恕化解恨</h4><ol>
+<li><p>饶恕不是纵容罪</p>
+</li>
+<li><p>饶恕不是忘记</p>
+</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;饶恕也不是说你忘记了，「唉！算啦、算啦，忘记了，算了。」饶恕绝对不是忘记了、算啦，不是！饶恕是这件事真的在我⾥⾯，我没有忘记，因为那实在给我很深的伤害；但是，我选择不再继续做⼀个受害者，这叫饶恕。</p>
+<ol start="3">
+<li>饶恕不是不在乎</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;饶恕也绝不是说：唉呀！事情已经过了那么久了，我已经不在乎啦。不是，不是否定你的痛苦。当你饶恕的时候，你⾃⼰知道，这个事在我⾥⾯很痛苦的，给我带来很深的痛苦与伤害；但是，我愿意为着主的缘故，放弃报复的权利，放弃继续承受这个痛苦的后果；我愿意说：神你帮助我，我不愿意再这样痛苦下去，我饶恕他，我要让这个事情成为过去。</p>
+<ol start="4">
+<li>饶恕不是忍耐</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;还有就是，千万不要以为饶恕就是忍耐，饶恕乃是靠着神的恩典，胜过了那个苦。咬着⽛的忍耐，不能解决问题，你忍得了今天，忍不了明天，爆发出来更厉害。我们也不要以为⼀饶恕了他，就很快可以重新跟他建⽴起好的关系。饶恕不过是先除去你⼼中的苦毒，重新建⽴关系，是需要花很多的精 神⼒量，有很⻓的路要⾛。</p>
+<h4 id="⼆、怎么饶恕"><a href="#⼆、怎么饶恕" class="headerlink" title="⼆、怎么饶恕"></a>⼆、怎么饶恕</h4><ol>
+<li>感谢</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;我们受了这么多的伤害，怎么来饶恕呢？你真的要学饶恕，第⼀，要先安静在神的⾯前。因为我们必须知道⼀件事情，在我们天然的⽣命⾥⾯，我们没有⼀个⼈能够饶恕别⼈；我们⾃⼰做不到的。饶恕的⽣命是属天的⽣命，所以你必须要先安静在神的⾯前，要让神⾃⼰成为你的⼒量和帮助，你要花很⻓的时间在神的⾯前祷告。</p>
+<ol start="2">
+<li>分享</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;当你已经赦免了、你在神⾯前真的对付清楚以后，你⾥⾯真的觉得释放、喜乐的时候，还有⼀点很重要的，就是你要与⼈分享。当然不是分享你受了什么苦，你要与⼈分享的是，神怎么帮助你从这个苦难出来。<br>为什么要分享呢？因为当你与⼈分享你怎么样从这个苦难中出来的时候，这个分享不但可以成为别⼈的祝福，这个分享也会添加你所承受到的恩典。那时候你就真的很确定，你在神的⾯前已经蒙了这样的恩典。</p>
+<h2 id="四、应该从哪些方面施行"><a href="#四、应该从哪些方面施行" class="headerlink" title="四、应该从哪些方面施行"></a>四、应该从哪些方面施行</h2><p>&ensp;&ensp;&ensp;&ensp;应该从哪些方面施行呢？给大家布置的任务就是在这两周时间内去和父母通一下电话。</p>
+<ol>
+<li><p>你需要去了解你的父母的过往经历。</p>
+</li>
+<li><p>（有信仰的父母）你需要去了解你的父母是怎么样认识神的，他们都在哪些方面经历过神，现在是怎么看这个信仰的，你还可以说一下自己对信仰的看法。</p>
+</li>
+<li><p>（对没有信仰的父母）你需要去首先询问父母是否想要了解你的信仰，如果他们想要了解，那么就需要你做个见证，将你怎么蒙恩的经历告诉他们。如果他们不想了解，你可以讲一下你怎么看待这个信仰的。</p>
+</li>
+<li><p>询问父母家庭的整体状况：例如：经济。</p>
+</li>
+<li><p>询问父母他们认为我们的家庭应该怎么样走下去。表达自己愿意承担一些责任的态度。去了解你能够给父母提供什么样的帮助。</p>
+</li>
+<li><p>如果在谈话的过程中你发现了父母存在的一些问题，你需要勇敢的指出来，当然不是批评态度的指出来而是带有谦卑询问的态度。</p>
+</li>
+<li><p>会遇到哪些难题及其解决方案</p>
+</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;可能有人认为父母的性格或别的原因，不可能好好说话。你在和父母沟通之前需要有一个祷告，因为在神凡事都能。</p>
+<p>&ensp;&ensp;&ensp;&ensp;可能这件事对有些人来说很困难，但是我们要刚强壮胆，为神勇敢。</p>
+<p>&ensp;&ensp;&ensp;&ensp;总的来说，因为涉及到家庭的实际情况，我们只能给大家一些参考的建议，大家在实施的时候一定要先祷告求神预备，我们最初的目的是建立好彼此的关系；根据实际情况，我们不要急于求成，有所果效，建立关系也不一定是一次的交流就能实现的，需要彼此的信任和关爱，所以我们要不断的祷告和交流，是一个长期的努力。</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2025年08月10日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    cardList.forEach((item) => {
+      console.log(item.style)
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = '#e4e4e4'
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+       
+   
+   
+   
+    
+  <a href="/2025/07/26/task/%E8%B0%A6%E5%8D%91/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>谦卑</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2025 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

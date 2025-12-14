@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-在放纵的时代活出节制的生命</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="在放纵的时代活出节制的生命">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="在放纵的时代活出节制的生命">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <p>&ensp;&ensp;&ensp;&ensp;今天我们要一同思考一个看似古老却极其现代的品格 ——“节制”。在这个鼓励即时满足、追求极致体验、推崇 “爽就够了” 的文化中，节制常常被贴上压抑、古板、不自由的标签。我们的社交媒体充斥着 “人生苦短，及时行乐” 的口号，消费主义不断灌输 “拥有更多才是成功” 的价值观，技术革新让 “一键满足” 成为常态 —— 刷短视频能立刻获得快乐，网购能瞬间填补空虚，外卖能马上缓解饥饿。在这样的浪潮中，节制仿佛成了不合时宜的 “异类”，但圣经却向我们揭示了节制的永恒价值：“凡较力争胜的，诸事都有节制，他们不过是要得能坏的冠冕；我们却是要得不能坏的冠冕。”（哥林多前书 9:25）运动员为了短暂的金牌尚且愿意约束自己，我们作为神的儿女，为了永恒的奖赏，岂不更当活出节制的生命？ </p>
+<h2 id="一、圣经中节制的含义是什么？"><a href="#一、圣经中节制的含义是什么？" class="headerlink" title="一、圣经中节制的含义是什么？"></a>一、圣经中节制的含义是什么？</h2><p>&ensp;&ensp;&ensp;&ensp;首先，节制是圣灵所结的果子，是内在生命的自然流露。保罗在加拉太书 5:22-23 明确列出：“圣灵所结的果子，就是仁爱、喜乐、和平、忍耐、恩慈、良善、信实、温柔、节制。” 这九样果子并非孤立存在，而是彼此关联、层层递进的生命特质。节制被放在最后，并非因其次要，反而如同房屋的地基与门锁 —— 没有节制，仁爱可能变成无原则的纵容，喜乐可能沦为放纵的狂欢，和平可能因情绪失控而破碎。试想，一个人若有仁爱之心，却缺乏节制，可能会因过度付出而耗尽自己，甚至纵容他人的罪恶；若有喜乐的恩赐，却没有节制，可能会沉迷于世俗的娱乐，将快乐建立在短暂的感官刺激上。唯有以节制为根基，其他品格才能稳固生长，结出持久的果实。 </p>
+<p>&ensp;&ensp;&ensp;&ensp;其次，节制是被圣灵充满后的明智自我管理，而非外在规条的捆绑。希腊文中的 “节制”（enkrateia）由 “内在”（en）和 “力量”（kratos）组成，字面意思是 “内在的力量”。这种力量不是来自自我意志力的硬撑，而是圣灵在我们里面动工的结果，使我们能够不被肉体的欲望、情绪的冲动、世俗的潮流所控制，反而能主动管理自己的心思、言语、行为和欲望。旧约中的律法是外在的约束，而新约中的节制是内在的掌管 —— 前者是 “不可做什么”，后者是 “我能选择做对的事”；前者是被动的服从，后者是主动的顺服。就像大卫在面对拔示巴时，若仅凭外在规条，他本可以找借口掩盖罪行，但真正的节制是内心被神的灵掌管，即使无人看见，也能坚守圣洁的底线。 </p>
+<p>&ensp;&ensp;&ensp;&ensp;最后，节制是为了更高的自由与永恒的目标，而非自我剥夺。运动员节制饮食、放弃娱乐、刻苦训练，并非不爱美食、不喜休闲，而是为了在赛场上夺冠，为了更高的荣誉；同样，我们践行节制，也不是要过苦行僧式的生活，不是要否定生命的乐趣，而是为了 “得不能坏的冠冕”—— 为了更丰盛的生命，为了更专注地事奉神，为了更自由地爱神爱人。彼得后书 1:6 劝勉我们：“有了知识，又要加上节制；有了节制，又要加上忍耐。” 知识让我们明白神的真理，节制让我们能活出真理，忍耐则让我们在践行真理的过程中坚持到底。当我们节制对物质的贪欲，就能有更多时间和精力追求神的事；当我们节制情绪的冲动，就能维护人际关系的和睦；当我们节制对即时满足的渴望，就能培养坚韧的品格，这些都是通往真自由的必经之路。 </p>
+<h2 id="二、人在哪些方面不容易做到节制？"><a href="#二、人在哪些方面不容易做到节制？" class="headerlink" title="二、人在哪些方面不容易做到节制？"></a>二、人在哪些方面不容易做到节制？</h2><ol>
+<li><p><strong>欲望的即时满足文化，让延迟满足成为奢望</strong>。我们的世界被 “即时性” 所包裹：短视频平台用算法推送最吸引眼球的内容，让我们刷了一个又一个，停不下来；外卖软件承诺30分钟送达，让我们不愿花时间自己做饭；购物平台的 “一键下单”“分期付款”，让我们无需等待就能拥有想要的东西。这种 “即刻拥有” 的文化，逐渐削弱了我们延迟满足的能力。当孩子哭闹着要玩具时，父母往往立刻满足以平息情绪；当我们感到无聊时，第一反应是打开手机寻找刺激；当我们有了欲望时，就想着马上实现。等待不再被视为一种磨练，反而被当成一种煎熬。但圣经告诉我们，“凡事都有定期，天下万务都有定时”（传道书 3:1），延迟满足不是失去，而是为了更好的得着。 </p>
+</li>
+<li><p><strong>对 “自由” 的误解，让节制沦为 “不自由” 的代名词</strong>。现代人常将自由理解为 “无拘无束”“想做就做”，认为节制会限制自己的选择，剥夺自己的快乐。但这是对自由的极大误解 —— 真正的自由不是没有约束，而是有能力选择对的事，有能力拒绝错的事。就像一艘没有舵的船，看似能随意漂流，实则被风浪所控制，最终只会触礁沉没；而有舵的船，虽然被舵所约束，却能朝着既定的目标航行，抵达安全的港湾。保罗说 “凡事我都可行”（林前 6:12），但他紧接着补充：“但不都有益处；凡事我都可行，但不都造就人；凡事我都可行，但我总不受它的辖制。” 真正的自由，是不被欲望、情绪、物质所辖制，而是被神的灵所引导，活出神所喜悦的生命。 </p>
+</li>
+<li><p><strong>情绪管理的挑战，让言语和行为陷入冲动的辖制</strong>。节制不仅关乎物质层面，更关乎情感和言语。我们常常会因一点小事就大发雷霆，因他人的冒犯就恶语相向，因一时的委屈就做出后悔的决定。雅各书提醒我们：“舌头没有人能制伏，是不止息的恶物，满了害死人的毒气。”（雅各书 3:8）舌头虽小，却能点燃大火，烧毁人际关系，甚至毁坏自己的生命。很多时候，我们并非不知道要忍耐，而是在情绪上来的那一刻，失去了节制的能力。职场上，因同事的一句指责就当场翻脸；家庭中，因家人的一点疏忽就恶语相加；教会里，因弟兄姊妹的不同意见就心生怨恨。这些冲动的言语和行为，往往会带来难以弥补的伤害，而这正是缺乏情绪节制的表现。 </p>
+</li>
+<li><p><strong>数字时代的注意力分散，让时间和精力被碎片化消耗</strong>。智能手机、社交媒体、短视频、网络游戏…… 这些数字产品如同无形的网，将我们的时间和注意力切割得支离破碎。我们本想只看 10 分钟手机，结果却刷了 2 小时；本想专注完成一项工作，结果却被不断弹出的消息打断；本想利用闲暇时间亲近神，结果却被娱乐软件吸引。数字时代的便利，让我们陷入了 “注意力匮乏” 的困境 —— 我们难以长时间专注于一件事，难以静下心来祷告、读经，甚至难以与家人进行深度沟通。我们的时间被大量无意义的信息所占据，精力被过度的娱乐所消耗，却很少意识到，这正是缺乏节制的表现。正如奥古斯丁所说：“我们的心灵若不被真理约束，就会被各种欲望所牵引，最终迷失方向。” </p>
+</li>
+<li><p><strong>对 “缺乏” 的深层恐惧，让消费主义趁虚而入</strong>。消费主义的核心，就是不断制造 “你不够好”“你还缺少” 的焦虑：你不够美丽，所以需要买更多化妆品；你不够成功，所以需要买更贵的衣服；你不够幸福，所以需要买更多奢侈品。这种对 “缺乏” 的恐惧，驱使我们不断获取、囤积、消费，仿佛拥有更多物质就能填补内心的空虚。我们拼命赚钱，然后拼命消费，陷入 “赚钱 - 消费 - 再赚钱 - 再消费” 的循环中，却始终无法满足。圣经告诉我们：“贪爱银子的，不因得银子知足；贪爱丰富的，也不因得利益知足。这也是虚空。”（传道书 5:10）对物质的贪得无厌，正是缺乏节制的根源，而这种贪念的背后，是对神的供应缺乏信心，是忘记了神才是我们真正的满足。</p>
+</li>
+</ol>
+<h2 id="三、如何在生活中培养节制的品格？"><a href="#三、如何在生活中培养节制的品格？" class="headerlink" title="三、如何在生活中培养节制的品格？"></a>三、如何在生活中培养节制的品格？</h2><ol>
+<li><p><strong>让圣灵掌管生命，以祷告支取节制的力量</strong>。节制是圣灵的果子，不是自我努力的成果。我们常常试图靠自己的意志力去节制，比如发誓要少吃、少刷手机、少发脾气，但往往坚持不了几天就会失败。这是因为我们的肉体软弱，仅凭自己的力量无法胜过欲望的辖制。正如保罗所感叹的：“我真是苦啊！谁能救我脱离这取死的身体呢？”（罗马书 7:24）但紧接着，他就给出了答案：“感谢神，靠着我们的主耶稣基督就能脱离了。”（罗马书 7:25）我们必须首先承认自己的无力，然后全然倚靠圣灵的工作。每天花时间祷告，求圣灵充满我们，管理我们的心志、欲望和情绪；当面临试探时，立刻向神呼求，求他赐下抵挡的力量。正如耶稣在旷野面对魔鬼的试探时，三次引用圣经抵挡诱惑，他为我们树立了倚靠神得胜试探的榜样。 </p>
+</li>
+<li><p><strong>确立清晰的生命优先次序，以神的国为首要追求</strong>。耶稣说：“你们要先求他的国和他的义，这些东西都要加给你们了。”（马太福音 6:33）很多时候，我们之所以难以节制，是因为我们的生命没有明确的优先次序，我们不知道什么是最重要的，所以容易被各种欲望和潮流所牵引。如果我们将神的国和神的义放在首位，就会自然明白什么该追求，什么该节制。我们可以定期检视自己的生活：我的时间是否更多地用于祷告、读经、服事？我的金钱是否更多地用于奉献、帮助有需要的人？我的精力是否更多地放在荣神益人上？当我们的生活反映出神的优先次序时，那些不必要的欲望和消耗自然会减少。比如，当我们明白亲近神比刷手机更重要时，就会愿意节制使用电子设备的时间；当我们知道奉献比囤积物质更有价值时，就会愿意节制消费的欲望。 </p>
+</li>
+<li><p><strong>实践 “微小” 的节制训练，逐步培养节制的品格</strong>。节制如同肌肉，需要通过不断训练才能变得强壮。我们不必一开始就追求 “完美的节制”，可以从具体的小事做起，逐步培养节制的习惯。比如：</p>
+</li>
+</ol>
+<ul>
+<li><p>每天设定一段无电子设备的时间（比如 1 小时），用来祷告、读经或与家人沟通； </p>
+</li>
+<li><p>学习在发言前先祷告三秒，求神让我们说出造就人的话，避免冲动发言； </p>
+</li>
+<li><p>每周有一餐简单饮食（比如素食或少食），在吃饭时为饥饿的人祷告，培养知足的心；</p>
+</li>
+<li><p>练习完成一项任务后再查看手机，培养专注的能力； </p>
+</li>
+<li><p>购物前先祷告，询问神这件东西是否是必要的，避免冲动消费； </p>
+</li>
+<li><p>当感到愤怒时，先深呼吸，默想圣经中的忍耐话语，再做出回应。</p>
+</li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;提摩太前书 4:7-8 说：“你要逃避少年的私欲，同那清心祷告主的人追求公义、信实、仁爱、和平。操练身体，益处还少；惟独敬虔，凡事都有益处，因有今生和来生的应许。” 这些微小的节制训练，看似微不足道，却能让我们的心灵逐渐被神掌管，让节制成为一种自然的生命流露。 </p>
+<ol start="4">
+<li><strong>建立问责与群体支持，在彼此守望中得胜</strong>。节制不是孤军奋战，我们需要弟兄姊妹的彼此守望和支持。圣经说：“又要彼此相顾，激发爱心，勉励行善。”（希伯来书 10:24）我们可以寻找 1-2 位可信赖的弟兄姊妹，组成问责小组，彼此分享自己在节制方面的挣扎和进步，互相提醒、互相代祷。比如：</li>
+</ol>
+<ul>
+<li><p>如果你想节制饮食，可以和弟兄姊妹约定，每周互相汇报饮食情况，彼此鼓励； </p>
+</li>
+<li><p>如果你想节制使用手机，可以请家人或弟兄姊妹监督，当你过度使用时及时提醒； </p>
+</li>
+<li><p>如果你想节制情绪，可以和弟兄姊妹约定，当你情绪失控时，让他们为你代祷，帮助你冷静。</p>
+</li>
+</ul>
+<p>&ensp;&ensp;&ensp;&ensp;教会作为神的家，就是一个彼此扶持的群体。当我们在群体中敞开自己，接受他人的监督和鼓励，就能更有力量胜过试探。就像以色列人在旷野中，彼此搀扶才能走完全程；我们在追求节制的道路上，也需要彼此守望才能坚持到底。 </p>
+<ol start="5">
+<li><strong>以感恩和知足对抗欲望，在数算恩典中得着满足</strong>。“敬虔加上知足的心便是大利了，因为我们没有带什么到世上来，也不能带什么去。”（提摩太前书 6:6-7）欲望的根源，往往是不知足 —— 我们总觉得自己拥有的不够多、不够好，所以不断追求更多。而感恩和知足，正是对抗欲望的良药。每天花几分钟时间，记录三件神赐给我们的恩典：可能是一顿丰盛的饭菜，一次平安的出行，一个朋友的关心，或是祷告得到的回应。当我们学会数算恩典，就会发现神的供应早已超过我们的需要，我们所缺乏的往往不是物质，而是一颗知足的心。</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;我们可以常常默想圣经中的应许：“我的神必照他荣耀的丰富，在基督耶稣里使你们一切所需用的都充足。”（腓立比书 4:19）当我们相信神的供应是丰丰富富的，就不会再被消费主义的焦虑所捆绑，就能坦然地践行简朴和节制。同时，我们也可以通过帮助他人来培养知足的心 —— 当我们看到那些生活困苦却依然感恩的人，当我们将自己的财物分享给有需要的人，就会更加珍惜自己所拥有的，欲望的力量也会随之减弱。</p>
+<ol start="6">
+<li><strong>仰望基督的榜样，在十字架的爱中得着动力</strong>。希伯来书 4:15 说：“因我们的大祭司并非不能体恤我们的软弱，他也曾凡事受过试探，与我们一样，只是他没有犯罪。” 耶稣在旷野中面对魔鬼的三次试探，完美地展现了节制的品格：面对食物的试探，他选择以神的话为粮，而非满足肉体的饥饿；面对权势的试探，他拒绝将荣耀归给魔鬼，而是坚守对神的顺服；面对神迹的试探，他不愿试探神，而是依靠神的带领。耶稣的节制，不是因为他没有欲望，而是因为他将神的旨意放在首位，靠着神的力量胜过了试探。</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;更重要的是，耶稣在十字架上为我们舍命，他的爱激励我们活出节制的生命。当我们思想基督的牺牲，就会愿意放下自己的私欲，顺服神的旨意；当我们明白自己是蒙恩的罪人，就会更加珍惜神所赐的生命，不愿被欲望所毁坏。同时，我们也可以常常默想基督的再来，将永恒的盼望放在心中。当我们专注于永恒的冠冕，就不会被今生的短暂欲望所牵引，就能在放纵的时代中坚守节制的道路。 </p>
+<h2 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h2><p>&ensp;&ensp;&ensp;&ensp;亲爱的弟兄姊妹，节制不是剥夺生命的乐趣，恰恰相反，它是通往真自由、真丰盛生命的唯一路径。奥古斯丁曾说：“真正的自由不是能做你想做的事，而是能不做你不想做的事。” 当我们被圣灵管理，就能从欲望的奴役中得释放，不再被情绪所控制，不再被物质所捆绑，不再被潮流所牵引，而是能自由地选择神所喜悦的事，自由地爱神、爱人，活出生命的真正意义。 </p>
+<p>&ensp;&ensp;&ensp;&ensp;在这个放纵的时代，我们面临的试探无处不在，但神的恩典也够用。他赐给我们圣灵的能力，赐给我们圣经的真理，赐给我们教会的群体，让我们能够在试探中站立得住。我们不需要靠自己的力量去挣扎，只需要全然倚靠神，将自己的生命交托给他，让他在我们里面动工，结出节制的果子。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我们应该学习基督的样式，来克己，让基督在我们里面显大。一个基督徒必须愿意并切记要在生活中的每时每刻都把神考虑在内。基督徒要以神的律法来衡量他一切的行为，应用叫他的隐情降服于神旨。人若在凡事上都尊荣神，他必被拯救脱离一切妄念。这种克己的道理，基督一开始就殷勤地教训他的门徒了，至终也必约束我们心中的一切欲望。内心一旦有了克己，就不再给骄矜、倨傲、虚荣、淫荡、爱宴乐、荒唐，以及一切从自爱中产生出来的罪恶容留余地。</p>
+<p>&ensp;&ensp;&ensp;&ensp;“所以，弟兄们，我以神的慈悲劝你们，将身体献上，当作活祭，是圣洁的，是神所喜悦的；你们如此事奉乃是理所当然的。不要效法这个世界，只要心意更新而变化，叫你们察验何为神的善良、纯全、可喜悦的旨意。”（罗马书 12:1-2）愿我们都能回应神的呼召，将自己的生命献上，在这个放纵的时代中，活出节制、圣洁、自由的生命，成为光，成为盐，荣耀神的名。 </p>
+<p>&ensp;&ensp;&ensp;&ensp;愿主赐给我们节制的恩典，让我们在每一个试探中都能靠着基督得胜，在每一个选择中都能顺服神的旨意，直到基督再来的那日。
+ 
+ </p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2025年12月14日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    cardList.forEach((item) => {
+      console.log(item.style)
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = '#e4e4e4'
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+        
+  <a href="/2025/11/30/task/%E9%80%9A%E8%BF%87%E8%BA%AB%E8%BE%B9%E5%BE%AE%E5%B0%8F%E7%9A%84%E4%BA%8B%E8%A7%82%E5%AF%9F%E7%A5%9E%E7%9A%84%E5%90%8C%E5%9C%A8/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>通过身边微小的事观察神的同在</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2025 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

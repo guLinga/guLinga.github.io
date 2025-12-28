@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-活出饶恕的生命</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="活出饶恕的生命">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="活出饶恕的生命">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <h2 id="一、为什么要饶恕"><a href="#一、为什么要饶恕" class="headerlink" title="一、为什么要饶恕"></a>一、为什么要饶恕</h2><h3 id="1-1、饶恕是主的命令，是我们作为基督徒的生命本分"><a href="#1-1、饶恕是主的命令，是我们作为基督徒的生命本分" class="headerlink" title="1.1、饶恕是主的命令，是我们作为基督徒的生命本分"></a>1.1、饶恕是主的命令，是我们作为基督徒的生命本分</h3><p>圣经在《以弗所书》4:32明确吩咐我们：“并要以恩慈相待，存怜悯的心，彼此饶恕，正如神在基督里饶恕了你们一样。” 这里的“正如”二字，道尽了饶恕的根源——我们之所以能饶恕，是因为我们先被神饶恕。我们每个人都是罪人，在认识主之前，都活在罪的辖制中，本应承受罪的刑罚，但主耶稣基督在十字架上为我们流血舍命，偿还了我们一切的罪债，白白地饶恕了我们。这份饶恕不是我们配得的，完全是主的恩典。既然主已经这样丰盛地饶恕了我们，我们就没有任何理由拒绝饶恕他人。拒绝饶恕，本质上是不明白主的恩典，也是不顺服主的命令。</p>
+<h3 id="1-2、饶恕是释放自己，脱离仇恨的捆绑"><a href="#1-2、饶恕是释放自己，脱离仇恨的捆绑" class="headerlink" title="1.2、饶恕是释放自己，脱离仇恨的捆绑"></a>1.2、饶恕是释放自己，脱离仇恨的捆绑</h3><p>很多弟兄姊妹会觉得，饶恕是让伤害我们的人得利，是自己吃亏。但事实恰恰相反：不饶恕别人，真正被困住的是我们自己。仇恨就像一个无形的牢笼，我们以为是把伤害我们的人关在里面，其实是把自己锁在了里面。当我们抱着怨恨不放时，我们的心思会反复回到受伤的场景，情绪会被愤怒、痛苦、委屈占据，甚至会影响我们的睡眠、健康，让我们无法享受主所赐的平安和喜乐。就像有人说的：“不饶恕别人，就像自己喝毒药，却指望别人死去。” 而饶恕，就是我们主动打开牢笼的钥匙，不是为了释放伤害我们的人，而是为了释放我们自己，让我们从仇恨的辖制中走出来，重新得着心灵的自由。</p>
+<h3 id="1-3、饶恕能见证主的爱，荣耀神的名"><a href="#1-3、饶恕能见证主的爱，荣耀神的名" class="headerlink" title="1.3、饶恕能见证主的爱，荣耀神的名"></a>1.3、饶恕能见证主的爱，荣耀神的名</h3><p>我们作为主的门徒，生命的见证就是福音的见证。世人的逻辑是“以牙还牙、以眼还眼”，但主给我们的逻辑是“爱仇敌、饶恕伤害”。当我们在被伤害后，依然能靠着主选择饶恕，这种超越世俗的爱，会让周围的人看见主的同在。他们会好奇，是什么力量让我们能放下怨恨？这时，我们就有机会分享主的恩典，让更多人认识这位充满怜悯的神。所以，饶恕不仅是我们的生命功课，更是我们见证福音、荣耀神名的途径。</p>
+<h2 id="为什么很难做到饶恕"><a href="#为什么很难做到饶恕" class="headerlink" title="为什么很难做到饶恕"></a>为什么很难做到饶恕</h2><p>或许有弟兄姊妹会疑惑：“我已经信主了，为什么还是做不到饶恕？”其实这并不奇怪，我们虽蒙主拯救，但仍活在肉身之中，生命尚未完全成熟，难以饶恕的背后，藏着几个常见的原因。</p>
+<p>首先，是未深刻体会主的饶恕之恩——我们若忘记自己曾是蒙主白白赦免的罪人，就容易用“对方不配”“伤害太深”来拒绝饶恕，忘了我们的饶恕本是对主恩典的回应。</p>
+<p>其次，是被情绪和自我中心捆绑，伤害带来的愤怒、委屈若不及时交托主，就会被“讨回公道”的执念裹挟，把自己放在审判者的位置，而非被饶恕者的位置。</p>
+<p>再者，是低估了罪的辖制，试图靠自己的意志力硬撑着原谅，却不向主祷告支取力量，自然难以真正放下。<br>还有的弟兄姊妹误解了饶恕的本质，以为饶恕是纵容伤害、否定自己的痛苦，或是必须立刻和好，这种误解让我们对饶恕产生抗拒。明白这些原因，不是为我们的不饶恕找借口，而是让我们更清楚自己的软弱，知道需要更依靠主的恩典。那么，我们应该在哪些方面践行饶恕呢？</p>
+<h2 id="二、我们需要在哪些方面践行饶恕？"><a href="#二、我们需要在哪些方面践行饶恕？" class="headerlink" title="二、我们需要在哪些方面践行饶恕？"></a>二、我们需要在哪些方面践行饶恕？</h2><h3 id="2-1、饶恕他人的“无意之过”"><a href="#2-1、饶恕他人的“无意之过”" class="headerlink" title="2.1、饶恕他人的“无意之过”"></a>2.1、饶恕他人的“无意之过”</h3><p>生活中很多伤害，并不是对方故意的。比如，家人因为忙碌忽略了你的感受，朋友因为粗心说错了话刺痛了你，同事因为失误影响了你的工作。这些无意的伤害，虽然也会让我们难过，但本质上是对方的疏忽和不周全。面对这样的伤害，我们应当选择饶恕。就像主饶恕我们那些“无意”中犯下的罪一样，我们也要用宽容的心对待身边人的疏忽。</p>
+<h3 id="2-2、饶恕他人的“故意冒犯”"><a href="#2-2、饶恕他人的“故意冒犯”" class="headerlink" title="2.2、饶恕他人的“故意冒犯”"></a>2.2、饶恕他人的“故意冒犯”</h3><p>这比无意的伤害更难接受。比如，有人因为嫉妒散布关于你的谣言，有人为了利益背叛了你的信任，有人故意刁难、攻击你。这些故意的伤害，会让我们感到愤怒、羞耻、痛苦，甚至会怀疑人与人之间的真诚。但主耶稣在十字架上，面对那些钉祂、羞辱祂的人，依然祷告说：“父啊，赦免他们，因为他们所做的，他们不晓得。”（路加福音23:34）主为我们树立了饶恕故意冒犯的典范。即使对方的伤害是故意的，我们也要靠着主选择饶恕，因为我们的饶恕不是基于对方的行为，而是基于主的恩典。</p>
+<h3 id="2-3、饶恕“自己的不完美”"><a href="#2-3、饶恕“自己的不完美”" class="headerlink" title="2.3、饶恕“自己的不完美”"></a>2.3、饶恕“自己的不完美”</h3><p>很多时候，我们最难饶恕的不是别人，而是自己。我们会因为过去的错误自责不已，会因为没有达到自己或别人的期待而自我否定，会因为一次失败就陷入自我厌恶。但弟兄姊妹们，主的恩典是够我们用的，祂不仅饶恕我们对别人的亏欠，也饶恕我们对自己的苛责。主已经接纳了我们的不完美，祂爱的是原本的我们。所以，我们也要学习饶恕自己，放下过去的自责和愧疚，在主的恩典中重新站起来，勇敢地向前走。</p>
+<h2 id="三、哪些饶恕的功课最难攻克？"><a href="#三、哪些饶恕的功课最难攻克？" class="headerlink" title="三、哪些饶恕的功课最难攻克？"></a>三、哪些饶恕的功课最难攻克？</h2><h3 id="3-1、反复出现的伤害"><a href="#3-1、反复出现的伤害" class="headerlink" title="3.1、反复出现的伤害"></a>3.1、反复出现的伤害</h3><p>如果有人一次又一次地伤害你，一次又一次地向你道歉，却又一次又一次地重蹈覆辙，这种饶恕是极其艰难的。比如，家人反复因为同一个问题和你争吵，伴侣反复忽视你的需求，朋友反复失信于你。这种重复的伤害，会一点点消耗我们的耐心和爱心，让我们怀疑对方的诚意，甚至会觉得“饶恕就是纵容”。这种情况下，饶恕的功课就变得格外沉重。</p>
+<h3 id="3-2、触及核心利益和尊严的伤害"><a href="#3-2、触及核心利益和尊严的伤害" class="headerlink" title="3.2、触及核心利益和尊严的伤害"></a>3.2、触及核心利益和尊严的伤害</h3><p>当伤害让我们失去重要的东西——比如工作、财产、机会，或者严重践踏了我们的尊严——比如被公开羞辱、被恶意诋毁、被背叛，这种伤害带来的痛苦是刻骨铭心的。我们会觉得“这笔账不能就这么算了”，会想要讨回公道，会难以放下心中的怨恨。比如，有人因为嫉妒陷害你，让你失去了晋升的机会；有人在众人面前诋毁你，让你颜面尽失。这种伤害，让饶恕变得格外艰难。</p>
+<h3 id="3-3、来自亲近之人的伤害"><a href="#3-3、来自亲近之人的伤害" class="headerlink" title="3.3、来自亲近之人的伤害"></a>3.3、来自亲近之人的伤害</h3><p>最让我们痛苦的伤害，往往不是来自陌生人，而是来自我们最信任、最爱的人——父母、配偶、子女、亲密的朋友。因为我们对他们付出了最多的爱和信任，所以他们的伤害，就像一把尖刀，直刺我们的心脏。比如，父母的偏心让你感到被忽视，配偶的背叛让你感到被抛弃，朋友的出卖让你感到被欺骗。这种来自亲近之人的伤害，会让我们难以理解、难以接受，也难以饶恕。</p>
+<h2 id="四、我们该如何靠着主，真正践行饶恕？"><a href="#四、我们该如何靠着主，真正践行饶恕？" class="headerlink" title="四、我们该如何靠着主，真正践行饶恕？"></a>四、我们该如何靠着主，真正践行饶恕？</h2><p>在分享具体践行方法之前，我们先厘清一个核心问题：饶恕究竟是什么？它需要我们怎么做？是只调整心态，还是要付出实际行为？其实，真正的饶恕，是心态调整与实际行为的结合，二者缺一不可。</p>
+<p>首先，饶恕的核心是内心的心态调整。饶恕不是表面的敷衍，而是从心里放下对伤害者的怨恨、报复的念头，不再用对方的过错惩罚自己。这种心态调整，源于我们对主恩典的深刻体会——当我们明白自己曾是蒙主白白饶恕的罪人，就会从“审判者”的心态，转变为“被饶恕者”的心态，不再执着于“对方不配”的执念，而是以主的恩典包容对方的软弱。这种心态调整，是饶恕的基础，没有内心的放下，所有外在行为都只是虚假的表演。</p>
+<p>其次，饶恕离不开实际的行为表达。心态的调整最终要通过行为体现，否则就会陷入“只在心里原谅，却依然在言行上排斥对方”的矛盾中。实际的行为可能是一句真诚的“我原谅你”，可能是主动停止传播对方的过错，可能是在对方需要帮助时选择伸出援手，也可能是为对方祷告——祷告是最有力的饶恕行为，因为它能让我们在主面前放下自我，真正为伤害我们的人祝福。当然，如我们之前所说，实际行为不代表无底线妥协，设立健康边界也是饶恕的一种实际行为，它既保护了自己，也为关系的修复留有余地。</p>
+<p>简单来说，心态调整是饶恕的“内核”，决定了我们饶恕的真诚度；实际行为是饶恕的“外在体现”，让饶恕从内心的意念转化为真实的生命见证。二者相辅相成，才能构成完整的饶恕。那么，基于这样的认知，面对这些艰难的饶恕功课，我们该如何靠着主，真正践行饶恕呢？</p>
+<h3 id="4-1、承认伤害，向主倾诉，不压抑情绪"><a href="#4-1、承认伤害，向主倾诉，不压抑情绪" class="headerlink" title="4.1、承认伤害，向主倾诉，不压抑情绪"></a>4.1、承认伤害，向主倾诉，不压抑情绪</h3><p>饶恕不是“假装没事”，也不是“压抑痛苦”。真正的饶恕，是先承认自己被伤害了，承认自己心里的愤怒、痛苦、委屈是真实的。我们可以来到主的面前，把自己的情绪完完全全地告诉祂：“主啊，我好难过，因为他伤害了我；主啊，我好愤怒，因为他背叛了我。” 主是我们最知心的朋友，祂接纳我们所有的情绪，祂不会因为我们愤怒而责备我们，反而会安慰我们、扶持我们。当我们把情绪交托给主，就不会被情绪控制，也能为后续的饶恕预备心灵的空间。</p>
+<h3 id="4-2、定睛主的恩典，用恩典看待对方"><a href="#4-2、定睛主的恩典，用恩典看待对方" class="headerlink" title="4.2、定睛主的恩典，用恩典看待对方"></a>4.2、定睛主的恩典，用恩典看待对方</h3><p>当我们难以饶恕时，最有效的方法，就是回到主的恩典中，回忆主是如何饶恕我们的。我们可以想一想，自己曾经犯过多少罪，多少次偏离主的道路，但主依然选择了饶恕我们，给了我们新的生命。当我们把自己放在“被饶恕者”的位置上，就会更容易用恩典看待伤害我们的人——他们也是有限的、有罪的，他们的伤害，本质上也是对主的偏离。圣经说：“亲爱的弟兄，不要自己伸冤，宁可让步，听凭主怒；因为经上记着：‘主说，伸冤在我，我必报应。’”（罗马书12:19）我们不需要用自己的方式讨回公道，因为主会掌权，我们只需要像主饶恕我们那样，饶恕对方。</p>
+<h3 id="4-3、做出饶恕的决定，依靠主的力量坚持"><a href="#4-3、做出饶恕的决定，依靠主的力量坚持" class="headerlink" title="4.3、做出饶恕的决定，依靠主的力量坚持"></a>4.3、做出饶恕的决定，依靠主的力量坚持</h3><p>很多人以为，饶恕是“感觉不到恨了”之后才做的事，但其实，饶恕是先做出“选择原谅”的决定，情绪的释放会随之而来。饶恕不是“忘记伤害”，而是“不再用伤害惩罚自己和对方”；不是“认可对方的行为”，而是“放下对对方的怨恨”。我们可以在主的面前祷告：“主啊，我选择饶恕他，虽然我现在还很痛苦，但我愿意把这份痛苦交托给你，求你帮助我，让我从心里真正地原谅他。” 这个决定可能需要反复做出，尤其是面对反复的伤害，但每一次选择饶恕，都是在顺服主，也是在靠着主支取力量。</p>
+<h3 id="4-4、设立健康的边界，饶恕不等于纵容"><a href="#4-4、设立健康的边界，饶恕不等于纵容" class="headerlink" title="4.4、设立健康的边界，饶恕不等于纵容"></a>4.4、设立健康的边界，饶恕不等于纵容</h3><p>同时我们也要分清饶恕与和好的区别。很多弟兄姊妹会误以为，饶恕了对方就必须立刻和好，恢复到从前的关系。但事实并非如此：饶恕是我们单方面的心灵决定，是我们靠着主放下对对方的怨恨，不再用伤害惩罚自己，这是我们对主的顺服，完全由我们自己掌控；而和好是双方的事，需要建立在对方认罪悔改、愿意改变的基础上。如果对方没有悔改的意愿，依然持续伤害我们，我们可以选择饶恕，但不必急于和好，因为和好需要信任的重建，而信任是需要时间和对方的行动来证明的。我们需要明确，饶恕不是“无底线地妥协”，也不是“允许对方继续伤害我们”。真正的饶恕，是放下怨恨，但依然可以设立健康的边界，保护自己不被再次伤害。比如，如果有人反复背叛你，你可以选择饶恕他，但不需要再继续对他毫无保留地信任；如果有人反复伤害你的家人，你可以选择饶恕他，但需要减少与他的接触，避免再次受到伤害。设立边界不是不饶恕，而是在饶恕的同时，保护自己和身边人的身心安全，这也是对自己和他人负责的表现。</p>
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>饶恕，是回应神恩的信仰实践，也是释放自己、见证大爱的生命行动。它不否认伤害，却选择超越；不凭己力，而靠主恩。愿我们常在基督的爱中操练饶恕，让生命成为祂赦免与和平的流通管道。</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2025年12月28日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    cardList.forEach((item) => {
+      console.log(item.style)
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = '#e4e4e4'
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+        
+  <a href="/2025/12/14/task/%E5%9C%A8%E6%94%BE%E7%BA%B5%E7%9A%84%E6%97%B6%E4%BB%A3%E6%B4%BB%E5%87%BA%E8%8A%82%E5%88%B6%E7%9A%84%E7%94%9F%E5%91%BD/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>在放纵的时代活出节制的生命</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2025 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

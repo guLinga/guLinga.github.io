@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-常常警醒</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="常常警醒">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="常常警醒">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <p>各位弟兄姊妹，今天我们聚焦一个重要的属灵课题——常常警醒。这个看似简单的词语，却蕴含着深刻的真理，更是我们行走天路、践行使命不可或缺的生命状态。在忙碌的生活中，我们很容易被琐事裹挟、被安逸麻痹，而“常常警醒”的提醒，就像一盏明灯，照亮我们前行的道路，守护我们的心灵不偏离真道。</p>
+<h2 id="一、何为属灵的警醒？"><a href="#一、何为属灵的警醒？" class="headerlink" title="一、何为属灵的警醒？"></a>一、何为属灵的警醒？</h2><p>首先，我们要明白：什么是警醒？从字面上看，警醒就是保持清醒、不沉睡，时刻处于警觉的状态。而在属灵层面，警醒有着更丰富的内涵。《彼得前书5:8》告诫我们：“务要谨守，警醒。因为你们的仇敌魔鬼，如同吼叫的狮子，遍地游行，寻找可吞吃的人。” 这指明警醒的核心是对属灵仇敌的防备，也是对生命主权的坚守。它源于古希腊语，指代心灵与智性的清醒自持，是在思想、言语、行为上对真理的坚守，对试探的防备，对使命的铭记。正如圣徒所定义的，警醒是“在心的入口对思考的持续守望与节制”，不是被动的防备，而是主动的坚守；不是一时的冲动，而是长久的习惯。它要求我们不被世俗的潮流同化，不被内心的私欲牵引，始终以真理为标尺，审视自己的心思意念，校准自己的人生方向。这种警醒，既包括对外部环境的敏锐洞察，也包括对内心世界的深刻自省，是身心灵全方位的清醒与谨慎。</p>
+<h2 id="二、为何要常常警醒？"><a href="#二、为何要常常警醒？" class="headerlink" title="二、为何要常常警醒？"></a>二、为何要常常警醒？</h2><p>原因其实藏在我们的生命处境与属灵使命之中。首先，我们身处一个充满试探与挑战的世界，就像《彼得前书5:8》所提醒的，我们的仇敌如同吼叫的狮子，遍地游行，寻找可吞吃的人。这些试探有时披着安逸的外衣，让我们在顺境中忘记感恩、贪图享乐；有时带着诱惑的伪装，让我们在欲望中迷失自我、偏离正路。《路加福音21:34》也警示我们：“你们要谨慎，恐怕因贪食、醉酒，并今生的思虑累住你们的心，那日子就如同网罗忽然临到你们。” 对我们而言，无论是生活中的名利诱惑、人际关系中的纷争困扰，还是信仰中的冷淡敷衍，都需要我们以警醒之心应对，否则就会在不知不觉中陷入网罗。</p>
+<p>其次，我们的心灵本就有软弱的本性。《马太福音26:41》中耶稣提醒门徒：“应当警醒、祷告，免得陷入试探；你们心灵虽然愿意，肉体却是软弱的。” 每个人都有性格的短板、智慧的局限，内心的欲望如同野草，若不加以警醒约束，就会肆意生长，遮蔽真理的光芒。很多时候，我们并非故意偏离真道，而是在不经意间被本能冲动左右，在细微之处放松了对自己的要求。而警醒，就是为心灵安装一道“防火墙”，及时拦截错误的思想，驱散内心的幽暗，让理智与真理始终占据主导。</p>
+<p>更重要的是，警醒是我们践行属灵使命的必然要求。《以弗所书6:18》教导我们：“靠着圣灵，随时多方祷告祈求，并要在此警醒不倦，为众圣徒祈求。” 我们蒙召成为光成为盐，不是要在世界中随波逐流，而是要带着使命前行。同样，作为蒙恩的人，我们的信仰之路也绝非一帆风顺，既有高山也有低谷，既有平安也有风浪。唯有常常警醒，才能在顺境中铭记使命，不被成就冲昏头脑；在逆境中坚定信心，不被艰难击垮意志，始终朝着标杆直跑，不辜负所领受的恩典。</p>
+<h2 id="三、读经祷告：属灵警醒的根基"><a href="#三、读经祷告：属灵警醒的根基" class="headerlink" title="三、读经祷告：属灵警醒的根基"></a>三、读经祷告：属灵警醒的根基</h2><p>说到警醒，就不得不提读经祷告中的警醒——这是我们属灵警醒的根基与源泉。很多时候，我们的读经祷告会陷入形式化的困境：翻开圣经却心不在焉，口中祷告却思绪飘远，看似在亲近真理，心灵却早已沉睡。而读经祷告中的警醒，核心是以谦卑敬畏的心与上帝相遇，让圣灵在心中动工，这需要我们在具体操练中把握关键要点，避免流于表面。</p>
+<h4 id="（一）读经时当注重的核心：从“浏览文字”到“心灵聆听”"><a href="#（一）读经时当注重的核心：从“浏览文字”到“心灵聆听”" class="headerlink" title="（一）读经时当注重的核心：从“浏览文字”到“心灵聆听”"></a>（一）读经时当注重的核心：从“浏览文字”到“心灵聆听”</h4><p>读经绝非简单的知识积累，而是与上帝的心灵对话，首要注重<strong>慢读静听</strong>，拒绝匆忙赶进度。《诗篇1:2》说：“惟喜爱耶和华的律法，昼夜思想，这人便为有福。”</p>
+<p>要注重<strong>默想反思</strong>，让经文光照生命。《申命记6:6-7》吩咐我们：“我今日所吩咐你的话都要记在心上，也要殷勤教训你的儿女，无论你坐在家里，行在路上，躺下，起来，都要谈论。” 读经不是被动接收字句，而是主动让真理对照自我，如同牛吃草后的反刍，细细思想上帝的话语要向我们传递的信息。可以试着设身处地进入经文场景，若读福音书，便想象自己是当时的门徒，感受耶稣的教导与大能；若读书信，便默想使徒的劝勉如何对应自己当下的处境。同时要主动发问：“主啊，你借着这句话要提醒我什么？我的生命中是否有偏离这真理的地方？” 让读经成为自我省察的过程，而非单纯的文本解读。</p>
+<p>还要注重<strong>聚焦真理本质</strong>，不被私意曲解。《提摩太后书2:15》劝勉我们：“你当竭力在神面前得蒙喜悦，作无愧的工人，按着正意分解真理的道。” 我们容易带着自己的主观臆断读经，断章取义地寻找符合自身想法的经文，却忽略上帝话语的整体启示。读经时的警醒，就是放下自我中心的执念，顺服圣灵的带领，透过字句看见背后的真理，明白经文对我们生命的指引，而非将经文当作满足私欲、证明自我的工具。不要走马观花读完整章，要让上帝的话语成为生命的准绳，而非表面的装饰。</p>
+<h4 id="（二）祷告时当注重的核心：从“单向倾诉”到“双向契合”"><a href="#（二）祷告时当注重的核心：从“单向倾诉”到“双向契合”" class="headerlink" title="（二）祷告时当注重的核心：从“单向倾诉”到“双向契合”"></a>（二）祷告时当注重的核心：从“单向倾诉”到“双向契合”</h4><p>祷告是心灵与上帝的连接，首要注重<strong>心怀敬畏，端正态度</strong>。《希伯来书12:28》说：“所以，我们既得了不能震动的国，就当感恩，照神所喜悦的，用虔诚、敬畏的心侍奉神。” 这种警醒始于敬畏之心：祷告前可整理自身着装、洁净祈祷环境，不是流于形式，而是借着外在的庄重唤醒内心的敬畏，提醒自己正站在圣洁的上帝面前，不可轻慢敷衍。同时要放下世俗的杂念与浮躁，不带着应付的心态例行公事，让每一次祷告都源于真诚的心灵渴望。</p>
+<p>其次要注重<strong>聆听回应，而非单向索取</strong>。《雅各书4:8》教导我们：“你们亲近神，神就必亲近你们。” 很多时候我们的祷告只停留在倾诉需求、诉说困境，却忽略了安静聆听上帝的指引。警醒的祷告，是既有坦诚的倾诉，也有谦卑的聆听——将自己的感动、愧疚、疑问全然交托给上帝，之后便安静等候，让心灵在静默中感受圣灵的带领。这种聆听不是听见有声的言语，而是在心灵中领受上帝的安慰、提醒与托付，让祷告成为“与主对话”的过程，而非“向主吩咐”的独白，使我们的心意逐渐与上帝的心意契合。</p>
+<p>还要注重<strong>直面软弱，立志顺服</strong>。《约翰一书1:9》说：“我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。” 祷告的警醒，意味着不回避自己的罪与软弱，不向上帝隐瞒真实的内心。我们常常在祷告中美化自己的动机、掩饰自己的过错，却不知真诚的祷告始于坦诚的自省。要在祷告中勇敢认罪悔改，将内心的挣扎、困惑全然交托，祈求上帝的赦免与力量；同时带着顺服的心立志，将祷告中领受的感动转化为具体的行动，不让祷告止于口头的立志，而是让上帝的力量透过祷告进入生命，攻克内心的软弱，活出警醒顺服的生命。</p>
+<h4 id="（三）读经与祷告的契合：让真理与心灵深度联结"><a href="#（三）读经与祷告的契合：让真理与心灵深度联结" class="headerlink" title="（三）读经与祷告的契合：让真理与心灵深度联结"></a>（三）读经与祷告的契合：让真理与心灵深度联结</h4><p>读经与祷告本是相辅相成的属灵操练，二者的契合是警醒的关键。《路加福音21:36》劝勉我们：“你们要时时警醒，常常祈求，使你们能逃避这一切要来的事，得以站立在人子面前。” 我们当注重将读经所领受的真理，融入祷告的内容中，化经文为祷告——若读到“主啊，你是我山寨、是我力量”，便当即祷告宣告投靠主；若领受到认罪的真理，便在祷告中谦卑悔改。同时，也将祷告中的困惑、渴望，带入读经的默想中，祈求上帝借着话语给予指引，让读经为祷告提供真理的根基，让祷告为读经赋予生命的温度。</p>
+<p>这种契合的核心，是让读经祷告成为生命的常态，而非偶尔的仪式。正如经上教导，要“时时警醒祈祷”，让读经祷告不再是特定时间的“任务”，而是融入日常的心灵操练，在每一个时刻都保持与上帝的连接，让真理不断滋养心灵，让祷告不断坚固信心，从而为灵里的警醒筑牢根基，在纷繁的世界中始终保持心灵的清醒与坚定。</p>
+<p>经上教导我们“你们得救在乎归回安息，得力在乎平静安稳”，而这种安息与安稳，并非源于麻木懈怠，而是源于在真理中的警醒。当我们以敬畏之心读经、以警醒之心祷告，就会在上帝的话语中找到方向，在祷告中获得力量，无论面对何种环境，都能保持心灵的平静。因为我们知道上帝始终与我们同在，这种连接让我们在纷繁的世界中不迷失、不浮躁，守住初心、坚守真道，不被世俗的喧嚣所干扰，让读经祷告真正成为灵里警醒的坚固根基。</p>
+<h2 id="四、灵里警醒的难处与挣扎"><a href="#四、灵里警醒的难处与挣扎" class="headerlink" title="四、灵里警醒的难处与挣扎"></a>四、灵里警醒的难处与挣扎</h2><p>我们当承认，灵里的警醒从来不是一件容易的事，它既会遭遇外在环境的阻碍，更会面临内心深处的挣扎。很多时候，我们并非不知道警醒的重要性，却在实际践行中屡屡退缩，这背后藏着人性的软弱与属灵的困境。</p>
+<h4 id="（一）人为何不愿灵里警醒？"><a href="#（一）人为何不愿灵里警醒？" class="headerlink" title="（一）人为何不愿灵里警醒？"></a>（一）人为何不愿灵里警醒？</h4><p>首要原因，是警醒意味着要打破旧有的舒适区，直面真实的自我与处境。《希伯来书3:13》告诫我们：“总要趁着还有今日，天天彼此相劝，免得你们中间有人被罪迷惑，心里就刚硬了。” </p>
+<p>警醒需要付出代价，而懒惰与贪恋安逸的本性让我们选择逃避。箴言中也提醒我们，懒惰会让人陷入败坏与困局。保持灵里清醒需要持续的内在工作，要放下娱乐化的消遣，花时间读经祷告、自省反思。相比之下，沉睡则轻松得多，我们可以用“想那么多干嘛”“现实点不好吗”这样的借口自我麻痹，合理地沉溺于世俗的诱惑，不必承受直面过错的痛苦与改变的艰难。</p>
+<p>更深刻的是，警醒会带来“审判性的看见”，让我们无法再自欺欺人。很多人接近真理却突然转身，不是理解力不足，而是再往前一步，就必须面对自己忍耐已久的错误生活、未曾选择的人生，以及为了安全而放弃的真实。这种对自我的审视如同审判，让我们本能地启动防御机制，用否认、拖延、美化动机等方式逃避，宁愿活在自己编织的幻想中，也不愿在真理中清醒。</p>
+<h4 id="（二）警醒路上的核心挣扎"><a href="#（二）警醒路上的核心挣扎" class="headerlink" title="（二）警醒路上的核心挣扎"></a>（二）警醒路上的核心挣扎</h4><p>在追求警醒的过程中，我们会遭遇诸多内在挣扎，其中最核心的是“内在冲突与缓冲机制”的拉扯。《罗马书7:21-23》中保罗的感叹道出了这种挣扎：“我也知道在我里头，就是我肉体之中，没有良善。因为立志为善由得我，只是行出来由不得我。故此，我所愿意的善，我反不作；我所不愿意的恶，我倒去作。若我去作所不愿意作的，就不是我作的，乃是住在我里头的罪作的。” 就像灵性导师所指出的，我们内心常常有两个“我”在对抗：一个渴望亲近真理、努力警醒，另一个却贪恋舒适、不愿改变。此时，我们往往会用“明天再开始”“这次只是例外”这样的缓冲话术安慰自己，麻痹内在的矛盾，最终永远停留在原地，无法真正突破。</p>
+<p>其次是被情绪与惯性裹挟的挣扎。我们很容易陷入“认同”的困境，愤怒时就全然成为愤怒本身，沮丧时就被沮丧吞噬，完全被情绪主导而失去清醒的判断；同时，日常的惯性思维也会阻碍警醒，比如沉湎于过去的悔恨或未来的空想，唯独无法活在当下，用既定的习惯代替有意识的选择，让心灵在不知不觉中麻木。</p>
+<p>还有一个重要挣扎，是内在顾虑与自我中心的捆绑。我们常常过度在意他人的看法，总觉得别人在针对自己，要么因羞怯而隐藏真实的想法，要么因怨恨而滋生负面情绪，这些内在的顾虑消耗了大量本该用于警醒的能量。更有甚者，会因自我中心而不愿认罪，对自己说谎、为自己找借口，无法坦诚面对自己的软弱，让警醒失去根基。</p>
+<h2 id="五、当在哪些事上常常警醒？"><a href="#五、当在哪些事上常常警醒？" class="headerlink" title="五、当在哪些事上常常警醒？"></a>五、当在哪些事上常常警醒？</h2><p>灵里的警醒不是抽象的概念，而是要落实在具体的生活场景中，在每一件小事上守住心灵的阵地。首先，在<strong>心思意念上警醒</strong>，防备私欲与邪情的入侵。《哥林多后书10:5》教导我们：“将各样的计谋，各样拦阻人认识神的那些自高之事，一概攻破了，又将人所有的心意夺回，使他都顺服基督。” 我们的内心如同田地，若不警醒，嫉妒、贪婪、怨恨、淫乱等念头就会像野草一样肆意生长。要时刻检视自己的想法，是否被世俗的潮流同化，是否偏离了真理的标尺，不让错误的思想在心中扎根。</p>
+<p>其次，在<strong>言语行为上警醒</strong>，不被冲动与惯性左右。经上教导我们“言语要常常带着和气”，《雅各书3:2》也提醒我们：“原来我们在许多事上都有过失；若有人在话语上没有过失，他就是完全人，也能勒住自己的全身。” 我们要警醒自己的言语，是否有论断、抱怨、谎言，是否温柔有爱、造就他人；在行为上，要警醒自己是否行在正路，是否在工作、生活、人际关系中坚守真理，不随波逐流、不妥协让步，不让“祸患积于忽微”。</p>
+<p>再者，在<strong>敬拜侍奉与读经祷告上警醒</strong>，防备形式化与心不在焉。《以赛亚书29:13》中上帝责备百姓：“这百姓亲近我，用嘴唇尊敬我，心却远离我；他们将人的吩咐当作道理教导人，所以拜我也是枉然。” 很多时候我们的敬拜流于表面，祷告沦为流程，心灵早已远离上帝。要警醒自己是否带着谦卑敬畏的心来到主面前，是否在读经时沉思真理、在祷告中聆听指引，是否将领受的恩典转化为实际的行动，不让信仰只停留在口头上。</p>
+<p>最后，在<strong>面对顺境与逆境时警醒</strong>。《箴言16:18》说：“骄傲在败坏以先，狂心在跌倒之前。” 顺境中要警醒骄傲自满，不被成就冲昏头脑，忘记上帝的恩典与托付；《雅各书1:2-3》则劝勉我们：“我的弟兄们，你们落在百般试炼中，都要以为大喜乐；因为知道你们的信心经过试验，就生忍耐。” 逆境中要警醒灰心失望，不被艰难击垮意志，不因苦难怀疑真理。无论是平安还是风浪，都要保持清醒的头脑，始终朝着标杆直跑，在每一个处境中见证基督的荣美。</p>
+<h2 id="六、让警醒成为生命常态"><a href="#六、让警醒成为生命常态" class="headerlink" title="六、让警醒成为生命常态"></a>六、让警醒成为生命常态</h2><p>常常警醒不是一句空洞的口号，而是一种具体的生命实践。《彼得后书3:17》提醒我们：“亲爱的弟兄啊，你们既然预先知道这事，就当防备，恐怕被恶人的错谬诱惑，就从自己坚固的地步上坠落。” 它要求我们在日常生活中，时刻保持对真理的敏感，对试探的防备，对使命的坚守。在与人相处时，警醒自己的言语是否温柔有爱；在面对诱惑时，警醒自己的选择是否合乎真理；在敬拜侍奉时，警醒自己的心灵是否真诚火热；在独处反思时，警醒自己的意念是否纯洁正直。就像“小心驶得万年船”的谚语所说，唯有时刻警醒，才能避开生命中的暗礁险滩，行在上帝所指引的正路上。</p>
+<p>我们或许无法做到时刻完美无缺，但我们可以靠着圣灵的帮助，培养警醒的习惯。《加拉太书5:16》说：“我说，你们当顺着圣灵而行，就不放纵肉体的情欲了。” 每天留一点时间，在上帝面前安静自省，检视自己的言行与心思。当警醒成为我们的生命常态，我们就会发现，心灵变得更加清洁，信心变得更加坚定，脚步变得更加稳健，能够在信仰的道路上从容前行，活出基督的荣美。</p>
+<h2 id="七、结语：以警醒之心，行天路之程"><a href="#七、结语：以警醒之心，行天路之程" class="headerlink" title="七、结语：以警醒之心，行天路之程"></a>七、结语：以警醒之心，行天路之程</h2><p>愿我们都能将“常常警醒”这四个字刻在心中，靠着圣灵的能力，攻克内心的软弱，胜过警醒路上的艰难与挣扎，时刻保持心灵的清醒与谨慎。《启示录3:2》中耶稣对撒狄教会说：“你要警醒，坚固那剩下将要衰微的；因我见你的行为，在我神面前，没有一样是完全的。” 不被安逸麻痹，不被诱惑牵引，不在自我欺骗中沉沦，在每一件事上践行警醒，在每一个日子里以警醒的心敬拜上帝，以坚定的信践行使命。愿上帝保守我们的心怀意念，让我们在警醒中成长，在坚守中得福，直到见主面的那一天，阿们！</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2026年01月25日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    cardList.forEach((item) => {
+      console.log(item.style)
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = '#e4e4e4'
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+        
+  <a href="/2026/01/11/task/%E8%A6%81%E5%B8%B8%E5%B8%B8%E5%96%9C%E4%B9%90/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>要常常喜乐</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-清心见主</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="清心见主">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="清心见主">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <h2 id="一．圣洁"><a href="#一．圣洁" class="headerlink" title="一．圣洁"></a>一．圣洁</h2><p>&ensp;&ensp;&ensp;&ensp;诗篇二十四篇有一段诗人大卫的自我问答：“谁能登耶和华的山？谁能站在祂的圣所？就是手洁心清，不向虚妄，起誓不怀诡诈的人。”（诗24:3-4）</p>
+<p>&ensp;&ensp;&ensp;&ensp;“手洁心清”意思是：这些人的手是干净的，没有作恶；心是纯洁的，不怀诡诈。</p>
+<p>&ensp;&ensp;&ensp;&ensp;神所看重的不仅是手不作恶，祂更看重的是心无诡诈。“因为耶和华不像人看人，人是看外貌，耶和华是看内心。”（撒上16:7）</p>
+<p>&ensp;&ensp;&ensp;&ensp;主耶稣常常严厉责备法利赛人，因为法利赛人外表道貌岸然，内心却肮脏污秽。</p>
+<p>&ensp;&ensp;&ensp;&ensp;“你们这假冒为善的文士和法利赛人有祸了。因为你们洗净杯盘的外面，里面却盛满了勒索和放荡。你们这假冒为善的文士和法利赛人有祸了。因为你们好像粉饰的坟墓，外面好看，里面却装满了死人的骨头和一切的污秽。你们也是如此，在人前，外面显出公义来，里面却装满了假善和不法的事。”（太23:25-28）</p>
+<p>&ensp;&ensp;&ensp;&ensp;马太福音第六章，主耶稣论到法利赛人的施舍、祷告和禁食。他们施舍是“故意要得人的荣耀；”（太6:2）祷告是“故意叫人看见；”（太6:5）禁食是“故意叫人看出他们是禁食。”（太6:16）</p>
+<p>&ensp;&ensp;&ensp;&ensp;主耶稣说，“从人里面出来的，那才能污秽人。因为从里面，就是从人心里，发出恶念，苟合，偷盗，凶杀，奸淫，贪婪，邪恶，诡诈，淫荡，嫉妒，毁谤，骄傲，狂妄。”（可7:20-22）</p>
+<p>&ensp;&ensp;&ensp;&ensp;“你们听见有话说，不可奸淫。只是我告诉你们，凡看见妇女就动淫念的，这人心里已经与她犯奸淫了。”（太5:27-28）</p>
+<p>&ensp;&ensp;&ensp;&ensp;所以罪的问题不在外面的世界，乃在于里边的人心。</p>
+<p>&ensp;&ensp;&ensp;&ensp;先知耶利米说，“人心比万物都诡诈，坏到极处，谁能识透呢？”（耶17:9）</p>
+<p>&ensp;&ensp;&ensp;&ensp;既然如此，有谁能说自己是内心清洁的呢？</p>
+<p>&ensp;&ensp;&ensp;&ensp;感谢神，祂差遣耶稣基督到世上来，就是要改变罪人的心。耶稣基督是神的儿子，祂道成肉身成为人的样式，为拯救罪人在十字架上舍身流血，洗净罪人肮脏污秽的心，以祂自己的代罪替死，将世人从罪恶中拯救出来。“因祂要将自己的百姓从罪恶里救出来。”（太1:21）</p>
+<p>&ensp;&ensp;&ensp;&ensp;“若有人在基督里，他就是新造的人。旧事已过，都变成新的了。”（林后5:17）</p>
+<p>&ensp;&ensp;&ensp;&ensp;所以，哪些人是圣洁的人呢？就是那些凭信心接受耶稣基督为救主、他的心被主耶稣的宝血洁净、他的罪被神完全赦免的人。</p>
+<p>&ensp;&ensp;&ensp;&ensp;基督徒既然是圣洁蒙爱的人，就当对罪敏感，远离恶行，避免沾染世俗的污秽。</p>
+<p>&ensp;&ensp;&ensp;&ensp;保罗说，你们“行事为人就当与蒙召的恩相称，”（弗4:1）“当用各样的智慧，把基督的道理，丰丰富富的存在心里，用诗章，颂词，灵歌，彼此教导，互相劝戒，心被恩感歌颂神。无论作什么，或说话，或行事，都要奉主耶稣的名，借着祂感谢父神。”（西3:16-17）</p>
+<h2 id="二．专注"><a href="#二．专注" class="headerlink" title="二．专注"></a>二．专注</h2><p>&ensp;&ensp;&ensp;&ensp;清心不仅是远离污秽的事，清心更是对神的单纯，定睛在主耶稣基督身上，只要神自己，渴慕神的话语，寻求神的心意。</p>
+<p>&ensp;&ensp;&ensp;&ensp;大卫被神称作是“合神心意的人，”因为他的心切切寻求神，渴慕神，渴慕神的话语。</p>
+<blockquote>
+<p>“神阿，你是我的神，我要切切地寻求你。在干旱疲乏无水之地，我渴想你，我的心切慕你。”（诗63:1）<br>“我的灵阿，你当醒起，琴瑟阿，你们当醒起。我自己要极早醒起。”（诗57:8）<br>“求你使我清晨得听你慈爱之言，因我倚靠你。求你使我知道当行的路，因我的心仰望你。”（诗143:8）<br>论到最大的诫命，主耶稣说，“你要尽心，尽性，尽意，爱主你的神。”（太22:37）</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;人们很难做到尽心、尽性、尽意爱主我们的神，为什么？正如主耶稣撒种的比喻所说的，人们允许自己生长在荆棘中，被荆棘挤住不能生长、不能结实。</p>
+<blockquote>
+<p>“撒在荆棘里的，就是人听了道，后来有世上的思虑，钱财的迷惑，把道挤住了，不能结实。”（太13:22）</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;电脑、手机、网络，既是祝福又是咒诅，它既给人带来交流方便和快捷信息，同时又带给人网瘾、沉溺、身体损害，就看你怎样使用它。在缺乏约束和自律的当下，手机和网络对许多人来说成了咒诅。</p>
+<p>&ensp;&ensp;&ensp;&ensp;不幸的是，许多基督徒也深陷手机网络的沉溺之中，连主日崇拜竟然也手机不离手。试问，你怎么可能尽心、尽性、尽意爱主你的神呢？</p>
+<blockquote>
+<p>使徒保罗说，“我只有一件事，就是忘记背后努力面前的，向着标竿直跑，要得神在基督耶稣里从上面召我来得的奖赏。”（腓3:13-14）</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;主耶稣说，“我的食物，就是遵行差我来者的旨意，作成祂的工。”（约4:34）</p>
+<p>&ensp;&ensp;&ensp;&ensp;教会历史上神所重用的仆人，像马丁路德，加尔文，约翰卫斯理，亨利马太，本仁约翰，威廉克理，马礼逊，戴德生，毕大卫等，他们把毕生的生命献给神，神也大大地使用他们，使他们完成十倍、百倍于世人的工作，成为神的器皿、世人的祝福。</p>
+<p>&ensp;&ensp;&ensp;&ensp;而许多自称是基督徒的人，一生碌碌无为，一事无成，因为他们像世人一样为一些蝇头小利而汲汲营营，忙忙碌碌，生活目标太过低下，诚如主耶稣所说的，他们的生命被“世上的思虑，钱财的迷惑”所牵引、所捆绑、所消耗、所浪费。</p>
+<blockquote>
+<p>“因为你的财宝在哪里，你的心也在哪里。”（太6:21）</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;弟兄姐妹，你是否知道，有一天你需要向主耶稣交账？我们也许糊弄别人，甚至可能糊弄自己，但你绝不可能糊弄神！岂不知“审判要从神的家起首”（彼前4:17）吗？到那一天，你拿什么去见主耶稣呢？</p>
+<p>&ensp;&ensp;&ensp;&ensp;“那已经立好的根基，就是耶稣基督，此外没有人能立别的根基。若有人用金，银，宝石，草木，禾楷，在这根基上建造。各人的工程必然显露。因为那日子要将它表明出来，有火发现。这火要试验各人的工程怎样。人在那根基上所建造的工程，若存得住，他就要得赏赐。人的工程若被烧了，他就要受亏损，自己却要得救。虽然得救乃像从火里经过的一样。”（林前3:11-15）</p>
+<p>&ensp;&ensp;&ensp;&ensp;当你时常活在交账的亮光之下，就能够更深切地体会保罗的话，“我先前以为与我有益的，我现在因基督都当作有损的。不但如此，我也将万事当作有损的，因我以认识我主基督耶稣为至宝。我为他已经丢弃万事，看作粪土，为要得着基督。”（腓3:7-8）。</p>
+<p>&ensp;&ensp;&ensp;&ensp;而我们也必须承认说没有任何一个人有足够所谓纯洁单纯的动机在做某一件事，那这就意味着什么呢？我们必须每一天要为那隐而未现的罪去悔改在神面前，得要靠着圣灵的光照和带领仔细的去神面前去对付我们里面不够清洁的地方。</p>
+<p>&ensp;&ensp;&ensp;&ensp;清心，它是一个生命的状态，但同时呢，也是我们的每一天的抉择，你可以因为奉主的名做一些事情，但是却没有一个清洁的心。所以常常圣经当中提醒我们说你要用清洁的良心去面对神，那这个情节的良心是其他人看不到的只有神可以看到。所以不管我们做什么说什么，哪怕是我们讲了你在服侍主，但如果你的心不清洁的话，其实就好像主耶稣，在圣经当中，有非常严厉的一段话说：“很多那些奉我的名赶鬼奉了我的名，我却不认识你们这些毒蛇的种类，退我后边去吧”多可怕的一件事情所以今天啊，清心这件事情是值得我们要仔细的思想的，就是我们每一天是否在神面前，足够专注地去追求神。而当我们做每一个决定的时候，我们在神面前是否求主来洁净。</p>
+<p>&ensp;&ensp;&ensp;&ensp;那如果我发现我不够清洁的地方，我是不是真的去努力的悔改呢？还是说，我已经习惯了这么思想，我已经习惯了这么去处理问题，很多的习惯里面就带着罪，带着一些我们没有办法突破的枷锁，甚至呢，是一些我们不觉得有什么大不了的东西。</p>
+<p>&ensp;&ensp;&ensp;&ensp;我相信对于现今的信徒来讲，更多更多的时候我们需要去仔细的思想，我对人的态度，我对侍奉的态度，我对人的想法，是否反映了我是一个倾心的人呢？还是说我仍然在我旧有的老我的习惯当中去面对这个世界，在这节经文当中说：“清心的人有福了，因为他们必得见神”。其实见神这件事情在圣音当中不是说，最后要去见神站在审判台前，这里所说的是与神面对面，就是神像一个亲爱的朋友一样的。像摩西他与神面对面然后他脸上充满了荣光，别人都没有办法直视他，是多大的一个荣耀啊！</p>
+<p>&ensp;&ensp;&ensp;&ensp;亲眼见神这真的是每一个信徒生命当中最最值得我们盼望的一件事情，神不仅亲自面对了摩西还亲手埋葬了摩西，但是我们也记得在摩西当要跨前一步的时候，主说脱掉你的鞋子这是圣地你不可以随便来，所以不是我们所有人想见神就能见神的，这是我们每一个基督徒至高的荣耀。</p>
+<p>&ensp;&ensp;&ensp;&ensp;所以我们如今的这个决定和选是最最重要的，千万不要等到说反正都要见神，那最后一刻见呗，你要知道最后一刻就没有希望了、没有盼头了、没有翻转了、没有改变了，而那个没有才是真正可怕的一个没有。求助帮助我们今天要立志做个清心的人。清心是需要我们在我们很微小的事情上面去操练，比如说今天能不能不说任何一个别人的坏话今天能不能不要让自己动怒，今天公司的领导给你给了个脸色，没关系，怜悯他吧，因为他根本不知道什么才应该是那虚假的去服侍别人。所以弟兄姐妹们就从我们今天每一件小事开始操练自己让自己可以手节心亲清新的去建筑。</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2026年02月08日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    cardList.forEach((item) => {
+      console.log(item.style)
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = '#e4e4e4'
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+        
+  <a href="/2026/01/25/task/%E5%B8%B8%E5%B8%B8%E8%AD%A6%E9%86%92/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>常常警醒</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

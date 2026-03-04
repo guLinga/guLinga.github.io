@@ -100,6 +100,25 @@
   padding: 0 calc((100% - 1160px) / 2);
   margin-bottom: 50px;
 }
+.home .main .post-block-content1 {
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 20px 40px 0 rgba(50, 50, 50, 0.08);
+  position: relative;
+  top: 0px;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.home .main .post-block-content1:hover {
+  cursor: pointer;
+  top: -15px;
+}
 .home .main .post-block-content {
   margin: 20px 0;
   text-decoration: none;
@@ -180,6 +199,9 @@
   margin-right: 16px;
 }
 @media screen and (max-width: 1300px) {
+  .home .main .post-block-content1 {
+    margin: 20px 100px;
+  }
   .home .main .post-block-content {
     margin: 20px 100px;
   }

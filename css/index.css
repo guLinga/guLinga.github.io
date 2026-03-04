@@ -842,6 +842,25 @@ hue-6-2: #e6c07b
   padding: 0 calc((100% - 1160px) / 2);
   margin-bottom: 50px;
 }
+.home .main .post-block-content1 {
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 20px 40px 0 rgba(50, 50, 50, 0.08);
+  position: relative;
+  top: 0px;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.home .main .post-block-content1:hover {
+  cursor: pointer;
+  top: -15px;
+}
 .home .main .post-block-content {
   margin: 20px 0;
   text-decoration: none;
@@ -922,6 +941,9 @@ hue-6-2: #e6c07b
   margin-right: 16px;
 }
 @media screen and (max-width: 1300px) {
+  .home .main .post-block-content1 {
+    margin: 20px 100px;
+  }
   .home .main .post-block-content {
     margin: 20px 100px;
   }
@@ -1507,6 +1529,61 @@ hue-6-2: #e6c07b
   .tags-content-data {
     padding: 64px 50px;
   }
+}
+.plan-page .plan-main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+.plan-page .plan-page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #12183A;
+  text-align: center;
+  margin: 0 0 32px;
+  letter-spacing: 0.04em;
+}
+.plan-page .plan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.plan-page .plan-day {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(50, 50, 50, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  border: 1px solid rgba(18, 24, 58, 0.06);
+}
+.plan-page .plan-day:hover {
+  box-shadow: 0 8px 32px rgba(50, 50, 50, 0.1);
+  transform: translateY(-2px);
+}
+.plan-page .plan-day-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #12183A;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(18, 24, 58, 0.08);
+  letter-spacing: 0.02em;
+}
+.plan-page .plan-chapters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.plan-page .plan-chapter-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #8c6446;
+  background: rgba(252, 232, 212, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(210, 170, 120, 0.35);
 }
 .content-move {
   margin-top: -64px !important;

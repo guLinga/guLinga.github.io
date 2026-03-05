@@ -1596,10 +1596,6 @@ hue-6-2: #e6c07b
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
 }
-.plan-page .plan-day-sermon-btn:hover {
-  background: rgba(252, 232, 212, 0.9);
-  color: #644632;
-}
 .plan-page .plan-chapters {
   display: flex;
   flex-wrap: wrap;

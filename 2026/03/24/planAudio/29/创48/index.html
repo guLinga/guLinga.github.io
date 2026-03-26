@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-创48</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="创48">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="创48">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+    </div>
+    <div class="h-right-close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/plan">读经计划</a>
+    </li>
+    
+  </ul>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+        <div
+  class="post-header-background post-header-img"
+  style="
+    background: url('https://gulinga-github-io.pages.dev/image/cover.png');
+  "
+>
+  <div class="post-header-background-content">
+    <ul class="post-header-tag">
+      
+    </ul>
+
+    <h1>创48</h1>
+    <div class="post-header-info">
+      <div class="post-header-info-author">
+        
+        <svg
+          t="1604839279282"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="2901"
+          width="20"
+          height="20"
+        >
+          <path
+            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+            p-id="2902"
+            fill="#ffffff"
+          ></path>
+        </svg>
+        
+        <!-- <span class="post-header-info-author-text"> <a href="../../about">李新科</a></span> -->
+        <span class="post-header-info-author-text"
+          >李新科</span
+        >
+        <div class="post-header-info-author-categories">
+          
+        </div>
+        <p>2026-03-24 07:56:00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+        <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    
+        <div id="aplayer-QahTKFJs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-QahTKFJs"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "创48",
+              author: "李新科",
+              url: "https://gulinga-github-io.pages.dev/planAudio/创48.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>弟兄姊妹，祝主内平安。今天我为大家分享的是《创世记》第48章。</p>
+<p>我们先一起来做个祷告。主啊，我们感谢你，我们把今天的时间交在你的手中。愿你赐给孩子当说的话，也求你扶持孩子，并将这些信息传达给众弟兄姊妹。主啊，愿我们众人都能够领受你的话语，从你的话语当中得到力量。孩子如此祷告，奉主耶稣的名向天父祈求。阿们。</p>
+<p>好，我们先一节一节地来看。</p>
+<p>第一节说，这事以后，有人告诉约瑟说，你的父亲病了。他就带着两个儿子玛拿西和以法莲同去。这件事呢，就是因着饥荒的缘故，雅各和他全家为了逃避饥荒，去到埃及避难。在这之前，神也预备了约瑟提前在埃及预备了粮食，也把埃及几乎所有的地都归了法老，唯独祭司的地不归法老。神在安排这一切之后，雅各以及他的一家人都来到埃及避难。来到埃及之后，雅各也为法老所祝福，法老也问到雅各的年日，雅各也说他是寄居的，在世上是寄居的。这一系列的事情之后，雅各在临死之际要为他的后代祝福。在这事以后，他的父亲病了，他的儿子约瑟就带着约瑟的儿子，就是玛拿西和以法莲一块儿去看望他的父亲。这里也许是出于孝心，让后辈们也学习孝心；也或者是因为要祝福的缘故，他带着两个儿子同去。</p>
+<p>第二节，有人告诉雅各说，请看，你儿子约瑟到你这里来了。以色列就勉强在床上坐起来。以色列就是雅各。在这里我们可以看到，雅各现在年纪也很大，并且眼目昏花，身上还有疾病缠绕，所以在床上坐起来就非常勉强。</p>
+<p>第三节又说，雅各对他儿子约瑟说，全能的神曾在迦南地的路斯向我显现，赐福于我。雅各在这里提到神，称神为全能的神。在之前我们知道，他在伯特利的时候——也就是我们的参考经文《创世记》28章13到15节以及20到21节——雅各在伯特利做了一个梦，就是天梯的那个梦，在那里他遇见了神。我们来读一下：耶和华站在梯子上说，我是耶和华你祖亚伯拉罕的神，也是以撒的神。我要将你所躺卧之地赐给你和你的后裔。你的后裔必像地上的尘沙那样多，必向东西南北开展，地上万族必因你和你的后裔得福。我也与你同在，你无论往哪里去，我必保佑你，领你归回这地，总不离弃你，直到我成全了向你应许的。雅各许愿说，你若与我同在，在我所行的路上保佑我，又给我食物吃，使我平平安安地回到我父亲的家，我就必以耶和华为我的神。从这最后一句我们看到，雅各称耶和华为“我的神”是有条件的——如果这位神使他平平安安地回到他父亲的家，他就必以耶和华为我的神。也就是说，在雅各遇见神的那段时间，神在他心里的地位只是他列祖的神、他父亲的神；如果神应许他这一切，雅各才称耶和华为我的神。但是雅各在这里称神为全能的神。雅各经过一生的蜕变，经过神在他一生中的拆毁和磨练，在晚年之际，他不仅意识到神不仅是列祖的神、父亲的神，也是他自己的神，所以他在这里称神为全能的神。</p>
+<p>第四节，神对雅各说，我必使你生养众多，成为多民，又要把这地赐给你的后裔，永远为业。这是神对雅各的应许。然后雅各说，我未到埃及见你以先，你在埃及地所生的以法莲和玛拿西，这两个儿子是我的，正如流便和西缅是我的一样。雅各把他儿子约瑟的儿子以法莲和玛拿西提到和他儿子同等的地位。我们看参考经文《历代志上》5章1节：以色列的长子原是流便，因他污秽了父亲的床，他长子的名分就归了约瑟，只是按家谱他不算长子。我们可以看到，长子的名分归了约瑟，而雅各祝福的时候，他祝福约瑟的两个儿子，因此约瑟就得到了双倍的祝福、双倍的家产。在旧约的时代，长子理应得到双倍的产业或祝福，这是长子应得的。长子的名分在那个时期也非常受重视，所以众人都会羡慕，甚至嫉妒长子的名分。雅各把孙子提到儿子地位的行为，并且赐给约瑟双倍的祝福，不仅仅是因为流便的缘故，更有后面神的祝福和拣选。</p>
+<p>第六节，你在他们以后所生的就是你的，他们可以归在他们弟兄名下的产业。圣经并没有记载约瑟还有别的儿女；不管怎么样，或许是因为身体缘故，或约瑟小时候受父亲偏爱、容易受哥哥们责打、欺负等等，我们暂且不管。</p>
+<p>第七节，至于我，我从巴旦来的时候，拉结死在我的眼前，在迦南地的路上，离以法他还有一段路程，我就把她葬在以法他的路上。以法他就是伯利恒。这里雅各可以说是一段回忆。</p>
+<p>雅各从出生的时候，名字就是“抓住”的意思，也可说是诡诈的意思。雅各在出生的时候抓住他哥哥以扫的脚跟。又过了一段时间，他以一碗红豆汤换了他哥哥以扫长子的名分，又以诡诈在他父亲以撒面前骗取了长子的祝福。经过这一切，虽然神早已应许“大的将来要服事小的”，神的应许也必然成就，但是雅各很快就为他的诡诈得了报应。当以扫打猎回来，发现长子的祝福被雅各夺去的时候，就想杀掉雅各，雅各因此要逃亡，逃到他舅父拉班那里去。</p>
+<p>也许是为了娶妻的缘故——因为以扫有两个妻子是从迦南地娶的，却引起他们母亲利百加严重的不满和厌恶，所以他母亲不想让雅各再娶迦南地的女子为妻，就打发雅各往他舅父拉班那里去。</p>
+<p>雅各在这路上，也就是到伯特利的时候，遇见了神，就是我们之前读过的那段经文。在那里，神也指示雅各要往巴旦亚兰去。当雅各去的时候，他什么也没有，只有自己和手里一根杖；但是雅各回来的时候，却是蒙神祝福，妻子众多，资产也非常多。雅各到那里的时候，拉班有两个女儿，雅各却爱那个小女儿，小女儿叫拉结。圣经记载说，雅各深爱着拉结。但是，由于神要对付他的诡诈，神就借着他的亲族拉班——雅各为着拉结的缘故，愿意为拉班服事七年，以作聘礼迎娶拉结。可是七年到了，拉班并没有把小女儿给他，而是用理由说：我们这里没有大女儿还没嫁就把小女儿嫁出去的规矩，就把大女儿利亚先嫁给他。圣经也没有记载二人有什么大冲突，在短暂的筵席之后，雅各又为拉结的缘故再给拉班服了七年的工。也许是雅各非常爱拉结，就愿意再献上七年作聘礼。这七年过后，也就是十四年后，雅各又为拉班牧养羊群，又过了几年，一共为拉班服事了二十年。在这当中，拉班却十次更改他的工价，不断地像雅各一样耍诡诈；但神用这一系列的经历，用这些环境、用拉班这个人来磨练雅各。随着雅各得着成长、得着改变，虽然拉班不断地占便宜、耍小心思，想要自己多得、雅各少得，但从整体来看，尽管身边的人诡诈雅各也好、苛刻雅各也好，雅各并没有因此而失去什么，这也是神在背后的保守。神曾经就应许：我要将你的后裔像地上尘沙那样多，也必叫你成为大国，神的应许不会落空。即使我们身边的人、物、环境不断恶待我们，让我们诸事困难，神的应许也不会落空。虽然拉班不断诡诈、耍小聪明，雅各的资产、后裔却是那样繁多，并没有因此而削减。</p>
+<p>在雅各将要逃离拉班的时候，拉结做了一件事，就是偷了她父亲家的神像。这个神像也可以看作与继承权有关，有这层面的意思。她偷了神像，拉班就因此去追雅各。追到的时候，雅各说：我为你服事了这么多年，为你服事了二十年，你却十次更改我的工价，耶和华与我同在的时候，你的羊群也蒙保守……这一类话。最后雅各又说，谁若偷了你的神像，愿他死在我的眼前。但是雅各并不知道，拉结——他最深爱的妻子——却偷了神像藏在骆驼的驮篓里。</p>
+<p>所以在这里说，“我从巴旦来的时候，拉结死在我的眼前”，也可以看作拉结因那句话而死——也许是雅各当年那句咒诅的缘故，也许是神要拆毁他、对付他，将他最爱的人从他生命中挪去。</p>
+<p>雅各经过这一系列的事情之后，就要面对他哥哥以扫。在这个过程中，雅各又到了伯特利。在那里，雅各经历他一生中最重要的时候：独自在那里过夜，和神摔跤。摔跤之后，神把他大腿窝摸了一把，他的大腿窝就扭了，雅各以后终身瘸腿。但从那以后，雅各有了新的名字，叫以色列。神给雅各改名，意味着雅各从此有新的身份、新的生命。之前的雅各是欺骗者、诡诈的、抓住的人；从此之后，雅各就是以色列。以色列的意思可与“与神较力得胜”相连。参考经文说那人：你的名不要再叫雅各，要叫以色列，因为你与神与人较力都得了胜。</p>
+<p>雅各以前因为自己的诡诈夺了长子的名分和长子的祝福；经过这一切，雅各从那个欺骗者，曾经欺骗了他的哥哥，到后来却能与哥哥和好。他以前也是夺取祝福的人，现在却成为祝福的人。雅各以前对神的认识，以为神只是列祖的神、父亲的神；现在雅各知道，神是全能的，是他自己的神，是从幼年就牧养他直到如今的神。雅各所做事情的目的性也改变了：以前也许为自己、为别人，现在他为后裔的祝福，完全是因着神的应许；比起世俗，他更愿意让后裔承蒙神的祝福。</p>
+<p>第八节，雅各看见约瑟两个儿子，就说：这是谁？雅各在这里做了一个确认，也许是之前的惯例、确认的程序，也许是因为雅各自身：他蒙祝福时曾用欺骗的形式，因此可能在这里需要确认所要祝福的对象是谁。约瑟就对雅各说，这是在埃及地神赐给我的儿子。以色列说，请你领他们到我眼前来，我要给他们祝福。以色列年纪老迈，眼睛昏花，不能看见，约瑟领他们到他眼前，他就和他们亲嘴，抱着他们。</p>
+<p>这里提到雅各的身体状况，为后面的祝福做了铺垫。雅各不仅深爱拉结，也深爱着拉结所生的第一个儿子约瑟，偏爱约瑟。约瑟年小的时候，圣经记载雅各爱约瑟胜过爱其他众子，还为约瑟做了一件彩衣，因此招来其他哥哥的嫉妒，把他卖到埃及——后面这一切都有神的拣选和引领。雅各当看到儿子和孙子，就非常高兴，与他们亲嘴、抱着他们。</p>
+<p>短暂的温馨过后，雅各对约瑟说，我想不到还能得见你的面，不料神又使我得见你的儿子。当雅各被其他儿子告知约瑟被野兽撕裂的时候，他非常痛苦，以至于说要悲悲惨惨地下阴间去了；后来雅各得知约瑟仍在人间，父子得以重逢；《创世记》46章也记载神曾应许与他同下埃及，并让约瑟为他送终。神不仅使他再见约瑟，也使他得见约瑟的子孙。雅各在埃及的这十七年，不仅看见约瑟的地位和权柄都很大，目睹约瑟荣耀的一生，也能得见约瑟的儿子。</p>
+<p>后面又说，约瑟把两个儿子从以色列的两膝中领出来，自己就脸伏于地下拜。随后约瑟拉着他们两个：以法莲在他的右手里，对着以色列的左手；玛拿西在他的左手里，对着以色列的右手，领到以色列眼前。约瑟想按着当时的惯例——长者祝福的时候，右手通常祝福长子，左手赐福于次子——所以约瑟把大儿子玛拿西对着雅各的右手，小儿子对着左手，意思是按惯例把长子的祝福给玛拿西。</p>
+<p>但再往后我们就看到，以色列却伸出右手按在以法莲的头上——以法莲乃是次子；又交叉过左手来按在玛拿西的头上。玛拿西虽是长子，雅各却没有按他们的惯例来祝福，而是双手交叉，把长子的名分那一份祝福给了次子以法莲。我们前面说到雅各的身体状况，他连在床上坐着都非常勉强，何况把手交叉过来祝福——意思就是，雅各这么做不是因为看不清楚或其他缘故，而是他定意要这么做，因为这样并不舒服，他没有图自己舒服地伸手按惯例；前面他又确认了一次对象。他这样交叉双手，将长子的福分归于次子以法莲，是他定意的。</p>
+<p>下面就是雅各的祝福。雅各就为两个童子祝福，说，愿我祖亚伯拉罕和我父以撒所侍奉的神，就是一生牧养我直到今日的神，救赎我脱离一切患难的那使者，赐福给这两个童子；愿他们归在我的名下和我祖亚伯拉罕、我父以撒的名下；又愿他们在世上生养众多。这是祝福的内容。</p>
+<p>约瑟见他父亲把右手按在以法莲的头上，就不喜悦，也许带着冲动或愤怒，就伸手要把他父亲的手从以法莲头上挪到玛拿西头上，雅各却拦住，不肯听从。约瑟对父亲说，我父不是这样，这本是长子，求你把右手按在他头上。雅各没有听从，继续为小儿子以法莲祝福。他父亲就说，儿啊，我知道，我知道，他也必成为一族，也必昌盛，只是他的兄弟将来比他还要大，他兄弟的后裔要成为多国。</p>
+<p>雅各这么做，不再是以前那个只靠血气行事的雅各。现在的雅各虽然眼目昏花、看不清楚，在祝福上心里却比谁都清楚。虽然以撒祝福的时候真的不知道所祝福的到底是以扫还是雅各，雅各祝福的时候却非常清楚祝福的是谁。雅各在这里对儿子约瑟宣告“我知道，我儿，我知道”，不仅是成熟属灵生命的宣告，也是对神的拣选和旨意的宣告；不再是按着血气，而是按着神的旨意和他成熟的属灵生命。在这里宣告：我知道，儿啊，我知道——他必成为一族，也必昌盛，只是他兄弟将来比他更大。</p>
+<p>在后面我们不仅能看见神的拣选，也能看见神所拣选的和人通常想的并不一样。人通常以为神会定意拣选长子，神却接连两次拣选次子，赐给他们祝福和应许。这让我们看见，即使我们身处优势，仍不可骄傲；当我们像长子一样拥有更多福分和权利时，也不可骄傲，因为这一切应许和祝福都从神而来，神有他的旨意和计划。</p>
+<p>当神的安排和约瑟所想的不一样时，约瑟在听见这一切之后，就没有再去抗拒，而是完全顺服在神的权柄之下。也就是说，在我们生活中各样事情上，倘若神定意将那些事放在我们身边，也许不在我们的计划之中，也许是我们不喜悦的，我们仍要像约瑟一样去顺服神的旨意、神的拣选和安排。</p>
+<p>最后，以色列又对约瑟说，我要死了，但神必与你们同在，领你们回到你们列祖之地。并且我从亚摩利人手中用刀剑弓箭夺得的那些地，我都赐给你，使你比众弟兄多得一份。</p>
+<p>雅各在临终之际，没有只交代财产之类，而是说到属灵的事。他对儿子最后的嘱咐，是要他们回到列祖之地；他没有把这事单单交给某一个儿子，也没有因谁特别优秀就交给谁，而是把一切都交在神手中——神必与你们同在，领你们回到你们列祖之地。</p>
+<p>雅各在将死之际，最看重的也不是世上的一切；他已经改变，知道在这世上拥有再多也终必归于尘土。他不仅知道自己在这世上是寄居的，也要让儿子们知道：世上的一切也许虫蛀、朽坏、失去，但神的应许不会失去，直到永永远远。他最后的嘱咐，是把神应许的话传给儿子，让他们不是只活在这个世界里，而是活在神的应许当中。</p>
+<p>今天我为大家分享的内容就到这里。我们一起来做一个回应的祷告。</p>
+<p>主啊，我们感谢你，让我们看见雅各一生中所发生的改变。主啊，愿我们也像他一样——以前我们只以为信仰是家里的信仰、是别人的信仰；主啊，当我们被你的话语洗净，当你的灵在我们心中做工，当我们不断地亲近你、认识你，我们就知道并不是我们所想的那样：耶和华不但是我们家人的神，也是我们每一个人的神。主啊，我们感谢你，将这信息赐给我们。也让我们在这世上得着磨练。主啊，尽管这世上一切有不顺、悲哀、哭号和疼痛，当我们知道没有一件事不经你量过，也没有我们受不住的事，主啊，你对我们说你的恩典够我们用的，我们也信这话，也相信你向我们的应许。主啊，愿你赐福我们，将我们以后的生活交托给你；愿你与我们同在，使我们活在你的应许中有盼望、有力量。不要让我们贪恋这个世界，过于爱你；将我们剩下的时间交在你手中，将一切的忧虑也交给你。孩子如此祷告，奉主耶稣的名向天父祈求。阿们。</p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    
+    
+    
+    <div class="post-paging">
+     
+  <a href="/2026/03/26/planAudio/30/%E5%87%BA%E5%9F%83%E5%8F%8A%E8%AE%B0%E7%AC%AC%E4%B8%89%E7%AB%A0/">
+    <div class="post-paging-last">
+      <span>上一篇</span>
+      <p>出埃及记第三章</p>
+    </div>
+  </a>
+     
+  <a href="/2026/03/20/planAudio/25/%E5%88%9B%E4%B8%96%E7%BA%AA38-39%E7%AB%A0/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>创世纪38-39章</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+
